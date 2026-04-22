@@ -213,6 +213,22 @@ public:
             return "path_hash_mode set to " + std::to_string(m);
         }
 #endif
+        // Sim-only: toggle TopoGraph's TRACE probe scheduler. Gated by a
+        // compile-time check so plugins without topo_probes_enabled don't
+        // error out.
+#ifdef TOPO_HAS_PROBE_SWITCH
+        if (strncmp(cmd, "probes ", 7) == 0) {
+            const char* v = cmd + 7;
+            if (strcmp(v, "off") == 0 || strcmp(v, "0") == 0) {
+                _mesh.topo_probes_enabled = false;
+                return "topo probes disabled";
+            } else if (strcmp(v, "on") == 0 || strcmp(v, "1") == 0) {
+                _mesh.topo_probes_enabled = true;
+                return "topo probes enabled";
+            }
+            return "ERROR: probes must be on/off";
+        }
+#endif
         if (strncmp(cmd, "advert", 6) == 0) {
             mesh::Packet* pkt = _mesh.createSelfAdvert(_mesh.getNodeName());
             if (!pkt) return "ERROR: createSelfAdvert failed";
