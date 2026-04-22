@@ -203,6 +203,16 @@ public:
             }
             return "ERROR: createSelfAdvert failed";
         }
+        // Sim-only: expose companion's path_hash_mode so tests can exercise
+        // multi-byte hash support. Values 0/1/2 -> hash_size 1/2/3 bytes.
+#ifdef HAS_PATH_HASH_MODE
+        if (strncmp(cmd, "hashmode ", 9) == 0) {
+            int m = atoi(cmd + 9);
+            if (m < 0 || m > 2) return "ERROR: hashmode must be 0, 1, or 2";
+            _mesh.getNodePrefs()->path_hash_mode = (uint8_t)m;
+            return "path_hash_mode set to " + std::to_string(m);
+        }
+#endif
         if (strncmp(cmd, "advert", 6) == 0) {
             mesh::Packet* pkt = _mesh.createSelfAdvert(_mesh.getNodeName());
             if (!pkt) return "ERROR: createSelfAdvert failed";

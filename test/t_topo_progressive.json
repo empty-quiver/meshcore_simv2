@@ -1,0 +1,41 @@
+{
+  "_name": "t_topo_progressive",
+  "_desc": "Progressive TRACE expansion test. Long run (20 min) with periodic adverts. Alice runs fw_topo. Expect: probes fire progressively with increasing hop-distance, token-bucket paced at ~1 per 2 min, all reachable nodes eventually qualified. No user messages — pure discovery behavior.",
+  "_requires_plugins": ["fw_topo"],
+  "simulation": {
+    "duration_ms": 1200000,
+    "step_ms": 4,
+    "warmup_ms": 5000,
+    "hot_start": false,
+    "seed": 42
+  },
+  "nodes": [
+    {"name": "alice", "role": "companion", "firmware": "fw_topo"},
+    {"name": "B", "role": "repeater"},
+    {"name": "C", "role": "repeater"},
+    {"name": "D", "role": "repeater"},
+    {"name": "E", "role": "repeater"},
+    {"name": "frank", "role": "companion"}
+  ],
+  "topology": {
+    "links": [
+      {"from": "alice", "to": "B", "snr": 10, "rssi": -70},
+      {"from": "B", "to": "C", "snr": 10, "rssi": -70},
+      {"from": "C", "to": "D", "snr": 10, "rssi": -70},
+      {"from": "D", "to": "E", "snr": 10, "rssi": -70},
+      {"from": "E", "to": "frank", "snr": 10, "rssi": -70},
+      {"from": "B", "to": "E", "snr": 3, "rssi": -90}
+    ]
+  },
+  "commands": [
+    {"at_ms": 5000, "node": "@repeaters", "command": "set path.hash.mode 1"},
+    {"at_ms": 10000, "node": "frank", "command": "advert"},
+    {"at_ms": 10500, "node": "alice", "command": "advert"},
+    {"at_ms": 60000, "node": "frank", "command": "advert"},
+    {"at_ms": 120000, "node": "frank", "command": "advert"},
+    {"at_ms": 300000, "node": "frank", "command": "advert"},
+    {"at_ms": 600000, "node": "frank", "command": "advert"},
+    {"at_ms": 900000, "node": "frank", "command": "advert"}
+  ],
+  "expect": []
+}

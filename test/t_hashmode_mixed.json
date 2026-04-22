@@ -1,0 +1,152 @@
+{
+  "_name": "t_hashmode_mixed",
+  "_desc": "Mixed-mode test: frank on mode=2 (3-byte), alice on default mode=0 (1-byte). Verifies graph handles mixed-hash-size observations without corruption.",
+  "_requires_plugins": [
+    "fw_topo"
+  ],
+  "simulation": {
+    "duration_ms": 300000,
+    "step_ms": 4,
+    "warmup_ms": 5000,
+    "hot_start": false,
+    "seed": 42
+  },
+  "nodes": [
+    {
+      "name": "alice",
+      "role": "companion",
+      "firmware": "fw_topo"
+    },
+    {
+      "name": "B",
+      "role": "repeater"
+    },
+    {
+      "name": "C",
+      "role": "repeater"
+    },
+    {
+      "name": "D",
+      "role": "repeater"
+    },
+    {
+      "name": "E",
+      "role": "repeater"
+    },
+    {
+      "name": "frank",
+      "role": "companion"
+    }
+  ],
+  "topology": {
+    "links": [
+      {
+        "from": "alice",
+        "to": "B",
+        "snr": 10,
+        "rssi": -70
+      },
+      {
+        "from": "B",
+        "to": "C",
+        "snr": 10,
+        "rssi": -70
+      },
+      {
+        "from": "C",
+        "to": "D",
+        "snr": 10,
+        "rssi": -70
+      },
+      {
+        "from": "D",
+        "to": "E",
+        "snr": 10,
+        "rssi": -70
+      },
+      {
+        "from": "E",
+        "to": "frank",
+        "snr": 10,
+        "rssi": -70
+      },
+      {
+        "from": "B",
+        "to": "E",
+        "snr": 3,
+        "rssi": -90
+      }
+    ]
+  },
+  "commands": [
+    {
+      "at_ms": 2000,
+      "node": "frank",
+      "command": "hashmode 2"
+    },
+    {
+      "at_ms": 10000,
+      "node": "frank",
+      "command": "advert"
+    },
+    {
+      "at_ms": 10500,
+      "node": "alice",
+      "command": "advert"
+    },
+    {
+      "at_ms": 40000,
+      "node": "frank",
+      "command": "advert"
+    },
+    {
+      "at_ms": 40500,
+      "node": "alice",
+      "command": "advert"
+    },
+    {
+      "at_ms": 70000,
+      "node": "frank",
+      "command": "advert"
+    },
+    {
+      "at_ms": 70500,
+      "node": "alice",
+      "command": "advert"
+    },
+    {
+      "at_ms": 100000,
+      "node": "frank",
+      "command": "advert"
+    },
+    {
+      "at_ms": 130000,
+      "node": "frank",
+      "command": "advert"
+    },
+    {
+      "at_ms": 180000,
+      "node": "alice",
+      "command": "msg frank first_msg"
+    },
+    {
+      "at_ms": 200000,
+      "node": "alice",
+      "command": "msg frank second_msg"
+    }
+  ],
+  "expect": [
+    {
+      "type": "cmd_reply_contains",
+      "node": "alice",
+      "command": "msg frank first_msg",
+      "value": "sent"
+    },
+    {
+      "type": "cmd_reply_contains",
+      "node": "alice",
+      "command": "msg frank second_msg",
+      "value": "sent"
+    }
+  ]
+}

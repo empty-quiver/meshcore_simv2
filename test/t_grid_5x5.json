@@ -1,0 +1,720 @@
+{
+  "_name": "hot_start_grid_5x5_6c",
+  "_desc": "Stress test: 5x5 repeater grid (25 repeaters) + 6 companions. Max hop distance: 8. Verifies full companion discovery and cross-grid messaging.",
+  "simulation": {
+    "duration_ms": 60000,
+    "step_ms": 5,
+    "warmup_ms": 5000,
+    "hot_start": true
+  },
+  "nodes": [
+    {
+      "name": "r0_0",
+      "role": "repeater"
+    },
+    {
+      "name": "r0_1",
+      "role": "repeater"
+    },
+    {
+      "name": "r0_2",
+      "role": "repeater"
+    },
+    {
+      "name": "r0_3",
+      "role": "repeater"
+    },
+    {
+      "name": "r0_4",
+      "role": "repeater"
+    },
+    {
+      "name": "r1_0",
+      "role": "repeater"
+    },
+    {
+      "name": "r1_1",
+      "role": "repeater"
+    },
+    {
+      "name": "r1_2",
+      "role": "repeater"
+    },
+    {
+      "name": "r1_3",
+      "role": "repeater"
+    },
+    {
+      "name": "r1_4",
+      "role": "repeater"
+    },
+    {
+      "name": "r2_0",
+      "role": "repeater"
+    },
+    {
+      "name": "r2_1",
+      "role": "repeater"
+    },
+    {
+      "name": "r2_2",
+      "role": "repeater"
+    },
+    {
+      "name": "r2_3",
+      "role": "repeater"
+    },
+    {
+      "name": "r2_4",
+      "role": "repeater"
+    },
+    {
+      "name": "r3_0",
+      "role": "repeater"
+    },
+    {
+      "name": "r3_1",
+      "role": "repeater"
+    },
+    {
+      "name": "r3_2",
+      "role": "repeater"
+    },
+    {
+      "name": "r3_3",
+      "role": "repeater"
+    },
+    {
+      "name": "r3_4",
+      "role": "repeater"
+    },
+    {
+      "name": "r4_0",
+      "role": "repeater"
+    },
+    {
+      "name": "r4_1",
+      "role": "repeater"
+    },
+    {
+      "name": "r4_2",
+      "role": "repeater"
+    },
+    {
+      "name": "r4_3",
+      "role": "repeater"
+    },
+    {
+      "name": "r4_4",
+      "role": "repeater"
+    },
+    {
+      "name": "c01",
+      "role": "companion"
+    },
+    {
+      "name": "c02",
+      "role": "companion"
+    },
+    {
+      "name": "c03",
+      "role": "companion"
+    },
+    {
+      "name": "c04",
+      "role": "companion"
+    },
+    {
+      "name": "c05",
+      "role": "companion"
+    },
+    {
+      "name": "c06",
+      "role": "companion"
+    }
+  ],
+  "topology": {
+    "links": [
+      {
+        "from": "r0_0",
+        "to": "r0_1",
+        "snr": 8.0,
+        "rssi": -80.0,
+        "bidir": true
+      },
+      {
+        "from": "r0_0",
+        "to": "r1_0",
+        "snr": 8.0,
+        "rssi": -80.0,
+        "bidir": true
+      },
+      {
+        "from": "r0_1",
+        "to": "r0_2",
+        "snr": 8.0,
+        "rssi": -80.0,
+        "bidir": true
+      },
+      {
+        "from": "r0_1",
+        "to": "r1_1",
+        "snr": 8.0,
+        "rssi": -80.0,
+        "bidir": true
+      },
+      {
+        "from": "r0_2",
+        "to": "r0_3",
+        "snr": 8.0,
+        "rssi": -80.0,
+        "bidir": true
+      },
+      {
+        "from": "r0_2",
+        "to": "r1_2",
+        "snr": 8.0,
+        "rssi": -80.0,
+        "bidir": true
+      },
+      {
+        "from": "r0_3",
+        "to": "r0_4",
+        "snr": 8.0,
+        "rssi": -80.0,
+        "bidir": true
+      },
+      {
+        "from": "r0_3",
+        "to": "r1_3",
+        "snr": 8.0,
+        "rssi": -80.0,
+        "bidir": true
+      },
+      {
+        "from": "r0_4",
+        "to": "r1_4",
+        "snr": 8.0,
+        "rssi": -80.0,
+        "bidir": true
+      },
+      {
+        "from": "r1_0",
+        "to": "r1_1",
+        "snr": 8.0,
+        "rssi": -80.0,
+        "bidir": true
+      },
+      {
+        "from": "r1_0",
+        "to": "r2_0",
+        "snr": 8.0,
+        "rssi": -80.0,
+        "bidir": true
+      },
+      {
+        "from": "r1_1",
+        "to": "r1_2",
+        "snr": 8.0,
+        "rssi": -80.0,
+        "bidir": true
+      },
+      {
+        "from": "r1_1",
+        "to": "r2_1",
+        "snr": 8.0,
+        "rssi": -80.0,
+        "bidir": true
+      },
+      {
+        "from": "r1_2",
+        "to": "r1_3",
+        "snr": 8.0,
+        "rssi": -80.0,
+        "bidir": true
+      },
+      {
+        "from": "r1_2",
+        "to": "r2_2",
+        "snr": 8.0,
+        "rssi": -80.0,
+        "bidir": true
+      },
+      {
+        "from": "r1_3",
+        "to": "r1_4",
+        "snr": 8.0,
+        "rssi": -80.0,
+        "bidir": true
+      },
+      {
+        "from": "r1_3",
+        "to": "r2_3",
+        "snr": 8.0,
+        "rssi": -80.0,
+        "bidir": true
+      },
+      {
+        "from": "r1_4",
+        "to": "r2_4",
+        "snr": 8.0,
+        "rssi": -80.0,
+        "bidir": true
+      },
+      {
+        "from": "r2_0",
+        "to": "r2_1",
+        "snr": 8.0,
+        "rssi": -80.0,
+        "bidir": true
+      },
+      {
+        "from": "r2_0",
+        "to": "r3_0",
+        "snr": 8.0,
+        "rssi": -80.0,
+        "bidir": true
+      },
+      {
+        "from": "r2_1",
+        "to": "r2_2",
+        "snr": 8.0,
+        "rssi": -80.0,
+        "bidir": true
+      },
+      {
+        "from": "r2_1",
+        "to": "r3_1",
+        "snr": 8.0,
+        "rssi": -80.0,
+        "bidir": true
+      },
+      {
+        "from": "r2_2",
+        "to": "r2_3",
+        "snr": 8.0,
+        "rssi": -80.0,
+        "bidir": true
+      },
+      {
+        "from": "r2_2",
+        "to": "r3_2",
+        "snr": 8.0,
+        "rssi": -80.0,
+        "bidir": true
+      },
+      {
+        "from": "r2_3",
+        "to": "r2_4",
+        "snr": 8.0,
+        "rssi": -80.0,
+        "bidir": true
+      },
+      {
+        "from": "r2_3",
+        "to": "r3_3",
+        "snr": 8.0,
+        "rssi": -80.0,
+        "bidir": true
+      },
+      {
+        "from": "r2_4",
+        "to": "r3_4",
+        "snr": 8.0,
+        "rssi": -80.0,
+        "bidir": true
+      },
+      {
+        "from": "r3_0",
+        "to": "r3_1",
+        "snr": 8.0,
+        "rssi": -80.0,
+        "bidir": true
+      },
+      {
+        "from": "r3_0",
+        "to": "r4_0",
+        "snr": 8.0,
+        "rssi": -80.0,
+        "bidir": true
+      },
+      {
+        "from": "r3_1",
+        "to": "r3_2",
+        "snr": 8.0,
+        "rssi": -80.0,
+        "bidir": true
+      },
+      {
+        "from": "r3_1",
+        "to": "r4_1",
+        "snr": 8.0,
+        "rssi": -80.0,
+        "bidir": true
+      },
+      {
+        "from": "r3_2",
+        "to": "r3_3",
+        "snr": 8.0,
+        "rssi": -80.0,
+        "bidir": true
+      },
+      {
+        "from": "r3_2",
+        "to": "r4_2",
+        "snr": 8.0,
+        "rssi": -80.0,
+        "bidir": true
+      },
+      {
+        "from": "r3_3",
+        "to": "r3_4",
+        "snr": 8.0,
+        "rssi": -80.0,
+        "bidir": true
+      },
+      {
+        "from": "r3_3",
+        "to": "r4_3",
+        "snr": 8.0,
+        "rssi": -80.0,
+        "bidir": true
+      },
+      {
+        "from": "r3_4",
+        "to": "r4_4",
+        "snr": 8.0,
+        "rssi": -80.0,
+        "bidir": true
+      },
+      {
+        "from": "r4_0",
+        "to": "r4_1",
+        "snr": 8.0,
+        "rssi": -80.0,
+        "bidir": true
+      },
+      {
+        "from": "r4_1",
+        "to": "r4_2",
+        "snr": 8.0,
+        "rssi": -80.0,
+        "bidir": true
+      },
+      {
+        "from": "r4_2",
+        "to": "r4_3",
+        "snr": 8.0,
+        "rssi": -80.0,
+        "bidir": true
+      },
+      {
+        "from": "r4_3",
+        "to": "r4_4",
+        "snr": 8.0,
+        "rssi": -80.0,
+        "bidir": true
+      },
+      {
+        "from": "c01",
+        "to": "r0_0",
+        "snr": 10.0,
+        "rssi": -70.0,
+        "bidir": true
+      },
+      {
+        "from": "c02",
+        "to": "r0_4",
+        "snr": 10.0,
+        "rssi": -70.0,
+        "bidir": true
+      },
+      {
+        "from": "c03",
+        "to": "r4_0",
+        "snr": 10.0,
+        "rssi": -70.0,
+        "bidir": true
+      },
+      {
+        "from": "c04",
+        "to": "r4_4",
+        "snr": 10.0,
+        "rssi": -70.0,
+        "bidir": true
+      },
+      {
+        "from": "c05",
+        "to": "r3_0",
+        "snr": 10.0,
+        "rssi": -70.0,
+        "bidir": true
+      },
+      {
+        "from": "c06",
+        "to": "r2_0",
+        "snr": 10.0,
+        "rssi": -70.0,
+        "bidir": true
+      }
+    ]
+  },
+  "commands": [
+    {
+      "at_ms": 6000,
+      "node": "c01",
+      "command": "neighbors"
+    },
+    {
+      "at_ms": 6000,
+      "node": "c02",
+      "command": "neighbors"
+    },
+    {
+      "at_ms": 6000,
+      "node": "c03",
+      "command": "neighbors"
+    },
+    {
+      "at_ms": 6000,
+      "node": "c04",
+      "command": "neighbors"
+    },
+    {
+      "at_ms": 6000,
+      "node": "c05",
+      "command": "neighbors"
+    },
+    {
+      "at_ms": 6000,
+      "node": "c06",
+      "command": "neighbors"
+    },
+    {
+      "at_ms": 8000,
+      "node": "c01",
+      "command": "msg c04 hello across 8 hops"
+    },
+    {
+      "at_ms": 12000,
+      "node": "c02",
+      "command": "msg c03 second route 8 hops"
+    },
+    {
+      "at_ms": 50000,
+      "node": "c04",
+      "command": "stats"
+    },
+    {
+      "at_ms": 50000,
+      "node": "c03",
+      "command": "stats"
+    }
+  ],
+  "expect": [
+    {
+      "type": "cmd_reply_contains",
+      "node": "c01",
+      "command": "neighbors",
+      "value": "c02"
+    },
+    {
+      "type": "cmd_reply_contains",
+      "node": "c01",
+      "command": "neighbors",
+      "value": "c03"
+    },
+    {
+      "type": "cmd_reply_contains",
+      "node": "c01",
+      "command": "neighbors",
+      "value": "c04"
+    },
+    {
+      "type": "cmd_reply_contains",
+      "node": "c01",
+      "command": "neighbors",
+      "value": "c05"
+    },
+    {
+      "type": "cmd_reply_contains",
+      "node": "c01",
+      "command": "neighbors",
+      "value": "c06"
+    },
+    {
+      "type": "cmd_reply_contains",
+      "node": "c02",
+      "command": "neighbors",
+      "value": "c01"
+    },
+    {
+      "type": "cmd_reply_contains",
+      "node": "c02",
+      "command": "neighbors",
+      "value": "c03"
+    },
+    {
+      "type": "cmd_reply_contains",
+      "node": "c02",
+      "command": "neighbors",
+      "value": "c04"
+    },
+    {
+      "type": "cmd_reply_contains",
+      "node": "c02",
+      "command": "neighbors",
+      "value": "c05"
+    },
+    {
+      "type": "cmd_reply_contains",
+      "node": "c02",
+      "command": "neighbors",
+      "value": "c06"
+    },
+    {
+      "type": "cmd_reply_contains",
+      "node": "c03",
+      "command": "neighbors",
+      "value": "c01"
+    },
+    {
+      "type": "cmd_reply_contains",
+      "node": "c03",
+      "command": "neighbors",
+      "value": "c02"
+    },
+    {
+      "type": "cmd_reply_contains",
+      "node": "c03",
+      "command": "neighbors",
+      "value": "c04"
+    },
+    {
+      "type": "cmd_reply_contains",
+      "node": "c03",
+      "command": "neighbors",
+      "value": "c05"
+    },
+    {
+      "type": "cmd_reply_contains",
+      "node": "c03",
+      "command": "neighbors",
+      "value": "c06"
+    },
+    {
+      "type": "cmd_reply_contains",
+      "node": "c04",
+      "command": "neighbors",
+      "value": "c01"
+    },
+    {
+      "type": "cmd_reply_contains",
+      "node": "c04",
+      "command": "neighbors",
+      "value": "c02"
+    },
+    {
+      "type": "cmd_reply_contains",
+      "node": "c04",
+      "command": "neighbors",
+      "value": "c03"
+    },
+    {
+      "type": "cmd_reply_contains",
+      "node": "c04",
+      "command": "neighbors",
+      "value": "c05"
+    },
+    {
+      "type": "cmd_reply_contains",
+      "node": "c04",
+      "command": "neighbors",
+      "value": "c06"
+    },
+    {
+      "type": "cmd_reply_contains",
+      "node": "c05",
+      "command": "neighbors",
+      "value": "c01"
+    },
+    {
+      "type": "cmd_reply_contains",
+      "node": "c05",
+      "command": "neighbors",
+      "value": "c02"
+    },
+    {
+      "type": "cmd_reply_contains",
+      "node": "c05",
+      "command": "neighbors",
+      "value": "c03"
+    },
+    {
+      "type": "cmd_reply_contains",
+      "node": "c05",
+      "command": "neighbors",
+      "value": "c04"
+    },
+    {
+      "type": "cmd_reply_contains",
+      "node": "c05",
+      "command": "neighbors",
+      "value": "c06"
+    },
+    {
+      "type": "cmd_reply_contains",
+      "node": "c06",
+      "command": "neighbors",
+      "value": "c01"
+    },
+    {
+      "type": "cmd_reply_contains",
+      "node": "c06",
+      "command": "neighbors",
+      "value": "c02"
+    },
+    {
+      "type": "cmd_reply_contains",
+      "node": "c06",
+      "command": "neighbors",
+      "value": "c03"
+    },
+    {
+      "type": "cmd_reply_contains",
+      "node": "c06",
+      "command": "neighbors",
+      "value": "c04"
+    },
+    {
+      "type": "cmd_reply_contains",
+      "node": "c06",
+      "command": "neighbors",
+      "value": "c05"
+    },
+    {
+      "type": "cmd_reply_contains",
+      "node": "c01",
+      "command": "msg c04",
+      "value": "msg sent to c04"
+    },
+    {
+      "type": "cmd_reply_contains",
+      "node": "c04",
+      "command": "stats",
+      "value": "recv: 1 direct"
+    },
+    {
+      "type": "cmd_reply_contains",
+      "node": "c02",
+      "command": "msg c03",
+      "value": "msg sent to c03"
+    },
+    {
+      "type": "cmd_reply_contains",
+      "node": "c03",
+      "command": "stats",
+      "value": "recv: 1 direct"
+    }
+  ]
+}
