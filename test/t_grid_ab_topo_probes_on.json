@@ -1,0 +1,720 @@
+{
+  "_name": "t_grid_ab_topo_probes_on",
+  "_desc": "Busy 5x5 grid with probes explicitly ON. Adaptive gate should detect busy mesh (rx_util high) and suppress probes. Expect: same delivery as passive-only; no probes fired.",
+  "simulation": {
+    "duration_ms": 700000,
+    "step_ms": 4,
+    "warmup_ms": 10000,
+    "hot_start": false,
+    "seed": 42
+  },
+  "nodes": [
+    {
+      "name": "r0_0",
+      "role": "repeater"
+    },
+    {
+      "name": "r0_1",
+      "role": "repeater"
+    },
+    {
+      "name": "r0_2",
+      "role": "repeater"
+    },
+    {
+      "name": "r0_3",
+      "role": "repeater"
+    },
+    {
+      "name": "r0_4",
+      "role": "repeater"
+    },
+    {
+      "name": "r1_0",
+      "role": "repeater"
+    },
+    {
+      "name": "r1_1",
+      "role": "repeater"
+    },
+    {
+      "name": "r1_2",
+      "role": "repeater"
+    },
+    {
+      "name": "r1_3",
+      "role": "repeater"
+    },
+    {
+      "name": "r1_4",
+      "role": "repeater"
+    },
+    {
+      "name": "r2_0",
+      "role": "repeater"
+    },
+    {
+      "name": "r2_1",
+      "role": "repeater"
+    },
+    {
+      "name": "r2_2",
+      "role": "repeater"
+    },
+    {
+      "name": "r2_3",
+      "role": "repeater"
+    },
+    {
+      "name": "r2_4",
+      "role": "repeater"
+    },
+    {
+      "name": "r3_0",
+      "role": "repeater"
+    },
+    {
+      "name": "r3_1",
+      "role": "repeater"
+    },
+    {
+      "name": "r3_2",
+      "role": "repeater"
+    },
+    {
+      "name": "r3_3",
+      "role": "repeater"
+    },
+    {
+      "name": "r3_4",
+      "role": "repeater"
+    },
+    {
+      "name": "r4_0",
+      "role": "repeater"
+    },
+    {
+      "name": "r4_1",
+      "role": "repeater"
+    },
+    {
+      "name": "r4_2",
+      "role": "repeater"
+    },
+    {
+      "name": "r4_3",
+      "role": "repeater"
+    },
+    {
+      "name": "r4_4",
+      "role": "repeater"
+    },
+    {
+      "name": "alice",
+      "role": "companion",
+      "firmware": "fw_topo"
+    },
+    {
+      "name": "bob",
+      "role": "companion"
+    },
+    {
+      "name": "carol",
+      "role": "companion"
+    },
+    {
+      "name": "dave",
+      "role": "companion"
+    }
+  ],
+  "topology": {
+    "links": [
+      {
+        "from": "r0_0",
+        "to": "r0_1",
+        "snr": 8.0,
+        "rssi": -80
+      },
+      {
+        "from": "r0_0",
+        "to": "r1_0",
+        "snr": 8.0,
+        "rssi": -80
+      },
+      {
+        "from": "r0_0",
+        "to": "r1_1",
+        "snr": 4.0,
+        "rssi": -95
+      },
+      {
+        "from": "r0_1",
+        "to": "r0_2",
+        "snr": 8.0,
+        "rssi": -80
+      },
+      {
+        "from": "r0_1",
+        "to": "r1_1",
+        "snr": 8.0,
+        "rssi": -80
+      },
+      {
+        "from": "r0_1",
+        "to": "r1_2",
+        "snr": 4.0,
+        "rssi": -95
+      },
+      {
+        "from": "r0_1",
+        "to": "r1_0",
+        "snr": 4.0,
+        "rssi": -95
+      },
+      {
+        "from": "r0_2",
+        "to": "r0_3",
+        "snr": 8.0,
+        "rssi": -80
+      },
+      {
+        "from": "r0_2",
+        "to": "r1_2",
+        "snr": 8.0,
+        "rssi": -80
+      },
+      {
+        "from": "r0_2",
+        "to": "r1_3",
+        "snr": 4.0,
+        "rssi": -95
+      },
+      {
+        "from": "r0_2",
+        "to": "r1_1",
+        "snr": 4.0,
+        "rssi": -95
+      },
+      {
+        "from": "r0_3",
+        "to": "r0_4",
+        "snr": 8.0,
+        "rssi": -80
+      },
+      {
+        "from": "r0_3",
+        "to": "r1_3",
+        "snr": 8.0,
+        "rssi": -80
+      },
+      {
+        "from": "r0_3",
+        "to": "r1_4",
+        "snr": 4.0,
+        "rssi": -95
+      },
+      {
+        "from": "r0_3",
+        "to": "r1_2",
+        "snr": 4.0,
+        "rssi": -95
+      },
+      {
+        "from": "r0_4",
+        "to": "r1_4",
+        "snr": 8.0,
+        "rssi": -80
+      },
+      {
+        "from": "r0_4",
+        "to": "r1_3",
+        "snr": 4.0,
+        "rssi": -95
+      },
+      {
+        "from": "r1_0",
+        "to": "r1_1",
+        "snr": 8.0,
+        "rssi": -80
+      },
+      {
+        "from": "r1_0",
+        "to": "r2_0",
+        "snr": 8.0,
+        "rssi": -80
+      },
+      {
+        "from": "r1_0",
+        "to": "r2_1",
+        "snr": 4.0,
+        "rssi": -95
+      },
+      {
+        "from": "r1_1",
+        "to": "r1_2",
+        "snr": 8.0,
+        "rssi": -80
+      },
+      {
+        "from": "r1_1",
+        "to": "r2_1",
+        "snr": 8.0,
+        "rssi": -80
+      },
+      {
+        "from": "r1_1",
+        "to": "r2_2",
+        "snr": 4.0,
+        "rssi": -95
+      },
+      {
+        "from": "r1_1",
+        "to": "r2_0",
+        "snr": 4.0,
+        "rssi": -95
+      },
+      {
+        "from": "r1_2",
+        "to": "r1_3",
+        "snr": 8.0,
+        "rssi": -80
+      },
+      {
+        "from": "r1_2",
+        "to": "r2_2",
+        "snr": 8.0,
+        "rssi": -80
+      },
+      {
+        "from": "r1_2",
+        "to": "r2_3",
+        "snr": 4.0,
+        "rssi": -95
+      },
+      {
+        "from": "r1_2",
+        "to": "r2_1",
+        "snr": 4.0,
+        "rssi": -95
+      },
+      {
+        "from": "r1_3",
+        "to": "r1_4",
+        "snr": 8.0,
+        "rssi": -80
+      },
+      {
+        "from": "r1_3",
+        "to": "r2_3",
+        "snr": 8.0,
+        "rssi": -80
+      },
+      {
+        "from": "r1_3",
+        "to": "r2_4",
+        "snr": 4.0,
+        "rssi": -95
+      },
+      {
+        "from": "r1_3",
+        "to": "r2_2",
+        "snr": 4.0,
+        "rssi": -95
+      },
+      {
+        "from": "r1_4",
+        "to": "r2_4",
+        "snr": 8.0,
+        "rssi": -80
+      },
+      {
+        "from": "r1_4",
+        "to": "r2_3",
+        "snr": 4.0,
+        "rssi": -95
+      },
+      {
+        "from": "r2_0",
+        "to": "r2_1",
+        "snr": 8.0,
+        "rssi": -80
+      },
+      {
+        "from": "r2_0",
+        "to": "r3_0",
+        "snr": 8.0,
+        "rssi": -80
+      },
+      {
+        "from": "r2_0",
+        "to": "r3_1",
+        "snr": 4.0,
+        "rssi": -95
+      },
+      {
+        "from": "r2_1",
+        "to": "r2_2",
+        "snr": 8.0,
+        "rssi": -80
+      },
+      {
+        "from": "r2_1",
+        "to": "r3_1",
+        "snr": 8.0,
+        "rssi": -80
+      },
+      {
+        "from": "r2_1",
+        "to": "r3_2",
+        "snr": 4.0,
+        "rssi": -95
+      },
+      {
+        "from": "r2_1",
+        "to": "r3_0",
+        "snr": 4.0,
+        "rssi": -95
+      },
+      {
+        "from": "r2_2",
+        "to": "r2_3",
+        "snr": 8.0,
+        "rssi": -80
+      },
+      {
+        "from": "r2_2",
+        "to": "r3_2",
+        "snr": 8.0,
+        "rssi": -80
+      },
+      {
+        "from": "r2_2",
+        "to": "r3_3",
+        "snr": 4.0,
+        "rssi": -95
+      },
+      {
+        "from": "r2_2",
+        "to": "r3_1",
+        "snr": 4.0,
+        "rssi": -95
+      },
+      {
+        "from": "r2_3",
+        "to": "r2_4",
+        "snr": 8.0,
+        "rssi": -80
+      },
+      {
+        "from": "r2_3",
+        "to": "r3_3",
+        "snr": 8.0,
+        "rssi": -80
+      },
+      {
+        "from": "r2_3",
+        "to": "r3_4",
+        "snr": 4.0,
+        "rssi": -95
+      },
+      {
+        "from": "r2_3",
+        "to": "r3_2",
+        "snr": 4.0,
+        "rssi": -95
+      },
+      {
+        "from": "r2_4",
+        "to": "r3_4",
+        "snr": 8.0,
+        "rssi": -80
+      },
+      {
+        "from": "r2_4",
+        "to": "r3_3",
+        "snr": 4.0,
+        "rssi": -95
+      },
+      {
+        "from": "r3_0",
+        "to": "r3_1",
+        "snr": 8.0,
+        "rssi": -80
+      },
+      {
+        "from": "r3_0",
+        "to": "r4_0",
+        "snr": 8.0,
+        "rssi": -80
+      },
+      {
+        "from": "r3_0",
+        "to": "r4_1",
+        "snr": 4.0,
+        "rssi": -95
+      },
+      {
+        "from": "r3_1",
+        "to": "r3_2",
+        "snr": 8.0,
+        "rssi": -80
+      },
+      {
+        "from": "r3_1",
+        "to": "r4_1",
+        "snr": 8.0,
+        "rssi": -80
+      },
+      {
+        "from": "r3_1",
+        "to": "r4_2",
+        "snr": 4.0,
+        "rssi": -95
+      },
+      {
+        "from": "r3_1",
+        "to": "r4_0",
+        "snr": 4.0,
+        "rssi": -95
+      },
+      {
+        "from": "r3_2",
+        "to": "r3_3",
+        "snr": 8.0,
+        "rssi": -80
+      },
+      {
+        "from": "r3_2",
+        "to": "r4_2",
+        "snr": 8.0,
+        "rssi": -80
+      },
+      {
+        "from": "r3_2",
+        "to": "r4_3",
+        "snr": 4.0,
+        "rssi": -95
+      },
+      {
+        "from": "r3_2",
+        "to": "r4_1",
+        "snr": 4.0,
+        "rssi": -95
+      },
+      {
+        "from": "r3_3",
+        "to": "r3_4",
+        "snr": 8.0,
+        "rssi": -80
+      },
+      {
+        "from": "r3_3",
+        "to": "r4_3",
+        "snr": 8.0,
+        "rssi": -80
+      },
+      {
+        "from": "r3_3",
+        "to": "r4_4",
+        "snr": 4.0,
+        "rssi": -95
+      },
+      {
+        "from": "r3_3",
+        "to": "r4_2",
+        "snr": 4.0,
+        "rssi": -95
+      },
+      {
+        "from": "r3_4",
+        "to": "r4_4",
+        "snr": 8.0,
+        "rssi": -80
+      },
+      {
+        "from": "r3_4",
+        "to": "r4_3",
+        "snr": 4.0,
+        "rssi": -95
+      },
+      {
+        "from": "r4_0",
+        "to": "r4_1",
+        "snr": 8.0,
+        "rssi": -80
+      },
+      {
+        "from": "r4_1",
+        "to": "r4_2",
+        "snr": 8.0,
+        "rssi": -80
+      },
+      {
+        "from": "r4_2",
+        "to": "r4_3",
+        "snr": 8.0,
+        "rssi": -80
+      },
+      {
+        "from": "r4_3",
+        "to": "r4_4",
+        "snr": 8.0,
+        "rssi": -80
+      },
+      {
+        "from": "alice",
+        "to": "r0_0",
+        "snr": 8.0,
+        "rssi": -80
+      },
+      {
+        "from": "bob",
+        "to": "r0_4",
+        "snr": 8.0,
+        "rssi": -80
+      },
+      {
+        "from": "carol",
+        "to": "r4_4",
+        "snr": 8.0,
+        "rssi": -80
+      },
+      {
+        "from": "dave",
+        "to": "r4_0",
+        "snr": 8.0,
+        "rssi": -80
+      }
+    ]
+  },
+  "commands": [
+    {
+      "at_ms": 3000,
+      "node": "alice",
+      "command": "probes on"
+    },
+    {
+      "at_ms": 10000,
+      "node": "@repeaters",
+      "command": "set path.hash.mode 1"
+    },
+    {
+      "at_ms": 30000,
+      "node": "alice",
+      "command": "advert"
+    },
+    {
+      "at_ms": 32000,
+      "node": "bob",
+      "command": "advert"
+    },
+    {
+      "at_ms": 34000,
+      "node": "carol",
+      "command": "advert"
+    },
+    {
+      "at_ms": 36000,
+      "node": "dave",
+      "command": "advert"
+    },
+    {
+      "at_ms": 150000,
+      "node": "alice",
+      "command": "advert"
+    },
+    {
+      "at_ms": 152000,
+      "node": "bob",
+      "command": "advert"
+    },
+    {
+      "at_ms": 154000,
+      "node": "carol",
+      "command": "advert"
+    },
+    {
+      "at_ms": 156000,
+      "node": "dave",
+      "command": "advert"
+    },
+    {
+      "at_ms": 270000,
+      "node": "alice",
+      "command": "advert"
+    },
+    {
+      "at_ms": 272000,
+      "node": "bob",
+      "command": "advert"
+    },
+    {
+      "at_ms": 274000,
+      "node": "carol",
+      "command": "advert"
+    },
+    {
+      "at_ms": 276000,
+      "node": "dave",
+      "command": "advert"
+    },
+    {
+      "at_ms": 390000,
+      "node": "alice",
+      "command": "advert"
+    },
+    {
+      "at_ms": 392000,
+      "node": "bob",
+      "command": "advert"
+    },
+    {
+      "at_ms": 394000,
+      "node": "carol",
+      "command": "advert"
+    },
+    {
+      "at_ms": 396000,
+      "node": "dave",
+      "command": "advert"
+    },
+    {
+      "at_ms": 540000,
+      "node": "alice",
+      "command": "msg bob   msg_to_bob"
+    },
+    {
+      "at_ms": 570000,
+      "node": "alice",
+      "command": "msg carol msg_to_carol"
+    },
+    {
+      "at_ms": 600000,
+      "node": "alice",
+      "command": "msg dave  msg_to_dave"
+    }
+  ],
+  "expect": [
+    {
+      "type": "cmd_reply_contains",
+      "node": "alice",
+      "command": "msg bob",
+      "value": "sent"
+    },
+    {
+      "type": "cmd_reply_contains",
+      "node": "alice",
+      "command": "msg carol",
+      "value": "sent"
+    },
+    {
+      "type": "cmd_reply_contains",
+      "node": "alice",
+      "command": "msg dave",
+      "value": "sent"
+    }
+  ],
+  "_requires_plugins": [
+    "fw_topo"
+  ]
+}

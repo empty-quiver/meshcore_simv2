@@ -228,6 +228,25 @@ public:
             }
             return "ERROR: probes must be on/off";
         }
+        // Sweep knobs — runtime thresholds for experimentation
+        if (strncmp(cmd, "confidence ", 11) == 0) {
+            int v = atoi(cmd + 11);
+            if (v < 0 || v > 255) return "ERROR: confidence 0..255";
+            _mesh.topo_min_confidence = (uint8_t)v;
+            return "topo_min_confidence = " + std::to_string(v);
+        }
+        if (strncmp(cmd, "probecool ", 10) == 0) {
+            int v = atoi(cmd + 10);
+            if (v < 0) return "ERROR: negative";
+            _mesh.topo_post_send_cooldown_ms = (uint32_t)v * 1000UL;
+            return "topo_post_send_cooldown = " + std::to_string(v) + "s";
+        }
+        if (strncmp(cmd, "busyrate ", 9) == 0) {
+            int v = atoi(cmd + 9);
+            if (v < 0 || v > 255) return "ERROR: busyrate 0..255 pps";
+            _mesh.topo_busy_rate_pps = (uint8_t)v;
+            return "topo_busy_rate_pps = " + std::to_string(v);
+        }
 #endif
         if (strncmp(cmd, "advert", 6) == 0) {
             mesh::Packet* pkt = _mesh.createSelfAdvert(_mesh.getNodeName());
