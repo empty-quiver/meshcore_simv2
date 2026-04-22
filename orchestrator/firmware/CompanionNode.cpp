@@ -271,6 +271,24 @@ public:
             }
             return "ERROR: autoadjust on/off";
         }
+        if (strncmp(cmd, "penaltymode ", 12) == 0) {
+            const char* v = cmd + 12;
+            if (strcmp(v, "on") == 0 || strcmp(v, "1") == 0) {
+                _mesh.topo_penalty_mode = true;
+                return "penalty mode on (edge penalty on timeout)";
+            }
+            if (strcmp(v, "off") == 0 || strcmp(v, "0") == 0) {
+                _mesh.topo_penalty_mode = false;
+                return "penalty mode off (legacy suppression)";
+            }
+            return "ERROR: penaltymode on/off";
+        }
+        if (strncmp(cmd, "edgettl ", 8) == 0) {
+            int v = atoi(cmd + 8);
+            if (v < 10 || v > 86400) return "ERROR: edgettl 10..86400 seconds";
+            _mesh.topo_edge_ttl_ms = (uint32_t)v * 1000UL;
+            return "topo_edge_ttl = " + std::to_string(v) + "s";
+        }
 #endif
         if (strncmp(cmd, "advert", 6) == 0) {
             mesh::Packet* pkt = _mesh.createSelfAdvert(_mesh.getNodeName());
