@@ -247,6 +247,30 @@ public:
             _mesh.topo_busy_rate_pps = (uint8_t)v;
             return "topo_busy_rate_pps = " + std::to_string(v);
         }
+        if (strncmp(cmd, "multipath ", 10) == 0) {
+            int v = atoi(cmd + 10);
+            if (v < 1 || v > 4) return "ERROR: multipath 1..4";
+            _mesh.topo_multipath_count = (uint8_t)v;
+            return "topo_multipath_count = " + std::to_string(v);
+        }
+        if (strncmp(cmd, "maxprobehops ", 13) == 0) {
+            int v = atoi(cmd + 13);
+            if (v < 0 || v > 8) return "ERROR: maxprobehops 0..8";
+            _mesh.topo_max_probe_hops = (uint8_t)v;
+            return "topo_max_probe_hops = " + std::to_string(v);
+        }
+        if (strncmp(cmd, "autoadjust ", 11) == 0) {
+            const char* v = cmd + 11;
+            if (strcmp(v, "on") == 0 || strcmp(v, "1") == 0) {
+                _mesh.topo_auto_adjust = true;
+                return "auto-adjust enabled (graph size → min_confidence)";
+            }
+            if (strcmp(v, "off") == 0 || strcmp(v, "0") == 0) {
+                _mesh.topo_auto_adjust = false;
+                return "auto-adjust disabled";
+            }
+            return "ERROR: autoadjust on/off";
+        }
 #endif
         if (strncmp(cmd, "advert", 6) == 0) {
             mesh::Packet* pkt = _mesh.createSelfAdvert(_mesh.getNodeName());
