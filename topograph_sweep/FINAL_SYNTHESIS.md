@@ -20,7 +20,35 @@ All CSVs and per-sweep analyses live in `/tmp/sweep_v{7,8,9,10}.csv`, `/tmp/swee
 
 ---
 
-## Shipping recommendation (unchanged across all sweeps)
+## ⚠ Revised shipping recommendation (after adversarial review)
+
+**DO NOT ship `passive_c120` as default yet. Ship it as an opt-in flag.**
+
+An independent adversarial Opus review of all 27,910 runs (see `OPUS_ADVERSARIAL_REVIEW.md`) pooled every paired delta across v7 + v9 + v10 + dynamic + dynamic-realistic (1,918 non-ring comparisons). The pooled `passive_c120` delivery delta is **+0.06 pp, 95% CI [-0.12, +0.25], p = 0.51** — statistically indistinguishable from zero. Median delta is exactly 0.00, with 87.9% of runs showing exactly-zero paired delta (baseline saturation).
+
+Zero positive `passive_c120` findings survive Bonferroni or BH-FDR correction in any sweep. The one CI-clear dynamic finding (gdansk ttl_short +3.20 pp) had uncorrected p = 0.056, failed BH-FDR across cells (p_adj = 0.90 restricting to non-c40), and did not replicate under realistic traffic (dropped to +1.43 pp, CI crosses zero).
+
+Further: the sim baseline is a strawman. Stock MeshCore handsets recover from a dead-cache path in ~30-45s via app-layer `CMD_RESET_PATH` + retries; the sim doesn't model this. The current recommendation is therefore being tested against a pathologically weak baseline.
+
+**What this means:** the v7-v10 and dynamic sweeps demonstrate passive_c120 is *safe* (never significantly harmful outside rings) — but not that it is *beneficial* in any reliable way. The evidence base is consistent with the null hypothesis that passive_c120 has no real effect.
+
+**Still recommended (survives adversarial review):**
+- The c40 prohibition (cliff regressions of 10-53 pp, survives all corrections)
+- The ring-topology limitation as a documented known issue
+- The probes + multipath retractions (both dead as retracted by v9)
+- The `probes_on == probes_c120` firmware bug flag (real issue worth fixing)
+
+**Gated on new work before flipping the default:**
+1. Validate sim against at least one real MeshCore MQTT packet capture
+2. Rerun dynamic sweep against a *fixed* baseline (add path TTL + CMD_RESET_PATH-on-timeout + one retry)
+3. Pre-register pass/fail criteria (including multiple-comparison correction) for the decisive sweep
+4. Null-case sanity check (run sweeps with feature compiled-in but flag-off) to verify the CI machinery is honest
+
+If passive_c120 still shows a CI-clear benefit over a properly-strengthened baseline with multiple-comparison correction, ship it then. Until then, ship behind a flag.
+
+---
+
+## Original (pre-adversarial-review) shipping recommendation
 
 **Ship `passive_c120` as default**: confidence threshold 120, probes off, multipath 1, edge TTL 30 minutes (1800s), penalty mode on.
 
