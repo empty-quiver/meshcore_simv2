@@ -1,158 +1,187 @@
-# TopoGraph Parameter Sweep — Final Synthesis (v7 + v8 + v9 + v10)
+# TopoGraph Full Synthesis — Static + Dynamic + Realistic Traffic
 
-Four complementary sweeps run end-to-end over ~4 hours on the Lambda Vector (28 workers):
+Single document tying together 7 sweep campaigns, 27,191 simulation runs total, on synthetic + real-derived topologies under both static and dynamic propagation, with both single-pair and multi-pair bursty traffic models. Supersedes `FINAL_SYNTHESIS.md` (which covered only the first 4 sweep campaigns).
 
-| Sweep | Purpose | Rows | Topologies | Features | Seeds |
-|---|---|---:|---|---|---|
-| v7 | Wide topology sensitivity | 7,200 | 40 synthetic (chains, grids, stars, dstars, trees, rings, clusters, spurs) | 6 curated | 5 |
-| v8 | Dense factorial / ANOVA | 8,190 | 10 representative | 91 auto-generated (C × mp × pen × h) | 3 |
-| v9 | Seed-heavy precision | 4,480 | 8 key | 7 candidates | 20 |
-| v10 | Real-topology validation | 60 | 3 regions (Gdansk, SEAPDX, MANH) | 4 finalists | 5 |
+## Sweep campaign inventory
 
-All analyses authored by background subagents; raw CSVs and per-sweep reports preserved:
-- `/tmp/sweep_v{7,8,9,10}.csv`
-- `/tmp/v7_full_analysis.md`, `/tmp/v8_factorial_analysis.md`, `/tmp/v9_precision_analysis.md`, `/tmp/v10_realtopo_analysis.md`
+| Sweep | Purpose | Rows | Regions / Topologies | Features | Seeds | Propagation | Traffic |
+|---|---|---:|---|---|---|---|---|
+| v6p1/v6p2 | ANOVA exploration | 250 / 115 | representative subset | varied | 3-5 | static | single-pair |
+| v7 | Wide topology sensitivity | 7,200 | 40 synthetic | 6 | 5 | static | single-pair |
+| v8 | Dense factorial ANOVA | 8,190 | 10 representative | 91 auto-generated | 3 | static | single-pair |
+| v9 | Seed-heavy precision | 4,480 | 8 | 7 | 20 | static | single-pair |
+| v10 | Real-topology validation | 60 | 3 real regions | 4 | 5 | static | single-pair |
+| dynamic base | Dynamic-topology first test | 560 | 4 (1 synthetic + 3 real) | 7 | 20 | **dynamic** (drift/shadow/fade every 12s) | single-pair |
+| dynamic realistic | Dynamic + contention | 420 | 3 real | 7 | 20 | dynamic | **multi-pair bursty + channel broadcasts** |
+
+Total: ~26,800 simulation runs across seven campaigns. Sim runtime: ~6-7 hours wall-clock on 28-worker Lambda Vector.
+
+All CSVs and per-sweep analyses live in `/tmp/sweep_v{7,8,9,10}.csv`, `/tmp/sweep_dynamic.csv`, `/tmp/sweep_dynamic_realistic.csv`, with companion markdown analyses for each.
 
 ---
 
-## Shipping recommendation: `passive_c120` / `p2_c120`
+## Shipping recommendation (unchanged across all sweeps)
 
-**Single default.** Strict confidence (threshold = 120), no probes, no multipath, penalty-mode = default (no-op at strict conf).
+**Ship `passive_c120` as default**: confidence threshold 120, probes off, multipath 1, edge TTL 30 minutes (1800s), penalty mode on.
 
-Equivalent CLI state:
-```
-confidence 120
-probes off
-multipath 1
-```
+The recommendation survives every sweep:
 
-This recommendation survives every independent test:
-
-| Sweep | Evidence |
+| Sweep | Evidence supporting passive_c120 default |
 |---|---|
-| v7 | 234/240 non-ring scenarios at delta_pp in [-6.67, +14.67], median 0, mean +0.04pp. Never regresses >1.1pp outside of rings. Best single topology: chain_15 +1.78pp. |
-| v8 | Main-effect ANOVA: confidence saturates at ~101 (c105 = c120 = c160, all equivalent). `c120_mp1_pen1_h0` is within 0.5pp of the global best 4-tuple, at lower variance and lower radio cost. |
-| v9 | 20-seed paired CI: 0/32 cells significantly negative, 1/32 significantly positive. Pooled CI lower bound > -3.65pp on every topology. Median radio overhead +0.45%. |
-| v10 | 3/3 real regions: delta CI lower bound ≥ 0 (gdansk +0.80pp, seapdx +0.40pp, manh +0.40pp). Zero per-seed regressions across 15 region-seed pairs. Radio cost < 1.5%. |
+| v7 | 234/240 non-ring scenarios with delta_pp in [-6.67, +14.67], median 0, mean +0.04pp |
+| v8 | Confidence saturates at ~101 (c105=c120=c160 equivalent); best 4-tuple within 0.5pp of this |
+| v9 | 0/32 cells significantly negative, 1/32 significantly positive (chain_15 heavy/medium); pooled CI lower bound > -3.65pp on every topology |
+| v10 | +0.40 to +0.80pp on all 3 real regions, CI lower bound ≥ 0 on each, radio cost < 1.5% |
+| dynamic base | All CIs include zero across 4 regions — harmless, never significantly positive or negative |
+| dynamic realistic | All CIs include zero — same pattern, resilient to traffic-mix change |
+
+The story is consistent: passive_c120 is a **safe but modest** upgrade over baseline. It never significantly hurts anywhere outside rings. It's positive on some topology classes and neutral on others. It's not a transformative improvement.
 
 ---
 
-## Retractions (features we thought worked but don't)
+## Retractions (features that looked promising but weren't)
 
-### `p2_c120_h2` (probes hop-2) as a tree / backbone alternate
-v7 5-seed: `tree_d4f2 +9.8pp`, `tree_d3f3 +5.4pp` — these looked like a clear probe win for tree topologies.
-**v9 with 20 seeds:** all four `tree_d3f2` cells pool to **-3.13 to -3.44pp**. The v7 tree result did not replicate. v10 real-topology: probes lose 2.8-4.0pp mean on Gdansk/SEAPDX, with seapdx CI firmly negative [-8.0, -1.2].
+### `p2_c120_h2` (adaptive probes, hop cap 2)
+- **v7 claim:** +5.4pp on tree_d3f3, +9.8pp on tree_d4f2 (5 seeds)
+- **v9 refutation:** all tree_d3f2 cells pooled to -3.1 to -3.4pp with 20 seeds
+- **Dynamic confirmation:** 0/3 real regions with CI>0 on either base or realistic traffic
+- **Verdict:** dead. Probes do not help on static or dynamic topologies; tree win was a 5-seed fluke.
 
-Net: probes are not a safe default **anywhere** demonstrated. Kill the tree-alternate-mode recommendation.
+### Multipath (`mp2`, `mp3`)
+- **v7/v8 main effect:** never statistically significant (p > 0.3 in ANOVA main effects)
+- **v9 refutation:** mp2 vs c120 — 0/32 sig-positive. mp3 vs c120 — 0/32 sig-positive. mp3 vs mp2 — 0/32 sig-positive.
+- **Verdict:** dead. Remove from codebase.
 
-### `p2_c120_mp2` / `p2_c120_mp3` (multipath K=2 / K=3)
-v7 + v8 main effect: mp was never statistically significant (p > 0.3 everywhere).
-**v9 with 20 seeds:** mp2 vs c120 — 0/32 cells significantly positive. mp3 vs c120 — 0/32 sig-positive. mp3 vs mp2 — 0/32 sig-positive.
-
-Net: multipath gains nothing over single-path at strict confidence. **Remove the feature.**
-
-### `p2_c40` / `p2_c40_penalty_off` (loose confidence)
-v7: sharp cliff at chain length 8 (-18.7pp), grid 3x3 diagonal (-17pp), scaling to -52pp on grid_6x6.
-v8: conf × topology interaction F=13.81, p=1.4e-79. penalty-off mitigates (-7 to -14pp) but does not remove the cliff.
-v9: confirms and broadens — significantly negative on 10/16 pooled cells.
-
-Net: loose-conf modes **must not ship** as user-facing options. Keep only for debug.
+### Loose confidence (`c40` family)
+- **v7/v8:** cliff at chain length 8 (-18pp) and grid size 3×3 diagonal (-17pp), scaling to -53pp on grid_6x6
+- **v9:** sig-negative on 10/16 pooled cells
+- **Dynamic:** -7 to -18pp on all regions (also sig-negative, by floor effect under contention)
+- **Verdict:** must never ship. Debug mode only.
 
 ---
 
-## Known limitation: ring topologies
+## The dynamic-topology story (new since v10)
 
-v7 surfaces a structural failure mode not seen in the partial data:
+The big question that emerged from v10: "our sims are all static; what happens when RF conditions change mid-run?"
 
-| Feature | ring_6 mean delta | ring_10 mean delta |
-|---|---:|---:|
-| p2_c120 | -14.06pp | -9.17pp |
-| p2_c120_mp2 | -14.83pp | -12.83pp |
-| p2_c120_h2 | **-27.17pp** | -5.06pp |
+### Baseline MeshCore's hidden weakness
 
-Any TopoGraph-assisted mode hurts rings. Cause is structural: with symmetric ring topology both "directions" look equally good, the algorithm commits to one, and the committed path has lower resilience than flooding. No strict-confidence variant helps.
+Subagent analysis of the stock firmware (`/tmp/stock_firmware_dynamic_topo.md`) revealed:
 
-**Action:** document as a known limitation. If budget permits, add runtime ring detection + fall back to baseline flood for ring-like subgraphs. Non-blocking for shipping — real-world deployments are not ring-dominated (v10 regions all benefited from passive_c120).
+- Path cache has **no TTL**. Once cached, a path lives forever unless manually reset.
+- Firmware has **zero retries** on ACK timeout. Retries are entirely the app's responsibility.
+- `onSendTimeout()` is a no-op. No penalty, no flag, no re-flood trigger.
+- Recovery from "cached path through dead repeater" requires the app to explicitly call `CMD_RESET_PATH`. Without it, every future message routes into the void.
+
+This reframes TopoGraph's value proposition: it's the piece that lets baseline relax its "fixed infrastructure" assumption.
+
+### What the dynamic sweeps actually showed
+
+The dynamic sweeps added mid-run RF variability: every 12s, a random link either drifts (±3 dB persistent), gets shadowed (-10 dB for 60-120s), or deep-fades (-22 dB for 30-90s — link effectively dead). Event parity was identical across features (~71 events/run on all real regions).
+
+**Base traffic (single-pair alice→bob):**
+- Baseline delivery dropped to 36-44% across the 3 real regions (vs 37-48% static on v10).
+- passive_c120 remains inert: all 3 region CIs include zero.
+- passive_c120_ttl_short showed one CI-clean win on gdansk: **+3.20pp [CI +0.30, +6.30]** — but did NOT replicate on seapdx or manh (both CIs cross zero).
+- Probes remain retracted (v9 finding confirmed under dynamics).
+
+**Realistic traffic (7 pairs × 3 sessions × 4 msgs = 84 unicasts + 46 channel broadcasts):**
+- Baseline drops a further 3.9-6.6pp across regions (CIs exclude zero) — contention tax.
+- gdansk ttl_short CI-significance **did not replicate**: +3.20pp became +1.43pp [CI -0.89, +3.75].
+- seapdx passive_c120_ttl_long became the strongest candidate: **+2.32pp [CI +0.00, +4.64]** — CI lower bound touches zero, best airtime of any variant (-84.94 tx per delivered message).
+- TopoGraph variants drop ~1pp less than baseline on 11 of 12 c120 cells under contention. Directional support for path-cache-thrashing resilience, never CI-clear.
+
+### Honest read of dynamic sweeps
+
+The dynamic sweeps did **not** upgrade the shipping recommendation. No feature wins CI-clearly across multiple regions under either traffic model. The one CI-significant finding (gdansk ttl_short) did not replicate:
+- Same scenario, different regions: doesn't replicate.
+- Same regions, different traffic: doesn't replicate.
+- 1-of-4 replications is not evidence for a general effect.
+
+What the sweeps **did** support:
+- passive_c120 is never harmful on dynamic topologies (still CI-clean).
+- Seapdx (1076-node mesh) has a small consistent airtime-efficiency win for any c120 variant.
+- edge_ttl may be worth exposing as a runtime knob (gdansk/manh like short; seapdx likes long).
 
 ---
 
-## Firmware bug to investigate
+## Known limitations
 
-v10 observation: `probes_on` and `probes_c120` produce **numerically identical** output in every single (region, seed) cell — same delivered, radio_tx, collisions, wall_s.
+1. **Ring topologies regress** — any TopoGraph variant loses 14-27pp on ring_6 and 9-12pp on ring_10. Structural issue (algorithm commits to one direction when both look equally good). Recommended mitigation: document as known limitation and investigate ring-detection heuristic. Non-blocking for shipping since real-world deployments are not ring-dominated.
 
-Interpretation: when `probes on` is set, the `confidence 120` flag has no effect. Either probes override confidence or the code path is dead. This is worth a firmware-team look even though probes aren't shipping — it means the feature-gating for probes+c120 is not working as the simv2 config sheet implies.
+2. **Sim model unvalidated against real-world packet captures.** ITM/SRTM propagation + our MAC sim is the best we have, but until we see captures from real deployments, we can't confirm that delivery rates, event rates, or feature deltas match reality. User noted MQTT Boston access is forthcoming.
 
-File the issue; don't block on it.
+3. **Traffic model is simpler than real.** Realistic sweep adds multi-pair bursty chat, but still no:
+   - App-layer retries (stock MeshCore apps retry 3× on timeout — we don't simulate this)
+   - GPS/location beacons
+   - Dynamic channel joins/leaves
+   - Node mobility beyond link SNR variation
+
+4. **Firmware bug flagged, not fixed.** `probes_on` and `probes_c120` produced numerically identical output in v10 — the `confidence 120` flag appears to be a no-op when probes are enabled. Worth investigating but not blocking.
+
+5. **No multiple-comparison correction.** Across 27k+ runs and hundreds of cells, some CI-significant findings are expected by chance alone. This synthesis treats individual CI-significant results as suggestive, not conclusive — the pattern across sweeps is what matters.
 
 ---
 
-## Confidence threshold saturation (v8 discovery)
+## Confidence threshold saturation (v8 finding worth repeating)
 
-The v8 factorial revealed that the 5-level confidence factor effectively collapses into **2 bins**:
+The 5-level confidence factor (40, 100, 105, 120, 160) collapses into 2 effective bins:
 
 | Bin | Levels | Behavior |
 |---|---|---|
-| Loose | 40, 100 | Accept unknown-edge paths. Cliff at chain≥8 / grid≥3x3. |
+| Loose | 40, 100 | Accept unknown-edge paths. Cliff at chain≥8 / grid≥3×3. |
 | Strict | 105, 120, 160 | Reject unknown-edge paths. Safe on all non-ring topologies. |
 
-The transition is at confidence value 101. This is an artifact of `SNR_UNKNOWN = 100` in the encoding: any threshold ≤ 100 accepts unknown-SNR edges; any threshold ≥ 101 rejects them.
+Transition at confidence=101 (SNR_UNKNOWN=100 is rejected for any threshold ≥ 101).
 
-Product implication: there is no benefit to exposing a `confidence` slider to users. Ship a single "TopoGraph: on/off" toggle. Internally this maps to confidence=120 when on, and no topograph routing at all when off.
-
----
-
-## Radio overhead summary
-
-| Feature | Mean radio delta | Max radio delta | Worth it? |
-|---|---:|---:|---|
-| passive_c120 | +2.7% (v7), +0.45% (v9 median), <1.5% (v10) | +14.5% worst | Yes — modest cost, guaranteed non-regression |
-| passive_c120 + probes_h2 | +6.25% mean, +19.3% max | +103 tx abs | No — does not replicate delivery wins |
-| multipath_c120 | +3.55% mean | +19.6% max | No — zero delivery benefit |
-| c40 (loose) | -6.4% mean (floods suppressed before route confirmed) | — | No — "savings" proportional to delivery loss |
-
-The shipping default's radio overhead is under 2% in every measurement — well below noise floor for real meshes.
+**Product implication:** ship a binary "TopoGraph: on/off" toggle rather than a confidence slider. Internally: confidence=120 when on, no topo routing when off.
 
 ---
 
-## Per-topology-class summary (from v7)
+## Current shipping firmware defaults (as of 2026-04-23)
 
-| Class | Baseline | Best feature | Verdict |
-|---|---:|---|---|
-| chain_short (3-7) | 95-100% | all tie near 0 | `passive_c120` safe, no gain needed |
-| chain_long (8-25) | 69-94% | `passive_c120` +0.19pp mean | `passive_c120` |
-| grid_diag | 89-99% | `passive_c120` +0.34pp | `passive_c120` |
-| grid_nodiag | 77-82% | `passive_c120` -0.52pp (best of bad choices) | `passive_c120` (probes are toxic here) |
-| star / dstar | 97-100% | all tie at 0 | `passive_c120` no-op |
-| tree | 75-95% | `passive_c120_h2` +5-10pp **in v7** but **-3pp in v9** | `passive_c120` (v7 tree win did not replicate) |
-| ring | 73-82% | **all hurt** | baseline (structural limitation) |
-| cluster | 77-88% | `passive_c120_h2` marginal +1.2pp; variance wide | `passive_c120` (safer) |
-| spurs (chain6_spurs) | 38% | `passive_c120_h2` +1.04pp | `passive_c120` (v9 retraction applies) |
-
----
-
-## What the knobs do (final)
-
-| CLI | Recommended ship value | Why |
+| Knob | Default | Source |
 |---|---|---|
-| `confidence` | 120 | Strict; rejects unknown-edge paths. Anything 105-160 is equivalent. |
-| `probes on/off` | off | High variance, real-topology CI firmly negative on seapdx. |
-| `multipath` | 1 | Never statistically significant in 20-seed testing. |
-| `penaltymode` | default (on) | No effect at strict confidence; left on so loose-mode debuggers see intended behavior. |
-| `edgettl` | 1800 (30min) | Not directly re-swept; prior v3 evidence shows 30min is the sweet spot. |
-| `autoadjust` | off | Not swept here. Keep off until explicitly tested. |
+| `topo_min_confidence` | **120** | synthesis recommendation (was 105, bumped per v7-v10) |
+| `topo_probes_enabled` | **off** | v9 retraction of tree-probe claim |
+| `topo_multipath_count` | **1** | v9 retraction of multipath |
+| `topo_max_probe_hops` | 2 | dead at probes-off default |
+| `topo_edge_ttl_ms` | 1800s (30 min) | v3-v10 evidence; dynamic sweeps suggest exposing as knob |
+| `topo_penalty_mode` | on | no effect at strict confidence anyway |
+| `topo_auto_adjust` | off | not rigorously swept |
 
 ---
 
-## Budget note
+## What to ship
 
-Total compute: ~3h 45min wall-clock across 4 sweeps. Sweep2 parallelism of 28 workers gave ~16 effective cores of sim throughput. Each analysis agent took 2-5 min. Entire end-to-end pipeline — including the 4 subagent analyses and this synthesis — completed in ~4h with no human intervention after the initial "run the pipeline" kickoff.
+- Ship `passive_c120` as the default when TopoGraph is enabled.
+- Document ring topologies as a known limitation (consider ring detection later).
+- Expose `edge_ttl` as a runtime-configurable knob (default 1800s, 300s for high-churn profiles).
+- Keep probes and multipath in the codebase but off by default, undocumented for users.
+- File a firmware-side issue to investigate `probes_on` vs `probes_c120` identical output.
+- Ultimately: wait for real-world MeshCore MQTT traffic captures before making stronger claims about dynamic-topology benefit.
+
+## What NOT to ship
+
+- Do NOT ship loose confidence (c40) as a user-facing option.
+- Do NOT ship multipath (verified dead across 20-seed precision sweep).
+- Do NOT flip `probes on` by default; keep it as opt-in debug.
+- Do NOT claim "big dynamic-topology improvements" in release notes — the evidence shows *safety*, not *transformation*.
 
 ---
 
-## Open follow-ups (non-blocking)
+## For the record: what the sweeps don't prove
 
-1. **Ring-detection heuristic** — investigate adding runtime ring-subgraph detection and fallback to flood. Could be a companion-side topology invariant check during graph updates.
-2. **Probes firmware bug** — why does `confidence 120` + `probes on` produce the same output as just `probes on`? Dead code path or correct-but-surprising override?
-3. **Manh probes effect** — v10 shows probes_on +1.6pp on manh but CI crosses zero. A 20-seed re-run on just manh would resolve this. If real, may indicate probes help on specific real-world topology shapes (diameter > ~8 hops).
-4. **cluster_big high variance** — v9 flags it as the noisiest topology (26pp CI width even at n=20). Longer sim duration or more seeds would tighten conclusions there.
-5. **edge_ttl and autoadjust revisits** — both untouched in v7-v10; neither should block shipping but deserve targeted sweeps before turning `autoadjust` on by default.
+1. We don't have evidence TopoGraph meaningfully improves real-world user experience. Our wins are 0.4-0.8pp delivery deltas on real regions under static sims; the dynamic sweeps are compelling in theory but none of the non-default variants CI-clear across regions.
+
+2. We don't have packet captures validating our sim model. Until MQTT Boston data arrives, dynamic-topology conclusions are sim-predictions, not measurements.
+
+3. We haven't tested the scenarios most likely to reveal TopoGraph's true value: long-running chat between two specific nodes over many messages (path cache staying warm), mobile repeaters (tested indirectly via variability, not directly), app-layer retries (would increase the cost of baseline's dead-cache failures).
+
+## Future work
+
+1. **Mobile repeater scenario** (scoped in `/tmp/DYNAMIC_TOPO_AB_PLAN.md`). Needs offline ITM waypoint compute. ~6-8h effort. Would directly test the value prop.
+2. **App-retry emulation**: schedule each message 3× with backoff OR add explicit Lua event hook. Would make baseline's dead-cache cost realistic (and probably make TopoGraph look better).
+3. **Ring detection**: runtime heuristic to fall back to baseline flood for ring-subgraphs. Would eliminate the one known delivery regression.
+4. **MQTT Boston calibration**: once packet captures are available, rerun dynamic sweep with sim workloads tuned to match observed real-world traffic patterns. Validates or refutes the whole story.
+5. **Opus adversarial review**: see `/tmp/OPUS_ADVERSARIAL_REVIEW.md` for an independent skeptical read of all sweep evidence.

@@ -1,0 +1,6139 @@
+{
+  "_source": "manh realistic traffic variant (bursty multi-pair + dense channel)",
+  "simulation": {
+    "duration_ms": 900000,
+    "step_ms": 4,
+    "warmup_ms": 5000,
+    "hot_start": true,
+    "radio": {
+      "sf": 8,
+      "bw": 62500,
+      "cr": 4
+    }
+  },
+  "nodes": [
+    {
+      "name": "APODublin",
+      "role": "repeater",
+      "lat": 42.8989,
+      "lon": -72.0679
+    },
+    {
+      "name": "Concord_MA__MQTT",
+      "role": "repeater",
+      "lat": 42.474,
+      "lon": -71.3146
+    },
+    {
+      "name": "DOV__MED_Border",
+      "role": "repeater",
+      "lat": 42.2156,
+      "lon": -71.2733
+    },
+    {
+      "name": "GRF__Observer",
+      "role": "repeater",
+      "lat": 42.178,
+      "lon": -71.6671
+    },
+    {
+      "name": "BEDTree_Router",
+      "role": "repeater",
+      "lat": 42.9403,
+      "lon": -71.4938
+    },
+    {
+      "name": "CONPunkatasset",
+      "role": "repeater",
+      "lat": 42.4793,
+      "lon": -71.3388
+    },
+    {
+      "name": "Balch_Street_Repeate",
+      "role": "repeater",
+      "lat": 42.5631,
+      "lon": -70.8867
+    },
+    {
+      "name": "CRM_NotDeployed",
+      "role": "repeater",
+      "lat": 43.3638,
+      "lon": -71.5524
+    },
+    {
+      "name": "MALBellrock",
+      "role": "repeater",
+      "lat": 42.4206,
+      "lon": -71.0672
+    },
+    {
+      "name": "Bradford_Repeater",
+      "role": "repeater",
+      "lat": 42.7674,
+      "lon": -71.0762
+    },
+    {
+      "name": "RWNL_Base",
+      "role": "repeater",
+      "lat": 43.0159,
+      "lon": -71.598
+    },
+    {
+      "name": "CON1WBoostah",
+      "role": "repeater",
+      "lat": 42.4803,
+      "lon": -71.3205
+    },
+    {
+      "name": "BRK__CoolidgeCnr_09",
+      "role": "repeater",
+      "lat": 42.3382,
+      "lon": -71.1221
+    },
+    {
+      "name": "COMSAX__Poems",
+      "role": "repeater",
+      "lat": 42.296,
+      "lon": -71.4008
+    },
+    {
+      "name": "DUDE2_RPT",
+      "role": "repeater",
+      "lat": 42.4363,
+      "lon": -71.1781
+    },
+    {
+      "name": "njcrepeater",
+      "role": "repeater",
+      "lat": 42.5886,
+      "lon": -71.2843
+    },
+    {
+      "name": "BXFD__Wood_Hill",
+      "role": "repeater",
+      "lat": 42.6904,
+      "lon": -71.0575
+    },
+    {
+      "name": "BXFD__Wood_Hill_2",
+      "role": "repeater",
+      "lat": 42.6904,
+      "lon": -71.0575
+    },
+    {
+      "name": "HNMCSOLARUNC2GT",
+      "role": "repeater",
+      "lat": 42.9846,
+      "lon": -71.5875
+    },
+    {
+      "name": "FBGElizabeth_St_Sout",
+      "role": "repeater",
+      "lat": 42.5756,
+      "lon": -71.7974
+    },
+    {
+      "name": "SLM__NHMesh_UTR_Exit",
+      "role": "repeater",
+      "lat": 42.7782,
+      "lon": -71.2578
+    },
+    {
+      "name": "Brookline",
+      "role": "repeater",
+      "lat": 42.3309,
+      "lon": -71.1195
+    },
+    {
+      "name": "K1UHV_Solar",
+      "role": "repeater",
+      "lat": 42.4806,
+      "lon": -71.0908
+    },
+    {
+      "name": "WEL__West",
+      "role": "repeater",
+      "lat": 42.291,
+      "lon": -71.3107
+    },
+    {
+      "name": "RAK4631_Repeater",
+      "role": "repeater",
+      "lat": 42.0771,
+      "lon": -71.0729
+    },
+    {
+      "name": "Westboro_Fay_Repeate",
+      "role": "repeater",
+      "lat": 42.2427,
+      "lon": -71.6364
+    },
+    {
+      "name": "GeorgetownMARoom",
+      "role": "repeater",
+      "lat": 42.7316,
+      "lon": -70.995
+    },
+    {
+      "name": "SHR__Moose_Hill",
+      "role": "repeater",
+      "lat": 42.124,
+      "lon": -71.2136
+    },
+    {
+      "name": "TJTacoRepeater",
+      "role": "repeater",
+      "lat": 42.4635,
+      "lon": -71.2887
+    },
+    {
+      "name": "COMSAX__All_Welcome",
+      "role": "repeater",
+      "lat": 42.3158,
+      "lon": -71.3977
+    },
+    {
+      "name": "StarrHillMC",
+      "role": "repeater",
+      "lat": 43.6451,
+      "lon": -72.261
+    },
+    {
+      "name": "WES__Trolley_Line_Tr",
+      "role": "repeater",
+      "lat": 42.2789,
+      "lon": -71.5772
+    },
+    {
+      "name": "Hawks_Nest_Leicester",
+      "role": "repeater",
+      "lat": 42.2253,
+      "lon": -71.9013
+    },
+    {
+      "name": "NANDWeir_Hill",
+      "role": "repeater",
+      "lat": 42.6937,
+      "lon": -71.1048
+    },
+    {
+      "name": "SOM__Twin_City_Plaza",
+      "role": "repeater",
+      "lat": 42.3749,
+      "lon": -71.0854
+    },
+    {
+      "name": "CMB__Atto",
+      "role": "repeater",
+      "lat": 42.361,
+      "lon": -71.0962
+    },
+    {
+      "name": "Rumford",
+      "role": "repeater",
+      "lat": 43.2789,
+      "lon": -71.5058
+    },
+    {
+      "name": "Telegraph_Hill",
+      "role": "repeater",
+      "lat": 42.3045,
+      "lon": -70.9036
+    },
+    {
+      "name": "WDIT_Room_Server",
+      "role": "repeater",
+      "lat": 42.9778,
+      "lon": -71.6922
+    },
+    {
+      "name": "BIL__Fox_Hill",
+      "role": "repeater",
+      "lat": 42.5697,
+      "lon": -71.2516
+    },
+    {
+      "name": "New_Heltec_Repeater",
+      "role": "repeater",
+      "lat": 42.3573,
+      "lon": -71.1147
+    },
+    {
+      "name": "CAMNoCaLinearPkRpt",
+      "role": "repeater",
+      "lat": 42.3978,
+      "lon": -71.1351
+    },
+    {
+      "name": "Tyqre__Meshsmith_Pho",
+      "role": "repeater",
+      "lat": 42.1937,
+      "lon": -71.747
+    },
+    {
+      "name": "Woodside_Room",
+      "role": "repeater",
+      "lat": 42.5144,
+      "lon": -71.3857
+    },
+    {
+      "name": "vantor",
+      "role": "repeater",
+      "lat": 43.0649,
+      "lon": -70.9675
+    },
+    {
+      "name": "BRK_CP_MQTT",
+      "role": "repeater",
+      "lat": 42.3462,
+      "lon": -71.1314
+    },
+    {
+      "name": "ARL__LibraryNorth",
+      "role": "repeater",
+      "lat": 42.4161,
+      "lon": -71.1546
+    },
+    {
+      "name": "DPTSRV",
+      "role": "repeater",
+      "lat": 45.0424,
+      "lon": -73.1713
+    },
+    {
+      "name": "CambridgePort_MC",
+      "role": "repeater",
+      "lat": 42.3587,
+      "lon": -71.1057
+    },
+    {
+      "name": "NB__Goat_Hill",
+      "role": "repeater",
+      "lat": 42.1034,
+      "lon": -71.6297
+    },
+    {
+      "name": "NHMesh_Picohive_1",
+      "role": "repeater",
+      "lat": 42.7781,
+      "lon": -71.2579
+    },
+    {
+      "name": "NB__Hill_Street",
+      "role": "repeater",
+      "lat": 42.133,
+      "lon": -71.6717
+    },
+    {
+      "name": "BowfPeat",
+      "role": "repeater",
+      "lat": 42.2355,
+      "lon": -70.9954
+    },
+    {
+      "name": "CeylonMusk",
+      "role": "repeater",
+      "lat": 42.3587,
+      "lon": -71.0626
+    },
+    {
+      "name": "AUB__MINE_HILL",
+      "role": "repeater",
+      "lat": 42.9893,
+      "lon": -71.3376
+    },
+    {
+      "name": "ROSMeshCoreRepeater",
+      "role": "repeater",
+      "lat": 42.2817,
+      "lon": -71.1331
+    },
+    {
+      "name": "RandolphResRep01",
+      "role": "repeater",
+      "lat": 42.1501,
+      "lon": -71.0328
+    },
+    {
+      "name": "HamzLab_Galactic_Rep",
+      "role": "repeater",
+      "lat": 42.2988,
+      "lon": -71.3552
+    },
+    {
+      "name": "MaldenMesh_Devir_Par",
+      "role": "repeater",
+      "lat": 42.4204,
+      "lon": -71.084
+    },
+    {
+      "name": "MWMCR__RP2",
+      "role": "repeater",
+      "lat": 42.4557,
+      "lon": -71.0534
+    },
+    {
+      "name": "AUB__MA__Prospect__H",
+      "role": "repeater",
+      "lat": 42.1798,
+      "lon": -71.8543
+    },
+    {
+      "name": "FRE__SpruceSwamp",
+      "role": "repeater",
+      "lat": 42.9717,
+      "lon": -71.108
+    },
+    {
+      "name": "MWMCR__RP1",
+      "role": "repeater",
+      "lat": 42.4558,
+      "lon": -71.0529
+    },
+    {
+      "name": "Bow_RepeaterRed_Pine",
+      "role": "repeater",
+      "lat": 43.1506,
+      "lon": -71.5932
+    },
+    {
+      "name": "MBRCA_Quincy_Center",
+      "role": "repeater",
+      "lat": 42.2489,
+      "lon": -71.0095
+    },
+    {
+      "name": "LEXMeagherville",
+      "role": "repeater",
+      "lat": 42.4644,
+      "lon": -71.2413
+    },
+    {
+      "name": "NowRepeatMarlboroEas",
+      "role": "repeater",
+      "lat": 42.3553,
+      "lon": -71.4852
+    },
+    {
+      "name": "NBORO_Ellsworth",
+      "role": "repeater",
+      "lat": 42.3048,
+      "lon": -71.6388
+    },
+    {
+      "name": "GeorgetownMARoom_2",
+      "role": "repeater",
+      "lat": 42.7329,
+      "lon": -70.9938
+    },
+    {
+      "name": "WAT__Arsenal",
+      "role": "repeater",
+      "lat": 42.3676,
+      "lon": -71.166
+    },
+    {
+      "name": "BXFDMt_Eleanor",
+      "role": "repeater",
+      "lat": 42.6367,
+      "lon": -70.9934
+    },
+    {
+      "name": "WALSE_Room_Server",
+      "role": "repeater",
+      "lat": 42.3765,
+      "lon": -71.2145
+    },
+    {
+      "name": "HOP__TC_Repeater",
+      "role": "repeater",
+      "lat": 43.2105,
+      "lon": -71.7557
+    },
+    {
+      "name": "FBGWarren",
+      "role": "repeater",
+      "lat": 42.575,
+      "lon": -71.8024
+    },
+    {
+      "name": "tyqrePiMesh1W",
+      "role": "repeater",
+      "lat": 42.1939,
+      "lon": -71.7472
+    },
+    {
+      "name": "BRK__Coolidge_Park",
+      "role": "repeater",
+      "lat": 42.3465,
+      "lon": -71.131
+    },
+    {
+      "name": "tyqreobserver",
+      "role": "repeater",
+      "lat": 42.193,
+      "lon": -71.7477
+    },
+    {
+      "name": "MARL_Repeater",
+      "role": "repeater",
+      "lat": 42.3318,
+      "lon": -71.6065
+    },
+    {
+      "name": "NT4RAK4631_Repeater",
+      "role": "repeater",
+      "lat": 42.8673,
+      "lon": -71.0089
+    },
+    {
+      "name": "WPF5_Heltec_2",
+      "role": "repeater",
+      "lat": 43.0951,
+      "lon": -71.2662
+    },
+    {
+      "name": "FBGPH2",
+      "role": "repeater",
+      "lat": 42.5995,
+      "lon": -71.7883
+    },
+    {
+      "name": "spfldnet",
+      "role": "repeater",
+      "lat": 42.1154,
+      "lon": -72.5741
+    },
+    {
+      "name": "Squad_6",
+      "role": "repeater",
+      "lat": 42.313,
+      "lon": -71.3042
+    },
+    {
+      "name": "FOX__high",
+      "role": "repeater",
+      "lat": 42.0616,
+      "lon": -71.2859
+    },
+    {
+      "name": "QCY__Faxon_ParkHMart",
+      "role": "repeater",
+      "lat": 42.2386,
+      "lon": -70.9843
+    },
+    {
+      "name": "Steves_Braintree_Bri",
+      "role": "repeater",
+      "lat": 42.2274,
+      "lon": -71.0265
+    },
+    {
+      "name": "NorwellAccord_Park_1",
+      "role": "repeater",
+      "lat": 42.1961,
+      "lon": -70.9255
+    },
+    {
+      "name": "Waltham_900",
+      "role": "repeater",
+      "lat": 42.3716,
+      "lon": -71.2342
+    },
+    {
+      "name": "SOM__Teele_Square",
+      "role": "repeater",
+      "lat": 42.405,
+      "lon": -71.1286
+    },
+    {
+      "name": "MIL__Broken_Hills",
+      "role": "repeater",
+      "lat": 42.2241,
+      "lon": -71.052
+    },
+    {
+      "name": "ivmden_base_20",
+      "role": "repeater",
+      "lat": 43.0086,
+      "lon": -71.2475
+    },
+    {
+      "name": "SOM__LunarLander",
+      "role": "repeater",
+      "lat": 42.3967,
+      "lon": -71.1116
+    },
+    {
+      "name": "Norwell_Accord_Park",
+      "role": "repeater",
+      "lat": 42.1676,
+      "lon": -70.8844
+    },
+    {
+      "name": "Kendall_Square",
+      "role": "repeater",
+      "lat": 42.3627,
+      "lon": -71.0881
+    },
+    {
+      "name": "WEY_Lovell_Corner_V4",
+      "role": "repeater",
+      "lat": 42.196,
+      "lon": -70.9266
+    },
+    {
+      "name": "NAS__Downtown",
+      "role": "repeater",
+      "lat": 42.7601,
+      "lon": -71.4646
+    },
+    {
+      "name": "BRK_CP_MQTT_2",
+      "role": "repeater",
+      "lat": 42.3462,
+      "lon": -71.1314
+    },
+    {
+      "name": "DOV__Peabody",
+      "role": "repeater",
+      "lat": 42.222,
+      "lon": -71.2649
+    },
+    {
+      "name": "Telegraph_Hill_2",
+      "role": "repeater",
+      "lat": 42.3043,
+      "lon": -70.9051
+    },
+    {
+      "name": "HM_MESHTOP",
+      "role": "repeater",
+      "lat": 42.9699,
+      "lon": -71.2483
+    },
+    {
+      "name": "FOX__center",
+      "role": "repeater",
+      "lat": 42.0696,
+      "lon": -71.253
+    },
+    {
+      "name": "Concord_Attic_G2",
+      "role": "repeater",
+      "lat": 42.47,
+      "lon": -71.33
+    },
+    {
+      "name": "nhdeerfieldsouth",
+      "role": "repeater",
+      "lat": 43.0865,
+      "lon": -71.2415
+    },
+    {
+      "name": "Deerfield_NH_Chatroo",
+      "role": "repeater",
+      "lat": 43.0939,
+      "lon": -71.2397
+    },
+    {
+      "name": "MRL__1W_Repeater",
+      "role": "repeater",
+      "lat": 42.3275,
+      "lon": -71.6119
+    },
+    {
+      "name": "KlopRoom",
+      "role": "repeater",
+      "lat": 42.6389,
+      "lon": -71.2485
+    },
+    {
+      "name": "Francestown_NH",
+      "role": "repeater",
+      "lat": 42.9846,
+      "lon": -71.7623
+    },
+    {
+      "name": "BOS__Fort_Hill",
+      "role": "repeater",
+      "lat": 42.3277,
+      "lon": -71.0957
+    },
+    {
+      "name": "ARL__Nourse_Attic",
+      "role": "repeater",
+      "lat": 42.4257,
+      "lon": -71.1842
+    },
+    {
+      "name": "GOFN_Repeater",
+      "role": "repeater",
+      "lat": 42.9857,
+      "lon": -71.5919
+    },
+    {
+      "name": "STOW__Red_Acre",
+      "role": "repeater",
+      "lat": 42.4449,
+      "lon": -71.4824
+    },
+    {
+      "name": "SHRNorthMainOffCente",
+      "role": "repeater",
+      "lat": 42.1289,
+      "lon": -71.1763
+    },
+    {
+      "name": "NBORO__Edmund_Hill",
+      "role": "repeater",
+      "lat": 42.3323,
+      "lon": -71.6353
+    },
+    {
+      "name": "BOS__North_End",
+      "role": "repeater",
+      "lat": 42.3663,
+      "lon": -71.0545
+    },
+    {
+      "name": "StuckOnARoof",
+      "role": "repeater",
+      "lat": 42.4441,
+      "lon": -73.2354
+    },
+    {
+      "name": "SentientBeing__G2_Ro",
+      "role": "repeater",
+      "lat": 42.8147,
+      "lon": -70.8828
+    },
+    {
+      "name": "ACT__Center",
+      "role": "repeater",
+      "lat": 42.4856,
+      "lon": -71.4334
+    },
+    {
+      "name": "ARL__Nourse_Porch",
+      "role": "repeater",
+      "lat": 42.4257,
+      "lon": -71.1842
+    },
+    {
+      "name": "CMT_Francestown",
+      "role": "repeater",
+      "lat": 42.9991,
+      "lon": -71.8748
+    },
+    {
+      "name": "Lowell_Beta",
+      "role": "repeater",
+      "lat": 42.6446,
+      "lon": -71.3005
+    },
+    {
+      "name": "SycamoreRepeater",
+      "role": "repeater",
+      "lat": 42.6103,
+      "lon": -71.3828
+    },
+    {
+      "name": "ALSArtisans",
+      "role": "repeater",
+      "lat": 42.3602,
+      "lon": -71.1377
+    },
+    {
+      "name": "Zaos__RLAW",
+      "role": "repeater",
+      "lat": 42.7013,
+      "lon": -71.179
+    },
+    {
+      "name": "HUL__Allerton_Harbor",
+      "role": "repeater",
+      "lat": 42.3067,
+      "lon": -70.892
+    },
+    {
+      "name": "CMBHarvard1",
+      "role": "repeater",
+      "lat": 42.3737,
+      "lon": -71.1221
+    },
+    {
+      "name": "NMKT__Cushing_Rd",
+      "role": "repeater",
+      "lat": 43.0779,
+      "lon": -70.9232
+    },
+    {
+      "name": "ACT__Historic_Distri",
+      "role": "repeater",
+      "lat": 42.4893,
+      "lon": -71.4331
+    },
+    {
+      "name": "Meshbury",
+      "role": "repeater",
+      "lat": 42.3831,
+      "lon": -71.416
+    },
+    {
+      "name": "DENHDeerfield_NH_WPF",
+      "role": "repeater",
+      "lat": 43.0951,
+      "lon": -71.2662
+    },
+    {
+      "name": "WAT__Palfrey_Base",
+      "role": "repeater",
+      "lat": 42.3696,
+      "lon": -71.1826
+    },
+    {
+      "name": "WEL__Z_Branch",
+      "role": "repeater",
+      "lat": 42.3156,
+      "lon": -71.3172
+    },
+    {
+      "name": "ConcordAnnursnac001",
+      "role": "repeater",
+      "lat": 42.478,
+      "lon": -71.3951
+    },
+    {
+      "name": "Iirya2PMC",
+      "role": "repeater",
+      "lat": 42.9185,
+      "lon": -71.2852
+    },
+    {
+      "name": "CHE__HEMLOCK",
+      "role": "repeater",
+      "lat": 42.9589,
+      "lon": -71.254
+    },
+    {
+      "name": "FBGHollis",
+      "role": "repeater",
+      "lat": 42.6015,
+      "lon": -71.7793
+    },
+    {
+      "name": "Steves_ZaTree_2",
+      "role": "repeater",
+      "lat": 42.2233,
+      "lon": -71.0096
+    },
+    {
+      "name": "Superfund",
+      "role": "repeater",
+      "lat": 43.2077,
+      "lon": -71.5286
+    },
+    {
+      "name": "Steves_GBH_Peace_Pro",
+      "role": "repeater",
+      "lat": 42.2153,
+      "lon": -71.1119
+    },
+    {
+      "name": "CONGreatMeadows02",
+      "role": "repeater",
+      "lat": 42.4759,
+      "lon": -71.3178
+    },
+    {
+      "name": "CMB2__wwwBostonMesh",
+      "role": "repeater",
+      "lat": 42.3604,
+      "lon": -71.1025
+    },
+    {
+      "name": "RooiBoston",
+      "role": "repeater",
+      "lat": 42.3545,
+      "lon": -71.0635
+    },
+    {
+      "name": "CMB__Nano",
+      "role": "repeater",
+      "lat": 42.3614,
+      "lon": -71.097
+    },
+    {
+      "name": "BoxRepeater",
+      "role": "repeater",
+      "lat": 42.6907,
+      "lon": -71.0447
+    },
+    {
+      "name": "NMKT__AWV__RSRPT",
+      "role": "repeater",
+      "lat": 43.0648,
+      "lon": -70.9674
+    },
+    {
+      "name": "MAFOXBOROEDG04",
+      "role": "repeater",
+      "lat": 42.0851,
+      "lon": -71.2433
+    },
+    {
+      "name": "Hahbah_Hop",
+      "role": "repeater",
+      "lat": 42.5419,
+      "lon": -70.8833
+    },
+    {
+      "name": "HNMCMJ2SOLGT",
+      "role": "repeater",
+      "lat": 43.018,
+      "lon": -71.6
+    },
+    {
+      "name": "Steves_Mishko_tower1",
+      "role": "repeater",
+      "lat": 42.2326,
+      "lon": -71.0146
+    },
+    {
+      "name": "ConcordPunkatasset00",
+      "role": "repeater",
+      "lat": 42.4818,
+      "lon": -71.3477
+    },
+    {
+      "name": "MAY__Presidential",
+      "role": "repeater",
+      "lat": 42.4315,
+      "lon": -71.4438
+    },
+    {
+      "name": "ViPeR2__Rt20BosProvT",
+      "role": "repeater",
+      "lat": 42.2172,
+      "lon": -71.7774
+    },
+    {
+      "name": "ViPeR2__Rt20BosProvT_2",
+      "role": "repeater",
+      "lat": 42.2132,
+      "lon": -71.7872
+    },
+    {
+      "name": "The_Packet_Yeeter",
+      "role": "repeater",
+      "lat": 42.2178,
+      "lon": -71.8378
+    },
+    {
+      "name": "COH__Scituate_Hill",
+      "role": "repeater",
+      "lat": 42.2368,
+      "lon": -70.8291
+    },
+    {
+      "name": "BOW_NHREDPINE_1W",
+      "role": "repeater",
+      "lat": 43.1513,
+      "lon": -71.5939
+    },
+    {
+      "name": "Chandler_Hill",
+      "role": "repeater",
+      "lat": 42.2703,
+      "lon": -71.7874
+    },
+    {
+      "name": "SentientBeing__G2_Ro_2",
+      "role": "repeater",
+      "lat": 42.8139,
+      "lon": -70.8805
+    },
+    {
+      "name": "SNO_Repeater",
+      "role": "repeater",
+      "lat": 42.6146,
+      "lon": -71.3238
+    },
+    {
+      "name": "HOP__TC_Repeater_2",
+      "role": "repeater",
+      "lat": 43.2107,
+      "lon": -71.7556
+    },
+    {
+      "name": "BOW_NHREDPINE",
+      "role": "repeater",
+      "lat": 43.1506,
+      "lon": -71.5932
+    },
+    {
+      "name": "FBGHollis_2",
+      "role": "repeater",
+      "lat": 42.6015,
+      "lon": -71.7793
+    },
+    {
+      "name": "T114_DOT",
+      "role": "repeater",
+      "lat": 42.2946,
+      "lon": -71.0534
+    },
+    {
+      "name": "BzqRepeater",
+      "role": "repeater",
+      "lat": 42.377,
+      "lon": -71.1038
+    },
+    {
+      "name": "HUL__Allerton_Harbor_2",
+      "role": "repeater",
+      "lat": 42.3058,
+      "lon": -70.8925
+    },
+    {
+      "name": "BRK__CoolidgePark_MQ",
+      "role": "repeater",
+      "lat": 42.3465,
+      "lon": -71.1309
+    },
+    {
+      "name": "DUDE3_RPT",
+      "role": "repeater",
+      "lat": 42.4374,
+      "lon": -71.1779
+    },
+    {
+      "name": "WALSE_RPTR",
+      "role": "repeater",
+      "lat": 42.3761,
+      "lon": -71.2143
+    },
+    {
+      "name": "Dracut_Repeater",
+      "role": "repeater",
+      "lat": 42.6832,
+      "lon": -71.3424
+    },
+    {
+      "name": "Highlands_Repeater",
+      "role": "repeater",
+      "lat": 42.1736,
+      "lon": -71.0127
+    },
+    {
+      "name": "AUBMAProspect2",
+      "role": "repeater",
+      "lat": 42.1794,
+      "lon": -71.8536
+    },
+    {
+      "name": "AUB__MA__Prospect",
+      "role": "repeater",
+      "lat": 42.1798,
+      "lon": -71.8543
+    },
+    {
+      "name": "WOBURNwwwRagRockus",
+      "role": "repeater",
+      "lat": 42.4823,
+      "lon": -71.1628
+    },
+    {
+      "name": "BOS__Fenway",
+      "role": "repeater",
+      "lat": 42.3465,
+      "lon": -71.0908
+    },
+    {
+      "name": "ACT__Town_Center",
+      "role": "repeater",
+      "lat": 42.4856,
+      "lon": -71.4334
+    },
+    {
+      "name": "Crows_Nest",
+      "role": "repeater",
+      "lat": 42.9088,
+      "lon": -71.6456
+    },
+    {
+      "name": "OWD__Norwood_Airport",
+      "role": "repeater",
+      "lat": 42.1867,
+      "lon": -71.1777
+    },
+    {
+      "name": "IanTestRepeater",
+      "role": "repeater",
+      "lat": 42.1798,
+      "lon": -71.8543
+    },
+    {
+      "name": "XDG4_Repeater",
+      "role": "repeater",
+      "lat": 42.6219,
+      "lon": -71.321
+    },
+    {
+      "name": "LOWPRWM1W1",
+      "role": "repeater",
+      "lat": 42.6292,
+      "lon": -71.3225
+    },
+    {
+      "name": "NCB1__Newton_Corner",
+      "role": "repeater",
+      "lat": 42.3542,
+      "lon": -71.1845
+    },
+    {
+      "name": "MAR__Pisgah__Peak",
+      "role": "repeater",
+      "lat": 42.36,
+      "lon": -71.6612
+    },
+    {
+      "name": "JP__Forest_Hills_Rep",
+      "role": "repeater",
+      "lat": 42.2961,
+      "lon": -71.1108
+    },
+    {
+      "name": "Dead",
+      "role": "repeater",
+      "lat": 42.4043,
+      "lon": -71.2972
+    },
+    {
+      "name": "DPTRPT",
+      "role": "repeater",
+      "lat": 45.0424,
+      "lon": -73.1722
+    },
+    {
+      "name": "FBGElizabeth_St_nort",
+      "role": "repeater",
+      "lat": 42.5761,
+      "lon": -71.7974
+    },
+    {
+      "name": "East_Somerville_CatD",
+      "role": "repeater",
+      "lat": 42.3862,
+      "lon": -71.0804
+    },
+    {
+      "name": "OWD__Neponset_River",
+      "role": "repeater",
+      "lat": 42.1872,
+      "lon": -71.1636
+    },
+    {
+      "name": "Mosscap",
+      "role": "repeater",
+      "lat": 42.2599,
+      "lon": -71.8019
+    },
+    {
+      "name": "LEXWhippleMNK",
+      "role": "repeater",
+      "lat": 42.4429,
+      "lon": -71.1828
+    },
+    {
+      "name": "GRF__Parker_Preserve",
+      "role": "repeater",
+      "lat": 42.1778,
+      "lon": -71.6664
+    },
+    {
+      "name": "FBGWallace",
+      "role": "repeater",
+      "lat": 42.5852,
+      "lon": -71.8013
+    },
+    {
+      "name": "BRK__CoolidgePark_MQ_2",
+      "role": "repeater",
+      "lat": 42.3462,
+      "lon": -71.1314
+    },
+    {
+      "name": "WAL__Walpole_Repeate",
+      "role": "repeater",
+      "lat": 42.15,
+      "lon": -71.23
+    },
+    {
+      "name": "BURSouthWest2",
+      "role": "repeater",
+      "lat": 42.4789,
+      "lon": -71.225
+    },
+    {
+      "name": "9Volt_test",
+      "role": "repeater",
+      "lat": 42.16,
+      "lon": -70.9339
+    },
+    {
+      "name": "FBGMTA",
+      "role": "repeater",
+      "lat": 42.5812,
+      "lon": -71.7931
+    },
+    {
+      "name": "Furnace_Brook_Parkwa",
+      "role": "repeater",
+      "lat": 42.2621,
+      "lon": -70.9977
+    },
+    {
+      "name": "Dude2_Repeater",
+      "role": "repeater",
+      "lat": 42.4377,
+      "lon": -71.1777
+    },
+    {
+      "name": "SOM__WOB",
+      "role": "repeater",
+      "lat": 42.3986,
+      "lon": -71.1187
+    },
+    {
+      "name": "FRA__Gibbs",
+      "role": "repeater",
+      "lat": 42.3316,
+      "lon": -71.4822
+    },
+    {
+      "name": "BOW_NHRED_PINE",
+      "role": "repeater",
+      "lat": 43.1513,
+      "lon": -71.5939
+    },
+    {
+      "name": "RPTRFTP",
+      "role": "repeater",
+      "lat": 42.602,
+      "lon": -71.3685
+    },
+    {
+      "name": "pants_pimesh",
+      "role": "repeater",
+      "lat": 42.4618,
+      "lon": -71.4555
+    },
+    {
+      "name": "LAW__Tower_Hill",
+      "role": "repeater",
+      "lat": 42.7006,
+      "lon": -71.1824
+    },
+    {
+      "name": "Arkay_Room_Server",
+      "role": "repeater",
+      "lat": 42.9671,
+      "lon": -71.0808
+    },
+    {
+      "name": "BURNorthEast3",
+      "role": "repeater",
+      "lat": 42.5276,
+      "lon": -71.1855
+    },
+    {
+      "name": "WFS1HHF",
+      "role": "repeater",
+      "lat": 42.4048,
+      "lon": -71.3195
+    },
+    {
+      "name": "BURFOXHILL",
+      "role": "repeater",
+      "lat": 42.5232,
+      "lon": -71.1995
+    },
+    {
+      "name": "TJ_RAK4631_Repeater",
+      "role": "repeater",
+      "lat": 42.4138,
+      "lon": -71.7375
+    },
+    {
+      "name": "FBGMarshallNorth",
+      "role": "repeater",
+      "lat": 42.5937,
+      "lon": -71.8014
+    },
+    {
+      "name": "OrangePeacoat",
+      "role": "repeater",
+      "lat": 42.3608,
+      "lon": -71.0639
+    },
+    {
+      "name": "Jiminy_Peak",
+      "role": "repeater",
+      "lat": 42.5442,
+      "lon": -73.2862
+    },
+    {
+      "name": "WEL__North",
+      "role": "repeater",
+      "lat": 42.3211,
+      "lon": -71.2989
+    },
+    {
+      "name": "MEL__Eagles_Nest",
+      "role": "repeater",
+      "lat": 42.4563,
+      "lon": -71.0577
+    },
+    {
+      "name": "Heltec_Repeater_5PS",
+      "role": "repeater",
+      "lat": 42.9624,
+      "lon": -71.4985
+    },
+    {
+      "name": "N_Tewksbury",
+      "role": "repeater",
+      "lat": 42.64,
+      "lon": -71.2482
+    },
+    {
+      "name": "NBORO_Heimdall_Repea",
+      "role": "repeater",
+      "lat": 42.3023,
+      "lon": -71.6384
+    },
+    {
+      "name": "Shrew1",
+      "role": "repeater",
+      "lat": 42.2966,
+      "lon": -71.7136
+    },
+    {
+      "name": "GraftonBMV",
+      "role": "repeater",
+      "lat": 42.1766,
+      "lon": -71.663
+    },
+    {
+      "name": "BURNorthEast2",
+      "role": "repeater",
+      "lat": 42.5199,
+      "lon": -71.1784
+    },
+    {
+      "name": "MNKroom",
+      "role": "repeater",
+      "lat": 42.5231,
+      "lon": -71.1863
+    },
+    {
+      "name": "Waltham_SE_Repeater",
+      "role": "repeater",
+      "lat": 42.376,
+      "lon": -71.2145
+    },
+    {
+      "name": "BURNorthEast1",
+      "role": "repeater",
+      "lat": 42.5223,
+      "lon": -71.187
+    },
+    {
+      "name": "LEX__GreatMeadow",
+      "role": "repeater",
+      "lat": 42.4303,
+      "lon": -71.196
+    },
+    {
+      "name": "abomb_Room_Server",
+      "role": "repeater",
+      "lat": 42.5419,
+      "lon": -71.267
+    },
+    {
+      "name": "NTKCTR02",
+      "role": "repeater",
+      "lat": 42.2809,
+      "lon": -71.355
+    },
+    {
+      "name": "GTWNEASTChurch",
+      "role": "repeater",
+      "lat": 42.7199,
+      "lon": -70.9777
+    },
+    {
+      "name": "ARL__LibrarySouth",
+      "role": "repeater",
+      "lat": 42.416,
+      "lon": -71.1543
+    },
+    {
+      "name": "ACT__Great_Hill",
+      "role": "repeater",
+      "lat": 42.4678,
+      "lon": -71.4486
+    },
+    {
+      "name": "South_Lincoln_2",
+      "role": "repeater",
+      "lat": 42.4118,
+      "lon": -71.319
+    },
+    {
+      "name": "WAL__Toasted_Radioli",
+      "role": "repeater",
+      "lat": 42.3787,
+      "lon": -71.2395
+    },
+    {
+      "name": "GLNDMAPITREPEATER",
+      "role": "repeater",
+      "lat": 42.7447,
+      "lon": -71.0128
+    },
+    {
+      "name": "WEL__Hills",
+      "role": "repeater",
+      "lat": 42.3139,
+      "lon": -71.2728
+    },
+    {
+      "name": "CHE__LEDGE",
+      "role": "repeater",
+      "lat": 42.9848,
+      "lon": -71.2519
+    },
+    {
+      "name": "WOBURN_RPT",
+      "role": "repeater",
+      "lat": 42.4655,
+      "lon": -71.2004
+    },
+    {
+      "name": "Aether_RPT",
+      "role": "repeater",
+      "lat": 43.0639,
+      "lon": -70.9679
+    },
+    {
+      "name": "Hampton_Test_Repeate",
+      "role": "repeater",
+      "lat": 42.9418,
+      "lon": -70.838
+    },
+    {
+      "name": "FBGRR_2",
+      "role": "repeater",
+      "lat": 42.599,
+      "lon": -71.7888
+    },
+    {
+      "name": "Cambridgeport_MA",
+      "role": "repeater",
+      "lat": 42.3605,
+      "lon": -71.1014
+    },
+    {
+      "name": "Jefts_Hill_Repeater",
+      "role": "repeater",
+      "lat": 42.7711,
+      "lon": -71.827
+    },
+    {
+      "name": "GRF__Brigham_Hill",
+      "role": "repeater",
+      "lat": 42.2087,
+      "lon": -71.7125
+    },
+    {
+      "name": "OTTO",
+      "role": "repeater",
+      "lat": 42.3583,
+      "lon": -71.1078
+    },
+    {
+      "name": "QCY__Pres_Hill",
+      "role": "repeater",
+      "lat": 42.2503,
+      "lon": -71.0144
+    },
+    {
+      "name": "ARL__Heights",
+      "role": "repeater",
+      "lat": 42.4211,
+      "lon": -71.1791
+    },
+    {
+      "name": "SNHNI_Test",
+      "role": "repeater",
+      "lat": 42.7593,
+      "lon": -71.9149
+    },
+    {
+      "name": "ALSArtisans_2",
+      "role": "repeater",
+      "lat": 42.36,
+      "lon": -71.1382
+    },
+    {
+      "name": "Steves_SS_Plaza_2",
+      "role": "repeater",
+      "lat": 42.2183,
+      "lon": -71.035
+    },
+    {
+      "name": "GeorgetownMARepeater",
+      "role": "repeater",
+      "lat": 42.7341,
+      "lon": -70.9966
+    },
+    {
+      "name": "Cambridgeport_MeshCo",
+      "role": "repeater",
+      "lat": 42.3587,
+      "lon": -71.1056
+    },
+    {
+      "name": "NewBosNH_Cem",
+      "role": "repeater",
+      "lat": 42.9719,
+      "lon": -71.6879
+    },
+    {
+      "name": "PNMCPawtNMCR",
+      "role": "repeater",
+      "lat": 43.1176,
+      "lon": -71.2024
+    },
+    {
+      "name": "Str__Stratham_Hill",
+      "role": "repeater",
+      "lat": 43.04,
+      "lon": -70.8902
+    },
+    {
+      "name": "STH__Bear_Hill",
+      "role": "repeater",
+      "lat": 42.4659,
+      "lon": -71.1073
+    },
+    {
+      "name": "Jefts_Hill_Repeater_2",
+      "role": "repeater",
+      "lat": 42.7712,
+      "lon": -71.827
+    },
+    {
+      "name": "SHR__Rattle",
+      "role": "repeater",
+      "lat": 42.09,
+      "lon": -71.1433
+    },
+    {
+      "name": "MIL__Ararat",
+      "role": "repeater",
+      "lat": 42.1811,
+      "lon": -71.7859
+    },
+    {
+      "name": "WOBDATV",
+      "role": "repeater",
+      "lat": 42.4748,
+      "lon": -71.1127
+    },
+    {
+      "name": "Mountain_Goat",
+      "role": "repeater",
+      "lat": 42.3783,
+      "lon": -71.1106
+    },
+    {
+      "name": "precisecheese",
+      "role": "repeater",
+      "lat": 42.479,
+      "lon": -71.4771
+    },
+    {
+      "name": "Hamp__JMESH_Repeater",
+      "role": "repeater",
+      "lat": 42.9267,
+      "lon": -70.7991
+    },
+    {
+      "name": "MBRCA_Waltham_600",
+      "role": "repeater",
+      "lat": 42.3833,
+      "lon": -71.249
+    },
+    {
+      "name": "ACT__SouthActon",
+      "role": "repeater",
+      "lat": 42.4617,
+      "lon": -71.4555
+    },
+    {
+      "name": "DPTR",
+      "role": "repeater",
+      "lat": 45.0422,
+      "lon": -73.1728
+    },
+    {
+      "name": "TJ_Repeater",
+      "role": "repeater",
+      "lat": 42.4134,
+      "lon": -71.7373
+    },
+    {
+      "name": "River_Court_Repeater",
+      "role": "repeater",
+      "lat": 42.3653,
+      "lon": -71.0773
+    },
+    {
+      "name": "WCONRoomServer",
+      "role": "repeater",
+      "lat": 42.4513,
+      "lon": -71.4047
+    },
+    {
+      "name": "MedwayMA_HELTEC",
+      "role": "repeater",
+      "lat": 42.1404,
+      "lon": -71.4304
+    },
+    {
+      "name": "LOWPRRoomServer",
+      "role": "repeater",
+      "lat": 42.6289,
+      "lon": -71.3224
+    },
+    {
+      "name": "MBRCA_Brookline_KD1M",
+      "role": "repeater",
+      "lat": 42.345,
+      "lon": -71.1219
+    },
+    {
+      "name": "MAN__Message_Board",
+      "role": "repeater",
+      "lat": 42.9827,
+      "lon": -71.4071
+    },
+    {
+      "name": "Cloudbury",
+      "role": "repeater",
+      "lat": 42.3856,
+      "lon": -71.4103
+    },
+    {
+      "name": "YachtYeeter",
+      "role": "repeater",
+      "lat": 42.2199,
+      "lon": -71.8336
+    },
+    {
+      "name": "HUD__CBP_Repeater",
+      "role": "repeater",
+      "lat": 42.7792,
+      "lon": -71.4012
+    },
+    {
+      "name": "Lderry__TreeBC01",
+      "role": "repeater",
+      "lat": 42.9044,
+      "lon": -71.3863
+    },
+    {
+      "name": "CAR__Benfield",
+      "role": "repeater",
+      "lat": 42.5143,
+      "lon": -71.3859
+    },
+    {
+      "name": "Quincy__Presidents_H",
+      "role": "repeater",
+      "lat": 42.2504,
+      "lon": -71.0143
+    },
+    {
+      "name": "ARL__ParkCircle",
+      "role": "repeater",
+      "lat": 42.4161,
+      "lon": -71.1798
+    },
+    {
+      "name": "CMB__CENTRAL_SQ__001",
+      "role": "repeater",
+      "lat": 42.3668,
+      "lon": -71.1054
+    },
+    {
+      "name": "WRN__Pinnacle",
+      "role": "repeater",
+      "lat": 42.0583,
+      "lon": -71.318
+    },
+    {
+      "name": "GTWNRedShank",
+      "role": "repeater",
+      "lat": 42.7091,
+      "lon": -70.986
+    },
+    {
+      "name": "BRK__Coolidge_Park_2",
+      "role": "repeater",
+      "lat": 42.3463,
+      "lon": -71.1314
+    },
+    {
+      "name": "ARL__Center",
+      "role": "repeater",
+      "lat": 42.4139,
+      "lon": -71.1498
+    },
+    {
+      "name": "ARL__FoodLink",
+      "role": "repeater",
+      "lat": 42.421,
+      "lon": -71.1615
+    },
+    {
+      "name": "SentientBeing__1W_Re",
+      "role": "repeater",
+      "lat": 42.815,
+      "lon": -70.8804
+    },
+    {
+      "name": "BXFD__Wildcat_Redux",
+      "role": "repeater",
+      "lat": 42.6811,
+      "lon": -71.028
+    },
+    {
+      "name": "CON2_Annursnac_Hill",
+      "role": "repeater",
+      "lat": 42.4771,
+      "lon": -71.3941
+    },
+    {
+      "name": "NEED__Highland_Ave",
+      "role": "repeater",
+      "lat": 42.2987,
+      "lon": -71.2322
+    },
+    {
+      "name": "ACT__Great_Hill_2",
+      "role": "repeater",
+      "lat": 42.4682,
+      "lon": -71.4548
+    },
+    {
+      "name": "FBGPH2_2",
+      "role": "repeater",
+      "lat": 42.5995,
+      "lon": -71.7883
+    },
+    {
+      "name": "BOSLongwood4",
+      "role": "repeater",
+      "lat": 42.3368,
+      "lon": -71.1018
+    },
+    {
+      "name": "tyqrespeedway1w",
+      "role": "repeater",
+      "lat": 42.2737,
+      "lon": -71.5718
+    },
+    {
+      "name": "NiNeVoLt_v2_Repeater",
+      "role": "repeater",
+      "lat": 42.1663,
+      "lon": -70.9419
+    },
+    {
+      "name": "StarrHillMCRS",
+      "role": "repeater",
+      "lat": 43.6449,
+      "lon": -72.2619
+    },
+    {
+      "name": "Steves_SS_Plaza_Brai",
+      "role": "repeater",
+      "lat": 42.2231,
+      "lon": -71.0097
+    },
+    {
+      "name": "Sterling_MA",
+      "role": "repeater",
+      "lat": 42.4138,
+      "lon": -71.7375
+    },
+    {
+      "name": "LDRY__North_Tree",
+      "role": "repeater",
+      "lat": 42.9044,
+      "lon": -71.3863
+    },
+    {
+      "name": "PEL__Jeremy_Hill",
+      "role": "repeater",
+      "lat": 42.7472,
+      "lon": -71.3581
+    },
+    {
+      "name": "LOWHighlands2",
+      "role": "repeater",
+      "lat": 42.6292,
+      "lon": -71.3225
+    },
+    {
+      "name": "MFD__Mystic",
+      "role": "repeater",
+      "lat": 42.4156,
+      "lon": -71.1322
+    },
+    {
+      "name": "NBORO_Pisgah",
+      "role": "repeater",
+      "lat": 42.3521,
+      "lon": -71.6577
+    },
+    {
+      "name": "WEY_NOT_DEPLOYED",
+      "role": "repeater",
+      "lat": 42.168,
+      "lon": -70.8842
+    },
+    {
+      "name": "Mine_Brook_Franklin_",
+      "role": "repeater",
+      "lat": 42.119,
+      "lon": -71.436
+    },
+    {
+      "name": "South_Nashua_Repeate",
+      "role": "repeater",
+      "lat": 42.7079,
+      "lon": -71.4608
+    },
+    {
+      "name": "CMBKilian1",
+      "role": "repeater",
+      "lat": 42.3848,
+      "lon": -71.135
+    },
+    {
+      "name": "LIN__Moccasin_Hill",
+      "role": "repeater",
+      "lat": 42.4044,
+      "lon": -71.2973
+    },
+    {
+      "name": "Autonomous_Solar_Rep",
+      "role": "repeater",
+      "lat": 42.3384,
+      "lon": -71.1036
+    },
+    {
+      "name": "Lowell_Alpha",
+      "role": "repeater",
+      "lat": 42.6477,
+      "lon": -71.34
+    },
+    {
+      "name": "BOS__Eagle_Hill_W",
+      "role": "repeater",
+      "lat": 42.3792,
+      "lon": -71.04
+    },
+    {
+      "name": "HUL__Allerton_Harbor_3",
+      "role": "repeater",
+      "lat": 42.3069,
+      "lon": -70.892
+    },
+    {
+      "name": "BOS__Eastie_Room",
+      "role": "repeater",
+      "lat": 42.3751,
+      "lon": -71.0392
+    },
+    {
+      "name": "BOS__Eastie_Room_2",
+      "role": "repeater",
+      "lat": 42.375,
+      "lon": -71.039
+    },
+    {
+      "name": "EBAE",
+      "role": "repeater",
+      "lat": 42.3142,
+      "lon": -71.0599
+    },
+    {
+      "name": "MEL__Bellevue_Test",
+      "role": "repeater",
+      "lat": 42.464,
+      "lon": -71.049
+    },
+    {
+      "name": "CONOld_Rifle_Range",
+      "role": "repeater",
+      "lat": 42.4447,
+      "lon": -71.4
+    },
+    {
+      "name": "DER__Warner_Hill_4AX",
+      "role": "repeater",
+      "lat": 42.8857,
+      "lon": -71.2664
+    },
+    {
+      "name": "CMB1__wwwBostonMesh",
+      "role": "repeater",
+      "lat": 42.359,
+      "lon": -71.1002
+    },
+    {
+      "name": "NOTCH",
+      "role": "repeater",
+      "lat": 42.0007,
+      "lon": -72.7311
+    },
+    {
+      "name": "MRL__Repeater",
+      "role": "repeater",
+      "lat": 42.3316,
+      "lon": -71.6035
+    },
+    {
+      "name": "New_Leaf_Repeater",
+      "role": "repeater",
+      "lat": 42.3928,
+      "lon": -71.114
+    },
+    {
+      "name": "MEL__Bellevue_South",
+      "role": "repeater",
+      "lat": 42.4637,
+      "lon": -71.0501
+    },
+    {
+      "name": "SU_NHMesh_UTR_SouthU",
+      "role": "repeater",
+      "lat": 42.9833,
+      "lon": -71.5876
+    },
+    {
+      "name": "AUB__Auburndale",
+      "role": "repeater",
+      "lat": 42.3591,
+      "lon": -71.2504
+    },
+    {
+      "name": "COMSAXpidgepeeter",
+      "role": "repeater",
+      "lat": 42.3159,
+      "lon": -71.3975
+    },
+    {
+      "name": "OrwellRPT",
+      "role": "repeater",
+      "lat": 43.0633,
+      "lon": -70.9474
+    },
+    {
+      "name": "Spring_Hill",
+      "role": "repeater",
+      "lat": 42.3885,
+      "lon": -71.1093
+    },
+    {
+      "name": "FBGMarshallSouth",
+      "role": "repeater",
+      "lat": 42.5908,
+      "lon": -71.8015
+    },
+    {
+      "name": "Lunenburg",
+      "role": "repeater",
+      "lat": 42.5927,
+      "lon": -71.7562
+    },
+    {
+      "name": "RJL_New_Boston",
+      "role": "repeater",
+      "lat": 43.0216,
+      "lon": -71.651
+    },
+    {
+      "name": "BOSWRox1",
+      "role": "repeater",
+      "lat": 42.2873,
+      "lon": -71.1478
+    },
+    {
+      "name": "Fitchburg_Central",
+      "role": "repeater",
+      "lat": 42.5836,
+      "lon": -71.8037
+    },
+    {
+      "name": "SUD__Saddle_Hill",
+      "role": "repeater",
+      "lat": 42.2512,
+      "lon": -71.5391
+    },
+    {
+      "name": "ARL__HighSchool",
+      "role": "repeater",
+      "lat": 42.4157,
+      "lon": -71.1654
+    },
+    {
+      "name": "ARL__ParkCircle2",
+      "role": "repeater",
+      "lat": 42.4164,
+      "lon": -71.1817
+    },
+    {
+      "name": "DeputyDawg__pyMC",
+      "role": "repeater",
+      "lat": 42.1233,
+      "lon": -71.6467
+    },
+    {
+      "name": "LEXFiske",
+      "role": "repeater",
+      "lat": 42.4605,
+      "lon": -71.2211
+    },
+    {
+      "name": "WOR__Chandler_Hill",
+      "role": "repeater",
+      "lat": 42.2693,
+      "lon": -71.789
+    },
+    {
+      "name": "Brookline_Village__0",
+      "role": "repeater",
+      "lat": 42.3318,
+      "lon": -71.1177
+    },
+    {
+      "name": "French_Road",
+      "role": "repeater",
+      "lat": 42.3174,
+      "lon": -71.277
+    },
+    {
+      "name": "Miskatonic_Mobile",
+      "role": "repeater",
+      "lat": 42.2488,
+      "lon": -71.0094
+    },
+    {
+      "name": "abombrepeater",
+      "role": "repeater",
+      "lat": 42.5419,
+      "lon": -71.2667
+    },
+    {
+      "name": "alice",
+      "role": "companion"
+    },
+    {
+      "name": "bob",
+      "role": "companion"
+    },
+    {
+      "name": "carol",
+      "role": "companion"
+    },
+    {
+      "name": "dave",
+      "role": "companion"
+    }
+  ],
+  "topology": {
+    "links": [
+      {
+        "from": "BRK__CoolidgePark_MQ_2",
+        "to": "BRK__Coolidge_Park_2",
+        "snr": 81.45,
+        "rssi": -38.59,
+        "snr_std_dev": 1.0,
+        "bidir": true
+      },
+      {
+        "from": "pants_pimesh",
+        "to": "ACT__SouthActon",
+        "snr": 81.45,
+        "rssi": -38.59,
+        "snr_std_dev": 1.0,
+        "bidir": true
+      },
+      {
+        "from": "Jefts_Hill_Repeater",
+        "to": "Jefts_Hill_Repeater_2",
+        "snr": 81.45,
+        "rssi": -38.59,
+        "snr_std_dev": 1.0,
+        "bidir": true
+      },
+      {
+        "from": "SLM__NHMesh_UTR_Exit",
+        "to": "NHMesh_Picohive_1",
+        "snr": 79.58,
+        "rssi": -40.46,
+        "snr_std_dev": 1.0,
+        "bidir": true
+      },
+      {
+        "from": "vantor",
+        "to": "NMKT__AWV__RSRPT",
+        "snr": 79.59,
+        "rssi": -40.45,
+        "snr_std_dev": 1.0,
+        "bidir": true
+      },
+      {
+        "from": "MBRCA_Quincy_Center",
+        "to": "Miskatonic_Mobile",
+        "snr": 79.55,
+        "rssi": -40.49,
+        "snr_std_dev": 1.0,
+        "bidir": true
+      },
+      {
+        "from": "COMSAX__All_Welcome",
+        "to": "COMSAXpidgepeeter",
+        "snr": 76.42,
+        "rssi": -43.62,
+        "snr_std_dev": 1.0,
+        "bidir": true
+      },
+      {
+        "from": "WALSE_RPTR",
+        "to": "Waltham_SE_Repeater",
+        "snr": 76.42,
+        "rssi": -43.62,
+        "snr_std_dev": 1.0,
+        "bidir": true
+      },
+      {
+        "from": "BOS__Eastie_Room",
+        "to": "BOS__Eastie_Room_2",
+        "snr": 76.42,
+        "rssi": -43.62,
+        "snr_std_dev": 1.0,
+        "bidir": true
+      },
+      {
+        "from": "HUL__Allerton_Harbor",
+        "to": "HUL__Allerton_Harbor_3",
+        "snr": 75.43,
+        "rssi": -44.61,
+        "snr_std_dev": 1.0,
+        "bidir": true
+      },
+      {
+        "from": "HOP__TC_Repeater",
+        "to": "HOP__TC_Repeater_2",
+        "snr": 74.89,
+        "rssi": -45.15,
+        "snr_std_dev": 1.0,
+        "bidir": true
+      },
+      {
+        "from": "Steves_ZaTree_2",
+        "to": "Steves_SS_Plaza_Brai",
+        "snr": 74.87,
+        "rssi": -45.17,
+        "snr_std_dev": 1.0,
+        "bidir": true
+      },
+      {
+        "from": "MWMCR__RP2",
+        "to": "MWMCR__RP1",
+        "snr": 69.8,
+        "rssi": -50.24,
+        "snr_std_dev": 1.0,
+        "bidir": true
+      },
+      {
+        "from": "WALSE_Room_Server",
+        "to": "WALSE_RPTR",
+        "snr": 68.85,
+        "rssi": -51.19,
+        "snr_std_dev": 1.0,
+        "bidir": true
+      },
+      {
+        "from": "BRK__Coolidge_Park",
+        "to": "BRK_CP_MQTT_2",
+        "snr": 68.96,
+        "rssi": -51.08,
+        "snr_std_dev": 1.0,
+        "bidir": true
+      },
+      {
+        "from": "TJ_RAK4631_Repeater",
+        "to": "TJ_Repeater",
+        "snr": 68.86,
+        "rssi": -51.19,
+        "snr_std_dev": 1.0,
+        "bidir": true
+      },
+      {
+        "from": "TJ_Repeater",
+        "to": "Sterling_MA",
+        "snr": 68.86,
+        "rssi": -51.19,
+        "snr_std_dev": 1.0,
+        "bidir": true
+      },
+      {
+        "from": "DPTRPT",
+        "to": "DPTR",
+        "snr": 68.03,
+        "rssi": -52.01,
+        "snr_std_dev": 1.0,
+        "bidir": true
+      },
+      {
+        "from": "WALSE_Room_Server",
+        "to": "Waltham_SE_Repeater",
+        "snr": 67.47,
+        "rssi": -52.57,
+        "snr_std_dev": 1.0,
+        "bidir": true
+      },
+      {
+        "from": "GRF__Observer",
+        "to": "GRF__Parker_Preserve",
+        "snr": 66.55,
+        "rssi": -53.49,
+        "snr_std_dev": 1.0,
+        "bidir": true
+      },
+      {
+        "from": "FBGRR_2",
+        "to": "FBGPH2_2",
+        "snr": 65.59,
+        "rssi": -54.45,
+        "snr_std_dev": 1.0,
+        "bidir": true
+      },
+      {
+        "from": "AUB__MA__Prospect__H",
+        "to": "AUBMAProspect2",
+        "snr": 65.13,
+        "rssi": -54.92,
+        "snr_std_dev": 1.0,
+        "bidir": true
+      },
+      {
+        "from": "StarrHillMC",
+        "to": "StarrHillMCRS",
+        "snr": 64.78,
+        "rssi": -55.26,
+        "snr_std_dev": 1.0,
+        "bidir": true
+      },
+      {
+        "from": "NorwellAccord_Park_1",
+        "to": "WEY_Lovell_Corner_V4",
+        "snr": 63.16,
+        "rssi": -56.88,
+        "snr_std_dev": 1.0,
+        "bidir": true
+      },
+      {
+        "from": "CMB2__wwwBostonMesh",
+        "to": "Cambridgeport_MA",
+        "snr": 63.19,
+        "rssi": -56.86,
+        "snr_std_dev": 1.0,
+        "bidir": true
+      },
+      {
+        "from": "Bow_RepeaterRed_Pine",
+        "to": "BOW_NHRED_PINE",
+        "snr": 62.7,
+        "rssi": -57.35,
+        "snr_std_dev": 1.0,
+        "bidir": true
+      },
+      {
+        "from": "BOW_NHREDPINE_1W",
+        "to": "BOW_NHREDPINE",
+        "snr": 62.7,
+        "rssi": -57.35,
+        "snr_std_dev": 1.0,
+        "bidir": true
+      },
+      {
+        "from": "MEL__Bellevue_Test",
+        "to": "MEL__Bellevue_South",
+        "snr": 62.71,
+        "rssi": -57.33,
+        "snr_std_dev": 1.0,
+        "bidir": true
+      },
+      {
+        "from": "tyqrePiMesh1W",
+        "to": "tyqreobserver",
+        "snr": 61.69,
+        "rssi": -58.35,
+        "snr_std_dev": 1.0,
+        "bidir": true
+      },
+      {
+        "from": "vantor",
+        "to": "Aether_RPT",
+        "snr": 61.1,
+        "rssi": -58.95,
+        "snr_std_dev": 1.0,
+        "bidir": true
+      },
+      {
+        "from": "DPTSRV",
+        "to": "DPTR",
+        "snr": 60.79,
+        "rssi": -59.25,
+        "snr_std_dev": 1.0,
+        "bidir": true
+      },
+      {
+        "from": "DUDE2_RPT",
+        "to": "DUDE3_RPT",
+        "snr": 60.55,
+        "rssi": -59.5,
+        "snr_std_dev": 1.0,
+        "bidir": true
+      },
+      {
+        "from": "GeorgetownMARoom",
+        "to": "GeorgetownMARoom_2",
+        "snr": 57.53,
+        "rssi": -62.51,
+        "snr_std_dev": 1.0,
+        "bidir": true
+      },
+      {
+        "from": "CambridgePort_MC",
+        "to": "OTTO",
+        "snr": 57.36,
+        "rssi": -62.69,
+        "snr_std_dev": 1.0,
+        "bidir": true
+      },
+      {
+        "from": "Brookline",
+        "to": "Brookline_Village__0",
+        "snr": 57.33,
+        "rssi": -62.71,
+        "snr_std_dev": 1.0,
+        "bidir": true
+      },
+      {
+        "from": "SentientBeing__G2_Ro",
+        "to": "SentientBeing__1W_Re",
+        "snr": 56.41,
+        "rssi": -63.63,
+        "snr_std_dev": 1.0,
+        "bidir": true
+      },
+      {
+        "from": "SentientBeing__G2_Ro",
+        "to": "SentientBeing__G2_Ro_2",
+        "snr": 56.03,
+        "rssi": -64.01,
+        "snr_std_dev": 1.0,
+        "bidir": true
+      },
+      {
+        "from": "BOSLongwood4",
+        "to": "Autonomous_Solar_Rep",
+        "snr": 55.09,
+        "rssi": -64.96,
+        "snr_std_dev": 1.0,
+        "bidir": true
+      },
+      {
+        "from": "CeylonMusk",
+        "to": "OrangePeacoat",
+        "snr": 54.18,
+        "rssi": -65.86,
+        "snr_std_dev": 1.0,
+        "bidir": true
+      },
+      {
+        "from": "RWNL_Base",
+        "to": "HNMCMJ2SOLGT",
+        "snr": 53.29,
+        "rssi": -66.75,
+        "snr_std_dev": 1.0,
+        "bidir": true
+      },
+      {
+        "from": "Zaos__RLAW",
+        "to": "LAW__Tower_Hill",
+        "snr": 53.17,
+        "rssi": -66.87,
+        "snr_std_dev": 1.0,
+        "bidir": true
+      },
+      {
+        "from": "GeorgetownMARoom",
+        "to": "GeorgetownMARepeater",
+        "snr": 52.63,
+        "rssi": -67.42,
+        "snr_std_dev": 1.0,
+        "bidir": true
+      },
+      {
+        "from": "CMB2__wwwBostonMesh",
+        "to": "Cambridgeport_MeshCo",
+        "snr": 52.35,
+        "rssi": -67.69,
+        "snr_std_dev": 1.0,
+        "bidir": true
+      },
+      {
+        "from": "Concord_MA__MQTT",
+        "to": "CONGreatMeadows02",
+        "snr": 51.82,
+        "rssi": -68.22,
+        "snr_std_dev": 1.0,
+        "bidir": true
+      },
+      {
+        "from": "MWMCR__RP2",
+        "to": "MEL__Eagles_Nest",
+        "snr": 51.27,
+        "rssi": -68.77,
+        "snr_std_dev": 1.0,
+        "bidir": true
+      },
+      {
+        "from": "CMB__Nano",
+        "to": "CMB1__wwwBostonMesh",
+        "snr": 50.9,
+        "rssi": -69.14,
+        "snr_std_dev": 1.0,
+        "bidir": true
+      },
+      {
+        "from": "HNMCSOLARUNC2GT",
+        "to": "GOFN_Repeater",
+        "snr": 50.82,
+        "rssi": -69.22,
+        "snr_std_dev": 1.0,
+        "bidir": true
+      },
+      {
+        "from": "MWMCR__RP1",
+        "to": "MEL__Eagles_Nest",
+        "snr": 50.38,
+        "rssi": -69.66,
+        "snr_std_dev": 1.0,
+        "bidir": true
+      },
+      {
+        "from": "ACT__Center",
+        "to": "ACT__Historic_Distri",
+        "snr": 50.07,
+        "rssi": -69.97,
+        "snr_std_dev": 1.0,
+        "bidir": true
+      },
+      {
+        "from": "FBGElizabeth_St_Sout",
+        "to": "FBGWarren",
+        "snr": 50.02,
+        "rssi": -70.03,
+        "snr_std_dev": 1.0,
+        "bidir": true
+      },
+      {
+        "from": "The_Packet_Yeeter",
+        "to": "YachtYeeter",
+        "snr": 49.96,
+        "rssi": -70.08,
+        "snr_std_dev": 1.0,
+        "bidir": true
+      },
+      {
+        "from": "FBGWarren",
+        "to": "FBGElizabeth_St_nort",
+        "snr": 49.76,
+        "rssi": -70.28,
+        "snr_std_dev": 1.0,
+        "bidir": true
+      },
+      {
+        "from": "Quincy__Presidents_H",
+        "to": "Miskatonic_Mobile",
+        "snr": 49.49,
+        "rssi": -70.55,
+        "snr_std_dev": 1.0,
+        "bidir": true
+      },
+      {
+        "from": "Cambridgeport_MeshCo",
+        "to": "CMB1__wwwBostonMesh",
+        "snr": 49.41,
+        "rssi": -70.63,
+        "snr_std_dev": 1.0,
+        "bidir": true
+      },
+      {
+        "from": "ARL__LibraryNorth",
+        "to": "ARL__Center",
+        "snr": 49.05,
+        "rssi": -71.0,
+        "snr_std_dev": 1.0,
+        "bidir": true
+      },
+      {
+        "from": "CeylonMusk",
+        "to": "RooiBoston",
+        "snr": 48.88,
+        "rssi": -71.16,
+        "snr_std_dev": 1.0,
+        "bidir": true
+      },
+      {
+        "from": "CMB2__wwwBostonMesh",
+        "to": "OTTO",
+        "snr": 48.5,
+        "rssi": -71.55,
+        "snr_std_dev": 1.0,
+        "bidir": true
+      },
+      {
+        "from": "BURNorthEast3",
+        "to": "MNKroom",
+        "snr": 45.61,
+        "rssi": -74.43,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "WEL__Hills",
+        "to": "French_Road",
+        "snr": 46.97,
+        "rssi": -73.08,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "Cambridgeport_MA",
+        "to": "OTTO",
+        "snr": 47.1,
+        "rssi": -72.94,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "SOM__LunarLander",
+        "to": "SOM__WOB",
+        "snr": 41.92,
+        "rssi": -78.12,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "FBGWallace",
+        "to": "FBGMarshallSouth",
+        "snr": 20.34,
+        "rssi": -99.7,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "MARL_Repeater",
+        "to": "MRL__1W_Repeater",
+        "snr": 7.26,
+        "rssi": -112.78,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "ARL__Nourse_Attic",
+        "to": "ARL__Heights",
+        "snr": 44.63,
+        "rssi": -75.41,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "WES__Trolley_Line_Tr",
+        "to": "tyqrespeedway1w",
+        "snr": 45.12,
+        "rssi": -74.93,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "DUDE3_RPT",
+        "to": "LEXWhippleMNK",
+        "snr": 33.98,
+        "rssi": -86.06,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "WDIT_Room_Server",
+        "to": "NewBosNH_Cem",
+        "snr": 42.89,
+        "rssi": -77.15,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "BURNorthEast2",
+        "to": "BURNorthEast1",
+        "snr": 42.99,
+        "rssi": -77.05,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "BRK__CoolidgeCnr_09",
+        "to": "MBRCA_Brookline_KD1M",
+        "snr": 21.01,
+        "rssi": -99.03,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "FBGPH2",
+        "to": "FBGHollis",
+        "snr": 40.66,
+        "rssi": -79.38,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "CONPunkatasset",
+        "to": "ConcordPunkatasset00",
+        "snr": 8.54,
+        "rssi": -111.5,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "XDG4_Repeater",
+        "to": "LOWPRRoomServer",
+        "snr": 44.46,
+        "rssi": -75.59,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "CMB__Atto",
+        "to": "CambridgePort_MC",
+        "snr": 34.3,
+        "rssi": -85.74,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "FBGMarshallSouth",
+        "to": "Fitchburg_Central",
+        "snr": 40.08,
+        "rssi": -79.96,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "MRL__1W_Repeater",
+        "to": "MRL__Repeater",
+        "snr": 10.94,
+        "rssi": -109.1,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "DUDE2_RPT",
+        "to": "LEXWhippleMNK",
+        "snr": 15.17,
+        "rssi": -104.87,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "WCONRoomServer",
+        "to": "CONOld_Rifle_Range",
+        "snr": 41.92,
+        "rssi": -78.12,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "nhdeerfieldsouth",
+        "to": "Deerfield_NH_Chatroo",
+        "snr": 28.3,
+        "rssi": -91.74,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "SNO_Repeater",
+        "to": "XDG4_Repeater",
+        "snr": 20.84,
+        "rssi": -99.2,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "Cambridgeport_MeshCo",
+        "to": "CMB__CENTRAL_SQ__001",
+        "snr": 33.66,
+        "rssi": -86.38,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "Waltham_900",
+        "to": "WAL__Toasted_Radioli",
+        "snr": 37.09,
+        "rssi": -82.95,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "FBGMTA",
+        "to": "Fitchburg_Central",
+        "snr": 31.58,
+        "rssi": -88.46,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "ARL__LibrarySouth",
+        "to": "ARL__HighSchool",
+        "snr": 28.02,
+        "rssi": -92.02,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "ViPeR2__Rt20BosProvT",
+        "to": "ViPeR2__Rt20BosProvT_2",
+        "snr": 17.42,
+        "rssi": -102.62,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "MAR__Pisgah__Peak",
+        "to": "NBORO_Pisgah",
+        "snr": 41.77,
+        "rssi": -78.27,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "Telegraph_Hill",
+        "to": "HUL__Allerton_Harbor_3",
+        "snr": 42.28,
+        "rssi": -77.77,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "BURFOXHILL",
+        "to": "BURNorthEast1",
+        "snr": 25.96,
+        "rssi": -94.08,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "BXFD__Wood_Hill_2",
+        "to": "BoxRepeater",
+        "snr": 18.45,
+        "rssi": -101.59,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "Telegraph_Hill_2",
+        "to": "HUL__Allerton_Harbor_2",
+        "snr": 36.25,
+        "rssi": -83.79,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "SOM__Teele_Square",
+        "to": "SOM__WOB",
+        "snr": 18.22,
+        "rssi": -101.82,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "Squad_6",
+        "to": "WEL__Z_Branch",
+        "snr": 39.28,
+        "rssi": -80.76,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "FBGElizabeth_St_Sout",
+        "to": "FBGWallace",
+        "snr": 23.23,
+        "rssi": -96.81,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "ARL__Nourse_Porch",
+        "to": "ARL__ParkCircle",
+        "snr": 19.29,
+        "rssi": -100.75,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "OWD__Norwood_Airport",
+        "to": "OWD__Neponset_River",
+        "snr": 37.88,
+        "rssi": -82.16,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "Steves_Braintree_Bri",
+        "to": "Steves_SS_Plaza_2",
+        "snr": 34.12,
+        "rssi": -85.92,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "SOM__Twin_City_Plaza",
+        "to": "River_Court_Repeater",
+        "snr": 8.34,
+        "rssi": -111.7,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "HM_MESHTOP",
+        "to": "CHE__HEMLOCK",
+        "snr": 25.38,
+        "rssi": -94.66,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "Concord_MA__MQTT",
+        "to": "Concord_Attic_G2",
+        "snr": 37.13,
+        "rssi": -82.92,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "ARL__HighSchool",
+        "to": "ARL__ParkCircle2",
+        "snr": 4.24,
+        "rssi": -115.8,
+        "snr_std_dev": 0.5,
+        "loss": 0.0003,
+        "bidir": true
+      },
+      {
+        "from": "BzqRepeater",
+        "to": "Spring_Hill",
+        "snr": 37.81,
+        "rssi": -82.24,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "ROSMeshCoreRepeater",
+        "to": "BOSWRox1",
+        "snr": 36.47,
+        "rssi": -83.57,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "SOM__Twin_City_Plaza",
+        "to": "Kendall_Square",
+        "snr": 24.61,
+        "rssi": -95.43,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "MALBellrock",
+        "to": "MaldenMesh_Devir_Par",
+        "snr": 35.89,
+        "rssi": -84.15,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "GTWNEASTChurch",
+        "to": "GTWNRedShank",
+        "snr": 39.58,
+        "rssi": -80.46,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "BOS__Fenway",
+        "to": "Autonomous_Solar_Rep",
+        "snr": 39.46,
+        "rssi": -80.59,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "CAMNoCaLinearPkRpt",
+        "to": "CMBKilian1",
+        "snr": 29.44,
+        "rssi": -90.61,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "SycamoreRepeater",
+        "to": "RPTRFTP",
+        "snr": 24.99,
+        "rssi": -95.06,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "CMBHarvard1",
+        "to": "CMB__CENTRAL_SQ__001",
+        "snr": 16.39,
+        "rssi": -103.65,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "Brookline",
+        "to": "BOSLongwood4",
+        "snr": 34.16,
+        "rssi": -85.88,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "ARL__ParkCircle",
+        "to": "ARL__FoodLink",
+        "snr": 24.88,
+        "rssi": -95.16,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "BowfPeat",
+        "to": "Steves_Mishko_tower1",
+        "snr": 36.77,
+        "rssi": -83.27,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "BRK__Coolidge_Park",
+        "to": "ALSArtisans_2",
+        "snr": 15.36,
+        "rssi": -104.68,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "BRK_CP_MQTT",
+        "to": "ALSArtisans",
+        "snr": 16.87,
+        "rssi": -103.18,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "BRK_CP_MQTT_2",
+        "to": "ALSArtisans",
+        "snr": 16.87,
+        "rssi": -103.18,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "Chandler_Hill",
+        "to": "Mosscap",
+        "snr": 2.7,
+        "rssi": -117.35,
+        "snr_std_dev": 0.5,
+        "loss": 0.001,
+        "bidir": true
+      },
+      {
+        "from": "DUDE2_RPT",
+        "to": "ARL__Heights",
+        "snr": 37.63,
+        "rssi": -82.41,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "LEXMeagherville",
+        "to": "LEXFiske",
+        "snr": 10.27,
+        "rssi": -109.77,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "WAT__Palfrey_Base",
+        "to": "NCB1__Newton_Corner",
+        "snr": 29.06,
+        "rssi": -90.98,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "New_Heltec_Repeater",
+        "to": "BRK__CoolidgePark_MQ",
+        "snr": 12.11,
+        "rssi": -107.93,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "BowfPeat",
+        "to": "Steves_SS_Plaza_Brai",
+        "snr": 31.51,
+        "rssi": -88.53,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "ARL__LibrarySouth",
+        "to": "MFD__Mystic",
+        "snr": 30.58,
+        "rssi": -89.47,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "CMB2__wwwBostonMesh",
+        "to": "BOS__Fenway",
+        "snr": 15.87,
+        "rssi": -104.18,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "Dead",
+        "to": "WFS1HHF",
+        "snr": 15.43,
+        "rssi": -104.61,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "MBRCA_Quincy_Center",
+        "to": "Steves_Mishko_tower1",
+        "snr": 29.68,
+        "rssi": -90.36,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "BOS__North_End",
+        "to": "BOS__Eagle_Hill_W",
+        "snr": 19.86,
+        "rssi": -100.18,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "FOX__center",
+        "to": "MAFOXBOROEDG04",
+        "snr": 22.86,
+        "rssi": -97.18,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "Furnace_Brook_Parkwa",
+        "to": "QCY__Pres_Hill",
+        "snr": 34.82,
+        "rssi": -85.22,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "K1UHV_Solar",
+        "to": "WOBDATV",
+        "snr": 26.6,
+        "rssi": -93.44,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "Waltham_900",
+        "to": "AUB__Auburndale",
+        "snr": 14.32,
+        "rssi": -105.72,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "CMBHarvard1",
+        "to": "Spring_Hill",
+        "snr": 36.56,
+        "rssi": -83.48,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "South_Lincoln_2",
+        "to": "LIN__Moccasin_Hill",
+        "snr": 24.82,
+        "rssi": -95.22,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "Dead",
+        "to": "South_Lincoln_2",
+        "snr": 24.08,
+        "rssi": -95.97,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "FBGElizabeth_St_nort",
+        "to": "FBGMarshallNorth",
+        "snr": 2.4,
+        "rssi": -117.64,
+        "snr_std_dev": 0.5,
+        "loss": 0.0012,
+        "bidir": true
+      },
+      {
+        "from": "HamzLab_Galactic_Rep",
+        "to": "NTKCTR02",
+        "snr": 29.94,
+        "rssi": -90.1,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "FBGHollis_2",
+        "to": "Lunenburg",
+        "snr": 34.88,
+        "rssi": -85.17,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "ALSArtisans",
+        "to": "MBRCA_Brookline_KD1M",
+        "snr": 20.98,
+        "rssi": -99.07,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "T114_DOT",
+        "to": "EBAE",
+        "snr": 16.67,
+        "rssi": -103.37,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "CMBHarvard1",
+        "to": "Cambridgeport_MA",
+        "snr": 30.16,
+        "rssi": -89.88,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "New_Heltec_Repeater",
+        "to": "Kendall_Square",
+        "snr": 28.1,
+        "rssi": -91.94,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "FRE__SpruceSwamp",
+        "to": "Arkay_Room_Server",
+        "snr": 14.43,
+        "rssi": -105.61,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "ACT__Town_Center",
+        "to": "ACT__Great_Hill",
+        "snr": 34.12,
+        "rssi": -85.92,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "DUDE3_RPT",
+        "to": "ARL__ParkCircle2",
+        "snr": 33.54,
+        "rssi": -86.5,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "BRK__CoolidgePark_MQ_2",
+        "to": "OTTO",
+        "snr": 14.83,
+        "rssi": -105.21,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "Balch_Street_Repeate",
+        "to": "Hahbah_Hop",
+        "snr": 21.13,
+        "rssi": -98.91,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "Dude2_Repeater",
+        "to": "ARL__ParkCircle",
+        "snr": 15.15,
+        "rssi": -104.89,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "MedwayMA_HELTEC",
+        "to": "Mine_Brook_Franklin_",
+        "snr": 16.8,
+        "rssi": -103.24,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "BRK__Coolidge_Park",
+        "to": "Autonomous_Solar_Rep",
+        "snr": 20.1,
+        "rssi": -99.94,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "ROSMeshCoreRepeater",
+        "to": "JP__Forest_Hills_Rep",
+        "snr": 34.22,
+        "rssi": -85.82,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "BOSLongwood4",
+        "to": "CMB1__wwwBostonMesh",
+        "snr": 28.21,
+        "rssi": -91.83,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "Lowell_Beta",
+        "to": "LOWHighlands2",
+        "snr": 15.96,
+        "rssi": -104.08,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "BOS__Fenway",
+        "to": "MBRCA_Brookline_KD1M",
+        "snr": 26.96,
+        "rssi": -93.08,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "CAMNoCaLinearPkRpt",
+        "to": "ARL__LibrarySouth",
+        "snr": 21.57,
+        "rssi": -98.47,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "precisecheese",
+        "to": "ACT__SouthActon",
+        "snr": 29.18,
+        "rssi": -90.86,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "NB__Goat_Hill",
+        "to": "DeputyDawg__pyMC",
+        "snr": 7.01,
+        "rssi": -113.03,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "BRK__Coolidge_Park",
+        "to": "BOSLongwood4",
+        "snr": 17.34,
+        "rssi": -102.7,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "NowRepeatMarlboroEas",
+        "to": "FRA__Gibbs",
+        "snr": 17.33,
+        "rssi": -102.71,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "ivmden_base_20",
+        "to": "CHE__LEDGE",
+        "snr": 7.41,
+        "rssi": -112.63,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "BowfPeat",
+        "to": "Steves_Braintree_Bri",
+        "snr": 13.77,
+        "rssi": -106.27,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "CMB__Nano",
+        "to": "OrangePeacoat",
+        "snr": 10.54,
+        "rssi": -109.5,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "ALSArtisans_2",
+        "to": "CMBKilian1",
+        "snr": 6.11,
+        "rssi": -113.93,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "QCY__Faxon_ParkHMart",
+        "to": "Furnace_Brook_Parkwa",
+        "snr": 32.04,
+        "rssi": -88.0,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "STOW__Red_Acre",
+        "to": "ACT__SouthActon",
+        "snr": 23.49,
+        "rssi": -96.55,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "GeorgetownMARepeater",
+        "to": "GTWNRedShank",
+        "snr": 27.73,
+        "rssi": -92.31,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "CMB__Nano",
+        "to": "East_Somerville_CatD",
+        "snr": 26.7,
+        "rssi": -93.34,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "RandolphResRep01",
+        "to": "Highlands_Repeater",
+        "snr": 30.2,
+        "rssi": -89.85,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "ARL__Nourse_Porch",
+        "to": "ARL__Center",
+        "snr": 16.73,
+        "rssi": -103.31,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "SHR__Moose_Hill",
+        "to": "SHRNorthMainOffCente",
+        "snr": 32.48,
+        "rssi": -87.56,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "BRK_CP_MQTT",
+        "to": "CMB__CENTRAL_SQ__001",
+        "snr": 9.99,
+        "rssi": -110.05,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "CMB__Nano",
+        "to": "Spring_Hill",
+        "snr": 31.65,
+        "rssi": -88.39,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "Tyqre__Meshsmith_Pho",
+        "to": "GRF__Brigham_Hill",
+        "snr": 4.21,
+        "rssi": -115.83,
+        "snr_std_dev": 0.5,
+        "loss": 0.0003,
+        "bidir": true
+      },
+      {
+        "from": "SOM__Teele_Square",
+        "to": "Mountain_Goat",
+        "snr": 7.26,
+        "rssi": -112.78,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "BIL__Fox_Hill",
+        "to": "abomb_Room_Server",
+        "snr": 31.9,
+        "rssi": -88.14,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "CMB1__wwwBostonMesh",
+        "to": "Spring_Hill",
+        "snr": 29.03,
+        "rssi": -91.01,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "njcrepeater",
+        "to": "BIL__Fox_Hill",
+        "snr": 31.37,
+        "rssi": -88.67,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "Cambridgeport_MA",
+        "to": "Brookline_Village__0",
+        "snr": 17.61,
+        "rssi": -102.43,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "TJTacoRepeater",
+        "to": "Concord_Attic_G2",
+        "snr": 15.38,
+        "rssi": -104.66,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "WEL__West",
+        "to": "WEL__North",
+        "snr": 8.31,
+        "rssi": -111.73,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "FBGWarren",
+        "to": "FBGHollis",
+        "snr": 31.49,
+        "rssi": -88.55,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "MAY__Presidential",
+        "to": "pants_pimesh",
+        "snr": -1.82,
+        "rssi": -121.86,
+        "snr_std_dev": 0.5,
+        "loss": 0.0341,
+        "bidir": true
+      },
+      {
+        "from": "WALSE_Room_Server",
+        "to": "AUB__Auburndale",
+        "snr": 10.59,
+        "rssi": -109.46,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "Hampton_Test_Repeate",
+        "to": "Hamp__JMESH_Repeater",
+        "snr": 12.78,
+        "rssi": -107.26,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "ACT__Center",
+        "to": "precisecheese",
+        "snr": 28.49,
+        "rssi": -91.55,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "WAT__Arsenal",
+        "to": "BRK__CoolidgePark_MQ_2",
+        "snr": 9.07,
+        "rssi": -110.97,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "ARL__Center",
+        "to": "New_Leaf_Repeater",
+        "snr": 22.3,
+        "rssi": -97.74,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "HNMCSOLARUNC2GT",
+        "to": "HNMCMJ2SOLGT",
+        "snr": 30.66,
+        "rssi": -89.38,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "BXFD__Wood_Hill",
+        "to": "NANDWeir_Hill",
+        "snr": 26.53,
+        "rssi": -93.51,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "ARL__ParkCircle",
+        "to": "MFD__Mystic",
+        "snr": 13.06,
+        "rssi": -106.99,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "NMKT__Cushing_Rd",
+        "to": "Aether_RPT",
+        "snr": 8.75,
+        "rssi": -111.29,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "GTWNEASTChurch",
+        "to": "GLNDMAPITREPEATER",
+        "snr": 6.02,
+        "rssi": -114.02,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "Kendall_Square",
+        "to": "BRK_CP_MQTT_2",
+        "snr": 13.8,
+        "rssi": -106.24,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "ConcordAnnursnac001",
+        "to": "CAR__Benfield",
+        "snr": 30.1,
+        "rssi": -89.94,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "ARL__LibrarySouth",
+        "to": "New_Leaf_Repeater",
+        "snr": 23.69,
+        "rssi": -96.35,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "Woodside_Room",
+        "to": "CON2_Annursnac_Hill",
+        "snr": 29.9,
+        "rssi": -90.14,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "MIL__Broken_Hills",
+        "to": "QCY__Pres_Hill",
+        "snr": 28.12,
+        "rssi": -91.93,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "FBGWarren",
+        "to": "Lunenburg",
+        "snr": 29.78,
+        "rssi": -90.26,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "pants_pimesh",
+        "to": "WCONRoomServer",
+        "snr": 9.58,
+        "rssi": -110.46,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "The_Packet_Yeeter",
+        "to": "AUB__MA__Prospect",
+        "snr": 25.8,
+        "rssi": -94.24,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "MBRCA_Quincy_Center",
+        "to": "MIL__Broken_Hills",
+        "snr": 6.33,
+        "rssi": -113.71,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "MALBellrock",
+        "to": "SOM__LunarLander",
+        "snr": 24.18,
+        "rssi": -95.86,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "nhdeerfieldsouth",
+        "to": "PNMCPawtNMCR",
+        "snr": 28.94,
+        "rssi": -91.1,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "T114_DOT",
+        "to": "JP__Forest_Hills_Rep",
+        "snr": 8.76,
+        "rssi": -111.28,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "NiNeVoLt_v2_Repeater",
+        "to": "WEY_NOT_DEPLOYED",
+        "snr": 2.29,
+        "rssi": -117.75,
+        "snr_std_dev": 0.5,
+        "loss": 0.0013,
+        "bidir": true
+      },
+      {
+        "from": "ConcordPunkatasset00",
+        "to": "CAR__Benfield",
+        "snr": 28.78,
+        "rssi": -91.26,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "SOM__LunarLander",
+        "to": "ARL__HighSchool",
+        "snr": 20.68,
+        "rssi": -99.36,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "NB__Hill_Street",
+        "to": "GraftonBMV",
+        "snr": 28.57,
+        "rssi": -91.47,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "MALBellrock",
+        "to": "New_Leaf_Repeater",
+        "snr": 14.25,
+        "rssi": -105.79,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "SHR__Moose_Hill",
+        "to": "MAFOXBOROEDG04",
+        "snr": 24.09,
+        "rssi": -95.95,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "WAT__Arsenal",
+        "to": "Cambridgeport_MeshCo",
+        "snr": 21.7,
+        "rssi": -98.34,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "WOBURNwwwRagRockus",
+        "to": "BURSouthWest2",
+        "snr": 28.2,
+        "rssi": -91.84,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "ACT__SouthActon",
+        "to": "CON2_Annursnac_Hill",
+        "snr": 27.86,
+        "rssi": -92.18,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "Str__Stratham_Hill",
+        "to": "OrwellRPT",
+        "snr": 27.85,
+        "rssi": -92.19,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "NBORO_Ellsworth",
+        "to": "NBORO_Pisgah",
+        "snr": 12.82,
+        "rssi": -107.22,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "Lowell_Beta",
+        "to": "Dracut_Repeater",
+        "snr": 27.58,
+        "rssi": -92.46,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "BOS__Fort_Hill",
+        "to": "BzqRepeater",
+        "snr": 5.84,
+        "rssi": -114.21,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "AUBMAProspect2",
+        "to": "MIL__Ararat",
+        "snr": 5.27,
+        "rssi": -114.77,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "RPTRFTP",
+        "to": "Lowell_Alpha",
+        "snr": 12.29,
+        "rssi": -107.76,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "NAS__Downtown",
+        "to": "HUD__CBP_Repeater",
+        "snr": 27.37,
+        "rssi": -92.67,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "BXFDMt_Eleanor",
+        "to": "BXFD__Wildcat_Redux",
+        "snr": 21.09,
+        "rssi": -98.96,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "BOS__North_End",
+        "to": "New_Leaf_Repeater",
+        "snr": -3.75,
+        "rssi": -123.79,
+        "snr_std_dev": 0.5,
+        "loss": 0.142,
+        "bidir": true
+      },
+      {
+        "from": "BURSouthWest2",
+        "to": "BURNorthEast1",
+        "snr": 20.75,
+        "rssi": -99.29,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "DENHDeerfield_NH_WPF",
+        "to": "PNMCPawtNMCR",
+        "snr": 27.18,
+        "rssi": -92.86,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "Bradford_Repeater",
+        "to": "GLNDMAPITREPEATER",
+        "snr": 13.36,
+        "rssi": -106.69,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "Cambridgeport_MeshCo",
+        "to": "BOS__Eastie_Room_2",
+        "snr": -2.21,
+        "rssi": -122.25,
+        "snr_std_dev": 0.5,
+        "loss": 0.0459,
+        "bidir": true
+      },
+      {
+        "from": "MAY__Presidential",
+        "to": "Cloudbury",
+        "snr": 9.84,
+        "rssi": -110.2,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "BURSouthWest2",
+        "to": "LEX__GreatMeadow",
+        "snr": 13.79,
+        "rssi": -106.25,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "RAK4631_Repeater",
+        "to": "SHR__Rattle",
+        "snr": 26.01,
+        "rssi": -94.04,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "NBORO_Heimdall_Repea",
+        "to": "Shrew1",
+        "snr": 23.47,
+        "rssi": -96.57,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "Dracut_Repeater",
+        "to": "LOWHighlands2",
+        "snr": 9.16,
+        "rssi": -110.88,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "Hawks_Nest_Leicester",
+        "to": "AUB__MA__Prospect__H",
+        "snr": 3.26,
+        "rssi": -116.79,
+        "snr_std_dev": 0.5,
+        "loss": 0.0006,
+        "bidir": true
+      },
+      {
+        "from": "LEXMeagherville",
+        "to": "CONGreatMeadows02",
+        "snr": 24.06,
+        "rssi": -95.98,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "CMBHarvard1",
+        "to": "BOS__Eastie_Room",
+        "snr": -0.68,
+        "rssi": -120.72,
+        "snr_std_dev": 0.5,
+        "loss": 0.0139,
+        "bidir": true
+      },
+      {
+        "from": "NCB1__Newton_Corner",
+        "to": "ARL__ParkCircle2",
+        "snr": 20.5,
+        "rssi": -99.54,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "AUB__MINE_HILL",
+        "to": "CHE__LEDGE",
+        "snr": 11.71,
+        "rssi": -108.33,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "BIL__Fox_Hill",
+        "to": "BURNorthEast3",
+        "snr": 25.28,
+        "rssi": -94.76,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "ALSArtisans",
+        "to": "ARL__ParkCircle2",
+        "snr": -0.96,
+        "rssi": -121.0,
+        "snr_std_dev": 0.5,
+        "loss": 0.0174,
+        "bidir": true
+      },
+      {
+        "from": "SNHNI_Test",
+        "to": "Jefts_Hill_Repeater_2",
+        "snr": 25.11,
+        "rssi": -94.93,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "NBORO__Edmund_Hill",
+        "to": "Shrew1",
+        "snr": 22.88,
+        "rssi": -97.16,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "Heltec_Repeater_5PS",
+        "to": "SU_NHMesh_UTR_SouthU",
+        "snr": 24.74,
+        "rssi": -95.3,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "CONGreatMeadows02",
+        "to": "WCONRoomServer",
+        "snr": -5.15,
+        "rssi": -125.19,
+        "snr_std_dev": 0.5,
+        "loss": 0.3358,
+        "bidir": true
+      },
+      {
+        "from": "BRK__CoolidgePark_MQ_2",
+        "to": "ARL__Center",
+        "snr": 14.11,
+        "rssi": -105.94,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "WAL__Toasted_Radioli",
+        "to": "WEL__Hills",
+        "snr": -1.56,
+        "rssi": -121.6,
+        "snr_std_dev": 0.5,
+        "loss": 0.0278,
+        "bidir": true
+      },
+      {
+        "from": "Furnace_Brook_Parkwa",
+        "to": "EBAE",
+        "snr": 21.13,
+        "rssi": -98.91,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "Iirya2PMC",
+        "to": "CHE__LEDGE",
+        "snr": -1.22,
+        "rssi": -121.26,
+        "snr_std_dev": 0.5,
+        "loss": 0.0214,
+        "bidir": true
+      },
+      {
+        "from": "Meshbury",
+        "to": "FRA__Gibbs",
+        "snr": 23.19,
+        "rssi": -96.85,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "WALSE_Room_Server",
+        "to": "MFD__Mystic",
+        "snr": -2.6,
+        "rssi": -122.64,
+        "snr_std_dev": 0.5,
+        "loss": 0.0616,
+        "bidir": true
+      },
+      {
+        "from": "BOS__Fort_Hill",
+        "to": "SOM__WOB",
+        "snr": 16.81,
+        "rssi": -103.23,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "DOV__MED_Border",
+        "to": "WAL__Walpole_Repeate",
+        "snr": 24.18,
+        "rssi": -95.86,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "Rumford",
+        "to": "Superfund",
+        "snr": 24.17,
+        "rssi": -95.87,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "Concord_Attic_G2",
+        "to": "ACT__Town_Center",
+        "snr": -0.84,
+        "rssi": -120.89,
+        "snr_std_dev": 0.5,
+        "loss": 0.0159,
+        "bidir": true
+      },
+      {
+        "from": "BRK__CoolidgePark_MQ",
+        "to": "ARL__FoodLink",
+        "snr": 4.39,
+        "rssi": -115.66,
+        "snr_std_dev": 0.5,
+        "loss": 0.0002,
+        "bidir": true
+      },
+      {
+        "from": "SycamoreRepeater",
+        "to": "Dracut_Repeater",
+        "snr": 23.53,
+        "rssi": -96.51,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "MAN__Message_Board",
+        "to": "LDRY__North_Tree",
+        "snr": 8.62,
+        "rssi": -111.42,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "Norwell_Accord_Park",
+        "to": "COH__Scituate_Hill",
+        "snr": 5.5,
+        "rssi": -114.54,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "Steves_Braintree_Bri",
+        "to": "NorwellAccord_Park_1",
+        "snr": 16.49,
+        "rssi": -103.55,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "LEXWhippleMNK",
+        "to": "BURFOXHILL",
+        "snr": 6.78,
+        "rssi": -113.26,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "Dracut_Repeater",
+        "to": "RPTRFTP",
+        "snr": 21.97,
+        "rssi": -98.07,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "Francestown_NH",
+        "to": "CMT_Francestown",
+        "snr": 23.01,
+        "rssi": -97.03,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "JP__Forest_Hills_Rep",
+        "to": "QCY__Pres_Hill",
+        "snr": 21.34,
+        "rssi": -98.7,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "MBRCA_Waltham_600",
+        "to": "NEED__Highland_Ave",
+        "snr": 19.79,
+        "rssi": -100.25,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "BEDTree_Router",
+        "to": "Lderry__TreeBC01",
+        "snr": 2.86,
+        "rssi": -117.18,
+        "snr_std_dev": 0.5,
+        "loss": 0.0008,
+        "bidir": true
+      },
+      {
+        "from": "Shrew1",
+        "to": "GRF__Brigham_Hill",
+        "snr": 21.91,
+        "rssi": -98.14,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "Cloudbury",
+        "to": "ACT__Great_Hill_2",
+        "snr": 21.87,
+        "rssi": -98.17,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "Telegraph_Hill",
+        "to": "QCY__Faxon_ParkHMart",
+        "snr": 22.47,
+        "rssi": -97.57,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "AUB__MA__Prospect",
+        "to": "Mosscap",
+        "snr": 21.6,
+        "rssi": -98.44,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "IanTestRepeater",
+        "to": "Mosscap",
+        "snr": 21.6,
+        "rssi": -98.44,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "Meshbury",
+        "to": "ACT__Great_Hill_2",
+        "snr": 11.9,
+        "rssi": -108.14,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "T114_DOT",
+        "to": "BzqRepeater",
+        "snr": -1.02,
+        "rssi": -121.06,
+        "snr_std_dev": 0.5,
+        "loss": 0.0182,
+        "bidir": true
+      },
+      {
+        "from": "WOBURN_RPT",
+        "to": "abombrepeater",
+        "snr": 22.3,
+        "rssi": -97.74,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "ViPeR2__Rt20BosProvT",
+        "to": "GRF__Parker_Preserve",
+        "snr": 21.87,
+        "rssi": -98.17,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "BIL__Fox_Hill",
+        "to": "RPTRFTP",
+        "snr": 22.19,
+        "rssi": -97.86,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "ARL__FoodLink",
+        "to": "BOSLongwood4",
+        "snr": 16.11,
+        "rssi": -103.93,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "QCY__Faxon_ParkHMart",
+        "to": "HUL__Allerton_Harbor_2",
+        "snr": 16.08,
+        "rssi": -103.96,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "LOWHighlands2",
+        "to": "abombrepeater",
+        "snr": 16.97,
+        "rssi": -103.08,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "QCY__Faxon_ParkHMart",
+        "to": "HUL__Allerton_Harbor_3",
+        "snr": 17.42,
+        "rssi": -102.63,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "Concord_MA__MQTT",
+        "to": "ACT__Great_Hill",
+        "snr": 21.54,
+        "rssi": -98.5,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "CHE__LEDGE",
+        "to": "DER__Warner_Hill_4AX",
+        "snr": 21.48,
+        "rssi": -98.56,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "Waltham_900",
+        "to": "CMB1__wwwBostonMesh",
+        "snr": -0.53,
+        "rssi": -120.57,
+        "snr_std_dev": 0.5,
+        "loss": 0.0125,
+        "bidir": true
+      },
+      {
+        "from": "PEL__Jeremy_Hill",
+        "to": "Lowell_Alpha",
+        "snr": 21.42,
+        "rssi": -98.62,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "MWMCR__RP2",
+        "to": "ARL__ParkCircle",
+        "snr": -5.72,
+        "rssi": -125.76,
+        "snr_std_dev": 0.5,
+        "loss": 0.4435,
+        "bidir": true
+      },
+      {
+        "from": "AUB__MA__Prospect",
+        "to": "WOR__Chandler_Hill",
+        "snr": 21.31,
+        "rssi": -98.74,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "Chandler_Hill",
+        "to": "IanTestRepeater",
+        "snr": 21.18,
+        "rssi": -98.86,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "BRK__CoolidgePark_MQ",
+        "to": "LEXWhippleMNK",
+        "snr": 20.08,
+        "rssi": -99.96,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "STH__Bear_Hill",
+        "to": "BOS__Eastie_Room",
+        "snr": 20.35,
+        "rssi": -99.69,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "BowfPeat",
+        "to": "HUL__Allerton_Harbor_3",
+        "snr": 20.78,
+        "rssi": -99.26,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "precisecheese",
+        "to": "Cloudbury",
+        "snr": 20.84,
+        "rssi": -99.21,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "HUL__Allerton_Harbor_2",
+        "to": "QCY__Pres_Hill",
+        "snr": 20.35,
+        "rssi": -99.69,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "MNKroom",
+        "to": "ARL__ParkCircle2",
+        "snr": -5.87,
+        "rssi": -125.91,
+        "snr_std_dev": 0.5,
+        "loss": 0.4731,
+        "bidir": true
+      },
+      {
+        "from": "StuckOnARoof",
+        "to": "Jiminy_Peak",
+        "snr": 20.88,
+        "rssi": -99.17,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "Westboro_Fay_Repeate",
+        "to": "NBORO_Pisgah",
+        "snr": 20.59,
+        "rssi": -99.46,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "NEED__Highland_Ave",
+        "to": "LIN__Moccasin_Hill",
+        "snr": 18.6,
+        "rssi": -101.44,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "MedwayMA_HELTEC",
+        "to": "WRN__Pinnacle",
+        "snr": 5.04,
+        "rssi": -115.0,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "KlopRoom",
+        "to": "BURNorthEast3",
+        "snr": 19.83,
+        "rssi": -100.21,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "LOWPRWM1W1",
+        "to": "PEL__Jeremy_Hill",
+        "snr": 19.81,
+        "rssi": -100.23,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "BRK_CP_MQTT",
+        "to": "STH__Bear_Hill",
+        "snr": 16.1,
+        "rssi": -103.94,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "LOWPRRoomServer",
+        "to": "PEL__Jeremy_Hill",
+        "snr": 19.79,
+        "rssi": -100.25,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "KlopRoom",
+        "to": "BURFOXHILL",
+        "snr": 19.79,
+        "rssi": -100.25,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "HM_MESHTOP",
+        "to": "Arkay_Room_Server",
+        "snr": 17.42,
+        "rssi": -102.62,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "WOBURNwwwRagRockus",
+        "to": "CMB__CENTRAL_SQ__001",
+        "snr": 0.38,
+        "rssi": -119.67,
+        "snr_std_dev": 0.5,
+        "loss": 0.0061,
+        "bidir": true
+      },
+      {
+        "from": "Quincy__Presidents_H",
+        "to": "BOS__Eastie_Room_2",
+        "snr": 16.47,
+        "rssi": -103.57,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "Quincy__Presidents_H",
+        "to": "WEY_NOT_DEPLOYED",
+        "snr": -2.17,
+        "rssi": -122.21,
+        "snr_std_dev": 0.5,
+        "loss": 0.0445,
+        "bidir": true
+      },
+      {
+        "from": "N_Tewksbury",
+        "to": "BURNorthEast2",
+        "snr": 19.14,
+        "rssi": -100.9,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "SycamoreRepeater",
+        "to": "ConcordPunkatasset00",
+        "snr": 15.72,
+        "rssi": -104.32,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "MWMCR__RP1",
+        "to": "BOS__Fort_Hill",
+        "snr": -8.55,
+        "rssi": -128.59,
+        "snr_std_dev": 0.5,
+        "loss": 0.8848,
+        "bidir": true
+      },
+      {
+        "from": "abomb_Room_Server",
+        "to": "WOBDATV",
+        "snr": 14.2,
+        "rssi": -105.84,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "BOS__North_End",
+        "to": "HUL__Allerton_Harbor_3",
+        "snr": -1.19,
+        "rssi": -121.23,
+        "snr_std_dev": 0.5,
+        "loss": 0.0208,
+        "bidir": true
+      },
+      {
+        "from": "Brookline",
+        "to": "STH__Bear_Hill",
+        "snr": 15.42,
+        "rssi": -104.62,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "FRA__Gibbs",
+        "to": "WEL__North",
+        "snr": 18.79,
+        "rssi": -101.25,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "MIL__Broken_Hills",
+        "to": "Norwell_Accord_Park",
+        "snr": 16.88,
+        "rssi": -103.16,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "MAR__Pisgah__Peak",
+        "to": "SUD__Saddle_Hill",
+        "snr": 18.45,
+        "rssi": -101.59,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "AUB__MA__Prospect__H",
+        "to": "GraftonBMV",
+        "snr": -3.39,
+        "rssi": -123.43,
+        "snr_std_dev": 0.5,
+        "loss": 0.1105,
+        "bidir": true
+      },
+      {
+        "from": "BURNorthEast1",
+        "to": "LIN__Moccasin_Hill",
+        "snr": -8.96,
+        "rssi": -129.01,
+        "snr_std_dev": 0.5,
+        "loss": 0.9146,
+        "bidir": true
+      },
+      {
+        "from": "WOBURN_RPT",
+        "to": "CON2_Annursnac_Hill",
+        "snr": -0.31,
+        "rssi": -120.35,
+        "snr_std_dev": 0.5,
+        "loss": 0.0105,
+        "bidir": true
+      },
+      {
+        "from": "Telegraph_Hill_2",
+        "to": "9Volt_test",
+        "snr": 14.92,
+        "rssi": -105.12,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "CMB__Atto",
+        "to": "Steves_GBH_Peace_Pro",
+        "snr": 13.82,
+        "rssi": -106.22,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "MNKroom",
+        "to": "CAR__Benfield",
+        "snr": -8.01,
+        "rssi": -128.05,
+        "snr_std_dev": 0.5,
+        "loss": 0.8328,
+        "bidir": true
+      },
+      {
+        "from": "SHR__Moose_Hill",
+        "to": "MIL__Broken_Hills",
+        "snr": -3.09,
+        "rssi": -123.13,
+        "snr_std_dev": 0.5,
+        "loss": 0.0889,
+        "bidir": true
+      },
+      {
+        "from": "ConcordAnnursnac001",
+        "to": "LOWPRWM1W1",
+        "snr": -1.93,
+        "rssi": -121.97,
+        "snr_std_dev": 0.5,
+        "loss": 0.037,
+        "bidir": true
+      },
+      {
+        "from": "FOX__high",
+        "to": "DOV__Peabody",
+        "snr": 13.62,
+        "rssi": -106.42,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "NB__Hill_Street",
+        "to": "Chandler_Hill",
+        "snr": 15.43,
+        "rssi": -104.61,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "COMSAX__All_Welcome",
+        "to": "ConcordAnnursnac001",
+        "snr": 2.12,
+        "rssi": -117.92,
+        "snr_std_dev": 0.5,
+        "loss": 0.0015,
+        "bidir": true
+      },
+      {
+        "from": "spfldnet",
+        "to": "NOTCH",
+        "snr": 17.19,
+        "rssi": -102.85,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "CON1WBoostah",
+        "to": "N_Tewksbury",
+        "snr": 1.05,
+        "rssi": -118.99,
+        "snr_std_dev": 0.5,
+        "loss": 0.0035,
+        "bidir": true
+      },
+      {
+        "from": "WOBURNwwwRagRockus",
+        "to": "N_Tewksbury",
+        "snr": 13.68,
+        "rssi": -106.36,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "APODublin",
+        "to": "CMT_Francestown",
+        "snr": 16.68,
+        "rssi": -103.36,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "LEXMeagherville",
+        "to": "LOWPRRoomServer",
+        "snr": -6.44,
+        "rssi": -126.48,
+        "snr_std_dev": 0.5,
+        "loss": 0.5873,
+        "bidir": true
+      },
+      {
+        "from": "MWMCR__RP1",
+        "to": "abomb_Room_Server",
+        "snr": -1.25,
+        "rssi": -121.29,
+        "snr_std_dev": 0.5,
+        "loss": 0.0218,
+        "bidir": true
+      },
+      {
+        "from": "Telegraph_Hill_2",
+        "to": "ALSArtisans_2",
+        "snr": 2.37,
+        "rssi": -117.68,
+        "snr_std_dev": 0.5,
+        "loss": 0.0012,
+        "bidir": true
+      },
+      {
+        "from": "Telegraph_Hill",
+        "to": "RandolphResRep01",
+        "snr": -0.47,
+        "rssi": -120.51,
+        "snr_std_dev": 0.5,
+        "loss": 0.0118,
+        "bidir": true
+      },
+      {
+        "from": "COMSAX__Poems",
+        "to": "ConcordAnnursnac001",
+        "snr": 12.93,
+        "rssi": -107.11,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "NANDWeir_Hill",
+        "to": "NT4RAK4631_Repeater",
+        "snr": 15.13,
+        "rssi": -104.91,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "Rumford",
+        "to": "HOP__TC_Repeater_2",
+        "snr": 15.69,
+        "rssi": -104.35,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "FRA__Gibbs",
+        "to": "CAR__Benfield",
+        "snr": 14.34,
+        "rssi": -105.7,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "QCY__Faxon_ParkHMart",
+        "to": "SOM__Teele_Square",
+        "snr": -3.22,
+        "rssi": -123.26,
+        "snr_std_dev": 0.5,
+        "loss": 0.0976,
+        "bidir": true
+      },
+      {
+        "from": "COMSAX__All_Welcome",
+        "to": "Woodside_Room",
+        "snr": -6.64,
+        "rssi": -126.68,
+        "snr_std_dev": 0.5,
+        "loss": 0.6251,
+        "bidir": true
+      },
+      {
+        "from": "QCY__Pres_Hill",
+        "to": "ARL__HighSchool",
+        "snr": -5.17,
+        "rssi": -125.21,
+        "snr_std_dev": 0.5,
+        "loss": 0.3393,
+        "bidir": true
+      },
+      {
+        "from": "Steves_GBH_Peace_Pro",
+        "to": "MFD__Mystic",
+        "snr": 1.64,
+        "rssi": -118.4,
+        "snr_std_dev": 0.5,
+        "loss": 0.0022,
+        "bidir": true
+      },
+      {
+        "from": "ACT__Town_Center",
+        "to": "MAR__Pisgah__Peak",
+        "snr": 12.66,
+        "rssi": -107.38,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "CRM_NotDeployed",
+        "to": "HOP__TC_Repeater",
+        "snr": 14.89,
+        "rssi": -105.15,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "NANDWeir_Hill",
+        "to": "SycamoreRepeater",
+        "snr": 11.42,
+        "rssi": -108.62,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "Crows_Nest",
+        "to": "HUD__CBP_Repeater",
+        "snr": 14.57,
+        "rssi": -105.47,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "COH__Scituate_Hill",
+        "to": "BOS__Fenway",
+        "snr": -8.2,
+        "rssi": -128.24,
+        "snr_std_dev": 0.5,
+        "loss": 0.8534,
+        "bidir": true
+      },
+      {
+        "from": "KlopRoom",
+        "to": "ARL__Heights",
+        "snr": -3.3,
+        "rssi": -123.34,
+        "snr_std_dev": 0.5,
+        "loss": 0.1035,
+        "bidir": true
+      },
+      {
+        "from": "South_Nashua_Repeate",
+        "to": "DER__Warner_Hill_4AX",
+        "snr": 8.81,
+        "rssi": -111.23,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "Iirya2PMC",
+        "to": "SU_NHMesh_UTR_SouthU",
+        "snr": 14.2,
+        "rssi": -105.84,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "CMT_Francestown",
+        "to": "BOW_NHRED_PINE",
+        "snr": 13.32,
+        "rssi": -106.72,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "HOP__TC_Repeater",
+        "to": "SU_NHMesh_UTR_SouthU",
+        "snr": 13.23,
+        "rssi": -106.81,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "FOX__high",
+        "to": "WEL__North",
+        "snr": -3.59,
+        "rssi": -123.63,
+        "snr_std_dev": 0.5,
+        "loss": 0.1266,
+        "bidir": true
+      },
+      {
+        "from": "DENHDeerfield_NH_WPF",
+        "to": "SU_NHMesh_UTR_SouthU",
+        "snr": 13.16,
+        "rssi": -106.88,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "WPF5_Heltec_2",
+        "to": "GOFN_Repeater",
+        "snr": 13.1,
+        "rssi": -106.94,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "FOX__high",
+        "to": "SUD__Saddle_Hill",
+        "snr": 11.98,
+        "rssi": -108.06,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "Steves_GBH_Peace_Pro",
+        "to": "WOBURNwwwRagRockus",
+        "snr": -3.12,
+        "rssi": -123.16,
+        "snr_std_dev": 0.5,
+        "loss": 0.0909,
+        "bidir": true
+      },
+      {
+        "from": "BEDTree_Router",
+        "to": "PNMCPawtNMCR",
+        "snr": -2.95,
+        "rssi": -122.99,
+        "snr_std_dev": 0.5,
+        "loss": 0.0803,
+        "bidir": true
+      },
+      {
+        "from": "WPF5_Heltec_2",
+        "to": "Str__Stratham_Hill",
+        "snr": -3.27,
+        "rssi": -123.31,
+        "snr_std_dev": 0.5,
+        "loss": 0.1012,
+        "bidir": true
+      },
+      {
+        "from": "CMB__Nano",
+        "to": "FRA__Gibbs",
+        "snr": -9.69,
+        "rssi": -129.73,
+        "snr_std_dev": 0.5,
+        "loss": 0.9504,
+        "bidir": true
+      },
+      {
+        "from": "NAS__Downtown",
+        "to": "SNHNI_Test",
+        "snr": 8.07,
+        "rssi": -111.97,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "NHMesh_Picohive_1",
+        "to": "STH__Bear_Hill",
+        "snr": -4.4,
+        "rssi": -124.44,
+        "snr_std_dev": 0.5,
+        "loss": 0.2176,
+        "bidir": true
+      },
+      {
+        "from": "PNMCPawtNMCR",
+        "to": "RJL_New_Boston",
+        "snr": 5.31,
+        "rssi": -114.73,
+        "snr_std_dev": 0.5,
+        "bidir": true
+      },
+      {
+        "from": "alice",
+        "to": "ACT__SouthActon",
+        "snr": 10.0,
+        "rssi": -70.0,
+        "bidir": true
+      },
+      {
+        "from": "bob",
+        "to": "Norwell_Accord_Park",
+        "snr": 10.0,
+        "rssi": -70.0,
+        "bidir": true
+      },
+      {
+        "from": "carol",
+        "to": "NANDWeir_Hill",
+        "snr": 10.0,
+        "rssi": -70.0,
+        "bidir": true
+      },
+      {
+        "from": "dave",
+        "to": "MALBellrock",
+        "snr": 10.0,
+        "rssi": -70.0,
+        "bidir": true
+      }
+    ]
+  },
+  "commands": [],
+  "message_schedule": [
+    {
+      "from": "alice",
+      "to": "carol",
+      "start_ms": 128657,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 alice->carol s1m1 seq=1",
+      "ack": true
+    },
+    {
+      "from": "carol",
+      "to": "alice",
+      "start_ms": 153520,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 carol->alice s1m2 seq=1",
+      "ack": true
+    },
+    {
+      "from": "alice",
+      "to": "carol",
+      "start_ms": 168954,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 alice->carol s1m3 seq=2",
+      "ack": true
+    },
+    {
+      "from": "alice",
+      "to": "bob",
+      "start_ms": 183810,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 alice->bob s1m1 seq=1",
+      "ack": true
+    },
+    {
+      "from": "bob",
+      "to": "dave",
+      "start_ms": 186673,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 bob->dave s1m1 seq=1",
+      "ack": true
+    },
+    {
+      "from": "carol",
+      "to": "dave",
+      "start_ms": 187841,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 carol->dave s1m1 seq=1",
+      "ack": true
+    },
+    {
+      "from": "alice",
+      "to": "dave",
+      "start_ms": 191506,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 alice->dave s1m1 seq=1",
+      "ack": true
+    },
+    {
+      "from": "carol",
+      "to": "alice",
+      "start_ms": 193149,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 carol->alice s1m4 seq=2",
+      "ack": true
+    },
+    {
+      "from": "bob",
+      "to": "alice",
+      "start_ms": 203316,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 bob->alice s1m2 seq=1",
+      "ack": true
+    },
+    {
+      "from": "dave",
+      "to": "carol",
+      "start_ms": 204010,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 dave->carol s1m2 seq=1",
+      "ack": true
+    },
+    {
+      "from": "bob",
+      "to": "carol",
+      "start_ms": 205791,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 bob->carol s1m1 seq=1",
+      "ack": true
+    },
+    {
+      "from": "dave",
+      "to": "bob",
+      "start_ms": 206414,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 dave->bob s1m2 seq=1",
+      "ack": true
+    },
+    {
+      "from": "dave",
+      "to": "alice",
+      "start_ms": 210474,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 dave->alice s1m1 seq=7",
+      "ack": true
+    },
+    {
+      "from": "dave",
+      "to": "alice",
+      "start_ms": 211058,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 dave->alice s1m2 seq=1",
+      "ack": true
+    },
+    {
+      "from": "alice",
+      "to": "bob",
+      "start_ms": 222328,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 alice->bob s1m3 seq=2",
+      "ack": true
+    },
+    {
+      "from": "bob",
+      "to": "dave",
+      "start_ms": 222721,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 bob->dave s1m3 seq=2",
+      "ack": true
+    },
+    {
+      "from": "alice",
+      "to": "dave",
+      "start_ms": 226390,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 alice->dave s1m2 seq=7",
+      "ack": true
+    },
+    {
+      "from": "carol",
+      "to": "bob",
+      "start_ms": 228318,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 carol->bob s1m2 seq=1",
+      "ack": true
+    },
+    {
+      "from": "alice",
+      "to": "dave",
+      "start_ms": 228605,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 alice->dave s1m3 seq=2",
+      "ack": true
+    },
+    {
+      "from": "carol",
+      "to": "dave",
+      "start_ms": 228990,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 carol->dave s1m3 seq=2",
+      "ack": true
+    },
+    {
+      "from": "bob",
+      "to": "alice",
+      "start_ms": 240985,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 bob->alice s1m4 seq=2",
+      "ack": true
+    },
+    {
+      "from": "dave",
+      "to": "bob",
+      "start_ms": 241535,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 dave->bob s1m4 seq=2",
+      "ack": true
+    },
+    {
+      "from": "dave",
+      "to": "alice",
+      "start_ms": 245142,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 dave->alice s1m3 seq=8",
+      "ack": true
+    },
+    {
+      "from": "dave",
+      "to": "carol",
+      "start_ms": 246793,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 dave->carol s1m4 seq=2",
+      "ack": true
+    },
+    {
+      "from": "dave",
+      "to": "alice",
+      "start_ms": 247132,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 dave->alice s1m4 seq=2",
+      "ack": true
+    },
+    {
+      "from": "bob",
+      "to": "carol",
+      "start_ms": 252103,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 bob->carol s1m3 seq=2",
+      "ack": true
+    },
+    {
+      "from": "alice",
+      "to": "dave",
+      "start_ms": 260667,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 alice->dave s1m4 seq=8",
+      "ack": true
+    },
+    {
+      "from": "carol",
+      "to": "bob",
+      "start_ms": 269148,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 carol->bob s1m4 seq=2",
+      "ack": true
+    },
+    {
+      "from": "bob",
+      "to": "carol",
+      "start_ms": 365695,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 bob->carol s2m1 seq=3",
+      "ack": true
+    },
+    {
+      "from": "alice",
+      "to": "bob",
+      "start_ms": 374592,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 alice->bob s2m1 seq=3",
+      "ack": true
+    },
+    {
+      "from": "carol",
+      "to": "bob",
+      "start_ms": 381986,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 carol->bob s2m2 seq=3",
+      "ack": true
+    },
+    {
+      "from": "bob",
+      "to": "dave",
+      "start_ms": 389871,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 bob->dave s2m1 seq=3",
+      "ack": true
+    },
+    {
+      "from": "alice",
+      "to": "carol",
+      "start_ms": 390495,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 alice->carol s2m1 seq=3",
+      "ack": true
+    },
+    {
+      "from": "bob",
+      "to": "alice",
+      "start_ms": 391271,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 bob->alice s2m2 seq=3",
+      "ack": true
+    },
+    {
+      "from": "carol",
+      "to": "dave",
+      "start_ms": 394993,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 carol->dave s2m1 seq=3",
+      "ack": true
+    },
+    {
+      "from": "bob",
+      "to": "carol",
+      "start_ms": 406030,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 bob->carol s2m3 seq=4",
+      "ack": true
+    },
+    {
+      "from": "dave",
+      "to": "bob",
+      "start_ms": 411098,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 dave->bob s2m2 seq=3",
+      "ack": true
+    },
+    {
+      "from": "dave",
+      "to": "carol",
+      "start_ms": 414003,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 dave->carol s2m2 seq=3",
+      "ack": true
+    },
+    {
+      "from": "carol",
+      "to": "alice",
+      "start_ms": 414423,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 carol->alice s2m2 seq=3",
+      "ack": true
+    },
+    {
+      "from": "alice",
+      "to": "bob",
+      "start_ms": 415206,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 alice->bob s2m3 seq=4",
+      "ack": true
+    },
+    {
+      "from": "alice",
+      "to": "dave",
+      "start_ms": 415392,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 alice->dave s2m1 seq=3",
+      "ack": true
+    },
+    {
+      "from": "carol",
+      "to": "bob",
+      "start_ms": 425833,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 carol->bob s2m4 seq=4",
+      "ack": true
+    },
+    {
+      "from": "bob",
+      "to": "dave",
+      "start_ms": 430652,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 bob->dave s2m3 seq=4",
+      "ack": true
+    },
+    {
+      "from": "bob",
+      "to": "alice",
+      "start_ms": 431630,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 bob->alice s2m4 seq=4",
+      "ack": true
+    },
+    {
+      "from": "carol",
+      "to": "dave",
+      "start_ms": 431680,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 carol->dave s2m3 seq=4",
+      "ack": true
+    },
+    {
+      "from": "dave",
+      "to": "alice",
+      "start_ms": 432066,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 dave->alice s2m2 seq=3",
+      "ack": true
+    },
+    {
+      "from": "alice",
+      "to": "carol",
+      "start_ms": 436296,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 alice->carol s2m3 seq=4",
+      "ack": true
+    },
+    {
+      "from": "alice",
+      "to": "dave",
+      "start_ms": 448585,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 alice->dave s2m3 seq=4",
+      "ack": true
+    },
+    {
+      "from": "dave",
+      "to": "bob",
+      "start_ms": 453080,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 dave->bob s2m4 seq=4",
+      "ack": true
+    },
+    {
+      "from": "dave",
+      "to": "carol",
+      "start_ms": 454253,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 dave->carol s2m4 seq=4",
+      "ack": true
+    },
+    {
+      "from": "carol",
+      "to": "alice",
+      "start_ms": 454907,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 carol->alice s2m4 seq=4",
+      "ack": true
+    },
+    {
+      "from": "dave",
+      "to": "alice",
+      "start_ms": 460704,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 dave->alice s2m1 seq=9",
+      "ack": true
+    },
+    {
+      "from": "dave",
+      "to": "alice",
+      "start_ms": 469809,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 dave->alice s2m4 seq=4",
+      "ack": true
+    },
+    {
+      "from": "alice",
+      "to": "dave",
+      "start_ms": 482276,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 alice->dave s2m2 seq=9",
+      "ack": true
+    },
+    {
+      "from": "dave",
+      "to": "alice",
+      "start_ms": 501662,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 dave->alice s2m3 seq=10",
+      "ack": true
+    },
+    {
+      "from": "alice",
+      "to": "dave",
+      "start_ms": 517746,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 alice->dave s2m4 seq=10",
+      "ack": true
+    },
+    {
+      "from": "alice",
+      "to": "bob",
+      "start_ms": 623278,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 alice->bob s3m1 seq=5",
+      "ack": true
+    },
+    {
+      "from": "bob",
+      "to": "alice",
+      "start_ms": 645190,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 bob->alice s3m2 seq=5",
+      "ack": true
+    },
+    {
+      "from": "alice",
+      "to": "bob",
+      "start_ms": 660710,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 alice->bob s3m3 seq=6",
+      "ack": true
+    },
+    {
+      "from": "alice",
+      "to": "dave",
+      "start_ms": 664597,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 alice->dave s3m1 seq=5",
+      "ack": true
+    },
+    {
+      "from": "bob",
+      "to": "alice",
+      "start_ms": 676198,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 bob->alice s3m4 seq=6",
+      "ack": true
+    },
+    {
+      "from": "dave",
+      "to": "alice",
+      "start_ms": 685478,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 dave->alice s3m2 seq=5",
+      "ack": true
+    },
+    {
+      "from": "alice",
+      "to": "carol",
+      "start_ms": 686237,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 alice->carol s3m1 seq=5",
+      "ack": true
+    },
+    {
+      "from": "alice",
+      "to": "dave",
+      "start_ms": 706113,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 alice->dave s3m3 seq=6",
+      "ack": true
+    },
+    {
+      "from": "carol",
+      "to": "alice",
+      "start_ms": 710891,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 carol->alice s3m2 seq=5",
+      "ack": true
+    },
+    {
+      "from": "carol",
+      "to": "dave",
+      "start_ms": 711988,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 carol->dave s3m1 seq=5",
+      "ack": true
+    },
+    {
+      "from": "bob",
+      "to": "carol",
+      "start_ms": 715647,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 bob->carol s3m1 seq=5",
+      "ack": true
+    },
+    {
+      "from": "bob",
+      "to": "dave",
+      "start_ms": 721327,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 bob->dave s3m1 seq=5",
+      "ack": true
+    },
+    {
+      "from": "dave",
+      "to": "alice",
+      "start_ms": 721711,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 dave->alice s3m1 seq=11",
+      "ack": true
+    },
+    {
+      "from": "alice",
+      "to": "carol",
+      "start_ms": 730448,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 alice->carol s3m3 seq=6",
+      "ack": true
+    },
+    {
+      "from": "dave",
+      "to": "alice",
+      "start_ms": 731004,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 dave->alice s3m4 seq=6",
+      "ack": true
+    },
+    {
+      "from": "dave",
+      "to": "carol",
+      "start_ms": 731410,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 dave->carol s3m2 seq=5",
+      "ack": true
+    },
+    {
+      "from": "dave",
+      "to": "bob",
+      "start_ms": 738991,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 dave->bob s3m2 seq=5",
+      "ack": true
+    },
+    {
+      "from": "carol",
+      "to": "bob",
+      "start_ms": 740106,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 carol->bob s3m2 seq=5",
+      "ack": true
+    },
+    {
+      "from": "carol",
+      "to": "alice",
+      "start_ms": 745554,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 carol->alice s3m4 seq=6",
+      "ack": true
+    },
+    {
+      "from": "alice",
+      "to": "dave",
+      "start_ms": 746003,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 alice->dave s3m2 seq=11",
+      "ack": true
+    },
+    {
+      "from": "carol",
+      "to": "dave",
+      "start_ms": 755535,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 carol->dave s3m3 seq=6",
+      "ack": true
+    },
+    {
+      "from": "bob",
+      "to": "carol",
+      "start_ms": 758256,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 bob->carol s3m3 seq=6",
+      "ack": true
+    },
+    {
+      "from": "bob",
+      "to": "dave",
+      "start_ms": 760056,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 bob->dave s3m3 seq=6",
+      "ack": true
+    },
+    {
+      "from": "dave",
+      "to": "alice",
+      "start_ms": 766158,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 dave->alice s3m3 seq=12",
+      "ack": true
+    },
+    {
+      "from": "dave",
+      "to": "carol",
+      "start_ms": 774133,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 dave->carol s3m4 seq=6",
+      "ack": true
+    },
+    {
+      "from": "carol",
+      "to": "bob",
+      "start_ms": 774395,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 carol->bob s3m4 seq=6",
+      "ack": true
+    },
+    {
+      "from": "dave",
+      "to": "bob",
+      "start_ms": 780876,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 dave->bob s3m4 seq=6",
+      "ack": true
+    },
+    {
+      "from": "alice",
+      "to": "dave",
+      "start_ms": 784641,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 alice->dave s3m4 seq=12",
+      "ack": true
+    }
+  ],
+  "channel_schedule": [
+    {
+      "from": "dave",
+      "channel": 0,
+      "start_ms": 10000,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "chan dave seq=1"
+    },
+    {
+      "from": "dave",
+      "channel": 0,
+      "start_ms": 34494,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "chan dave seq=2"
+    },
+    {
+      "from": "carol",
+      "channel": 0,
+      "start_ms": 46834,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "chan carol seq=1"
+    },
+    {
+      "from": "bob",
+      "channel": 0,
+      "start_ms": 59121,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "chan bob seq=1"
+    },
+    {
+      "from": "carol",
+      "channel": 0,
+      "start_ms": 81326,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "chan carol seq=2"
+    },
+    {
+      "from": "dave",
+      "channel": 0,
+      "start_ms": 103565,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "chan dave seq=3"
+    },
+    {
+      "from": "dave",
+      "channel": 0,
+      "start_ms": 128274,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "chan dave seq=4"
+    },
+    {
+      "from": "bob",
+      "channel": 0,
+      "start_ms": 144204,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "chan bob seq=2"
+    },
+    {
+      "from": "dave",
+      "channel": 0,
+      "start_ms": 156470,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "chan dave seq=5"
+    },
+    {
+      "from": "alice",
+      "channel": 0,
+      "start_ms": 167959,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "chan alice seq=1"
+    },
+    {
+      "from": "alice",
+      "channel": 0,
+      "start_ms": 192067,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "chan alice seq=2"
+    },
+    {
+      "from": "bob",
+      "channel": 0,
+      "start_ms": 204571,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "chan bob seq=3"
+    },
+    {
+      "from": "dave",
+      "channel": 0,
+      "start_ms": 227548,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "chan dave seq=6"
+    },
+    {
+      "from": "alice",
+      "channel": 0,
+      "start_ms": 247319,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "chan alice seq=3"
+    },
+    {
+      "from": "dave",
+      "channel": 0,
+      "start_ms": 263623,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "chan dave seq=7"
+    },
+    {
+      "from": "dave",
+      "channel": 0,
+      "start_ms": 283386,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "chan dave seq=8"
+    },
+    {
+      "from": "carol",
+      "channel": 0,
+      "start_ms": 302055,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "chan carol seq=3"
+    },
+    {
+      "from": "alice",
+      "channel": 0,
+      "start_ms": 327965,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "chan alice seq=4"
+    },
+    {
+      "from": "alice",
+      "channel": 0,
+      "start_ms": 349110,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "chan alice seq=5"
+    },
+    {
+      "from": "carol",
+      "channel": 0,
+      "start_ms": 370279,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "chan carol seq=4"
+    },
+    {
+      "from": "carol",
+      "channel": 0,
+      "start_ms": 392871,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "chan carol seq=5"
+    },
+    {
+      "from": "carol",
+      "channel": 0,
+      "start_ms": 404698,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "chan carol seq=6"
+    },
+    {
+      "from": "bob",
+      "channel": 0,
+      "start_ms": 421821,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "chan bob seq=4"
+    },
+    {
+      "from": "alice",
+      "channel": 0,
+      "start_ms": 439254,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "chan alice seq=6"
+    },
+    {
+      "from": "carol",
+      "channel": 0,
+      "start_ms": 464881,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "chan carol seq=7"
+    },
+    {
+      "from": "bob",
+      "channel": 0,
+      "start_ms": 490804,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "chan bob seq=5"
+    },
+    {
+      "from": "alice",
+      "channel": 0,
+      "start_ms": 509121,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "chan alice seq=7"
+    },
+    {
+      "from": "carol",
+      "channel": 0,
+      "start_ms": 533383,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "chan carol seq=8"
+    },
+    {
+      "from": "bob",
+      "channel": 0,
+      "start_ms": 557172,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "chan bob seq=6"
+    },
+    {
+      "from": "carol",
+      "channel": 0,
+      "start_ms": 569676,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "chan carol seq=9"
+    },
+    {
+      "from": "bob",
+      "channel": 0,
+      "start_ms": 592168,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "chan bob seq=7"
+    },
+    {
+      "from": "alice",
+      "channel": 0,
+      "start_ms": 611005,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "chan alice seq=8"
+    },
+    {
+      "from": "carol",
+      "channel": 0,
+      "start_ms": 630818,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "chan carol seq=10"
+    },
+    {
+      "from": "alice",
+      "channel": 0,
+      "start_ms": 648823,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "chan alice seq=9"
+    },
+    {
+      "from": "carol",
+      "channel": 0,
+      "start_ms": 660655,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "chan carol seq=11"
+    },
+    {
+      "from": "carol",
+      "channel": 0,
+      "start_ms": 685051,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "chan carol seq=12"
+    },
+    {
+      "from": "alice",
+      "channel": 0,
+      "start_ms": 698974,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "chan alice seq=10"
+    },
+    {
+      "from": "alice",
+      "channel": 0,
+      "start_ms": 712920,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "chan alice seq=11"
+    },
+    {
+      "from": "dave",
+      "channel": 0,
+      "start_ms": 724323,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "chan dave seq=9"
+    },
+    {
+      "from": "alice",
+      "channel": 0,
+      "start_ms": 747692,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "chan alice seq=12"
+    },
+    {
+      "from": "bob",
+      "channel": 0,
+      "start_ms": 770153,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "chan bob seq=8"
+    },
+    {
+      "from": "dave",
+      "channel": 0,
+      "start_ms": 782256,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "chan dave seq=10"
+    },
+    {
+      "from": "bob",
+      "channel": 0,
+      "start_ms": 807769,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "chan bob seq=9"
+    },
+    {
+      "from": "dave",
+      "channel": 0,
+      "start_ms": 822111,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "chan dave seq=11"
+    },
+    {
+      "from": "bob",
+      "channel": 0,
+      "start_ms": 847911,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "chan bob seq=10"
+    },
+    {
+      "from": "bob",
+      "channel": 0,
+      "start_ms": 873130,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "chan bob seq=11"
+    }
+  ]
+}

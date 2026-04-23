@@ -10,8 +10,7 @@
       "sf": 10,
       "bw": 250000,
       "cr": 4
-    },
-    "lua_init": "simulation/urban_variability.lua"
+    }
   },
   "nodes": [
     {
@@ -80,128 +79,96 @@
       {
         "from": "alice",
         "to": "R1",
-        "snr": 8.0,
-        "rssi": -105.0,
+        "snr": 4.0,
+        "rssi": -115.0,
         "snr_std_dev": 1.5,
         "bidir": true
       },
       {
         "from": "alice",
         "to": "R2",
-        "snr": 8.0,
-        "rssi": -105.0,
+        "snr": 4.0,
+        "rssi": -115.0,
         "snr_std_dev": 1.5,
         "bidir": true
       },
       {
         "from": "R1",
         "to": "R3",
-        "snr": 8.0,
-        "rssi": -105.0,
+        "snr": 4.0,
+        "rssi": -115.0,
         "snr_std_dev": 1.5,
         "bidir": true
       },
       {
         "from": "R3",
         "to": "R5",
-        "snr": 8.0,
-        "rssi": -105.0,
+        "snr": 4.0,
+        "rssi": -115.0,
         "snr_std_dev": 1.5,
         "bidir": true
       },
       {
         "from": "R5",
         "to": "R7",
-        "snr": 8.0,
-        "rssi": -105.0,
+        "snr": 4.0,
+        "rssi": -115.0,
         "snr_std_dev": 1.5,
         "bidir": true
       },
       {
         "from": "R2",
         "to": "R4",
-        "snr": 8.0,
-        "rssi": -105.0,
+        "snr": 4.0,
+        "rssi": -115.0,
         "snr_std_dev": 1.5,
         "bidir": true
       },
       {
         "from": "R4",
         "to": "R6",
-        "snr": 8.0,
-        "rssi": -105.0,
+        "snr": 4.0,
+        "rssi": -115.0,
         "snr_std_dev": 1.5,
         "bidir": true
       },
       {
         "from": "R6",
         "to": "R8",
-        "snr": 8.0,
-        "rssi": -105.0,
-        "snr_std_dev": 1.5,
-        "bidir": true
-      },
-      {
-        "from": "R1",
-        "to": "R2",
-        "snr": 8.0,
-        "rssi": -105.0,
+        "snr": 4.0,
+        "rssi": -115.0,
         "snr_std_dev": 1.5,
         "bidir": true
       },
       {
         "from": "R3",
         "to": "R4",
-        "snr": 8.0,
-        "rssi": -105.0,
+        "snr": 4.0,
+        "rssi": -115.0,
         "snr_std_dev": 1.5,
         "bidir": true
       },
       {
         "from": "R5",
         "to": "R6",
-        "snr": 8.0,
-        "rssi": -105.0,
-        "snr_std_dev": 1.5,
-        "bidir": true
-      },
-      {
-        "from": "R7",
-        "to": "R8",
-        "snr": 8.0,
-        "rssi": -105.0,
+        "snr": 4.0,
+        "rssi": -115.0,
         "snr_std_dev": 1.5,
         "bidir": true
       },
       {
         "from": "R7",
         "to": "bob",
-        "snr": 8.0,
-        "rssi": -105.0,
+        "snr": 4.0,
+        "rssi": -115.0,
         "snr_std_dev": 1.5,
         "bidir": true
       },
       {
         "from": "R8",
         "to": "bob",
-        "snr": 8.0,
-        "rssi": -105.0,
-        "snr_std_dev": 1.5,
-        "bidir": true
-      },
-      {
-        "from": "R1",
-        "to": "R4",
-        "snr": 8.0,
-        "rssi": -105.0,
-        "snr_std_dev": 1.5,
-        "bidir": true
-      },
-      {
-        "from": "R5",
-        "to": "R8",
-        "snr": 8.0,
-        "rssi": -105.0,
+        "snr": 4.0,
+        "rssi": -115.0,
         "snr_std_dev": 1.5,
         "bidir": true
       }
@@ -213,111 +180,187 @@
       "lua": "init_variability"
     },
     {
-      "at_ms": 60000,
+      "at_ms": 30000,
       "lua": "apply_variability"
     },
     {
-      "at_ms": 80000,
+      "at_ms": 42000,
       "lua": "apply_variability"
     },
     {
-      "at_ms": 100000,
+      "at_ms": 54000,
       "lua": "apply_variability"
     },
     {
-      "at_ms": 120000,
+      "at_ms": 66000,
       "lua": "apply_variability"
     },
     {
-      "at_ms": 140000,
+      "at_ms": 78000,
       "lua": "apply_variability"
     },
     {
-      "at_ms": 160000,
+      "at_ms": 90000,
       "lua": "apply_variability"
     },
     {
-      "at_ms": 180000,
+      "at_ms": 102000,
       "lua": "apply_variability"
     },
     {
-      "at_ms": 200000,
+      "at_ms": 114000,
       "lua": "apply_variability"
     },
     {
-      "at_ms": 220000,
+      "at_ms": 126000,
       "lua": "apply_variability"
     },
     {
-      "at_ms": 240000,
+      "at_ms": 138000,
       "lua": "apply_variability"
     },
     {
-      "at_ms": 260000,
+      "at_ms": 150000,
       "lua": "apply_variability"
     },
     {
-      "at_ms": 280000,
+      "at_ms": 162000,
       "lua": "apply_variability"
     },
     {
-      "at_ms": 300000,
+      "at_ms": 174000,
       "lua": "apply_variability"
     },
     {
-      "at_ms": 320000,
+      "at_ms": 186000,
       "lua": "apply_variability"
     },
     {
-      "at_ms": 340000,
+      "at_ms": 198000,
       "lua": "apply_variability"
     },
     {
-      "at_ms": 360000,
+      "at_ms": 210000,
       "lua": "apply_variability"
     },
     {
-      "at_ms": 380000,
+      "at_ms": 222000,
       "lua": "apply_variability"
     },
     {
-      "at_ms": 400000,
+      "at_ms": 234000,
       "lua": "apply_variability"
     },
     {
-      "at_ms": 420000,
+      "at_ms": 246000,
       "lua": "apply_variability"
     },
     {
-      "at_ms": 440000,
+      "at_ms": 258000,
       "lua": "apply_variability"
     },
     {
-      "at_ms": 460000,
+      "at_ms": 270000,
       "lua": "apply_variability"
     },
     {
-      "at_ms": 480000,
+      "at_ms": 282000,
       "lua": "apply_variability"
     },
     {
-      "at_ms": 500000,
+      "at_ms": 294000,
       "lua": "apply_variability"
     },
     {
-      "at_ms": 520000,
+      "at_ms": 306000,
       "lua": "apply_variability"
     },
     {
-      "at_ms": 540000,
+      "at_ms": 318000,
       "lua": "apply_variability"
     },
     {
-      "at_ms": 560000,
+      "at_ms": 330000,
       "lua": "apply_variability"
     },
     {
-      "at_ms": 580000,
+      "at_ms": 342000,
+      "lua": "apply_variability"
+    },
+    {
+      "at_ms": 354000,
+      "lua": "apply_variability"
+    },
+    {
+      "at_ms": 366000,
+      "lua": "apply_variability"
+    },
+    {
+      "at_ms": 378000,
+      "lua": "apply_variability"
+    },
+    {
+      "at_ms": 390000,
+      "lua": "apply_variability"
+    },
+    {
+      "at_ms": 402000,
+      "lua": "apply_variability"
+    },
+    {
+      "at_ms": 414000,
+      "lua": "apply_variability"
+    },
+    {
+      "at_ms": 426000,
+      "lua": "apply_variability"
+    },
+    {
+      "at_ms": 438000,
+      "lua": "apply_variability"
+    },
+    {
+      "at_ms": 450000,
+      "lua": "apply_variability"
+    },
+    {
+      "at_ms": 462000,
+      "lua": "apply_variability"
+    },
+    {
+      "at_ms": 474000,
+      "lua": "apply_variability"
+    },
+    {
+      "at_ms": 486000,
+      "lua": "apply_variability"
+    },
+    {
+      "at_ms": 498000,
+      "lua": "apply_variability"
+    },
+    {
+      "at_ms": 510000,
+      "lua": "apply_variability"
+    },
+    {
+      "at_ms": 522000,
+      "lua": "apply_variability"
+    },
+    {
+      "at_ms": 534000,
+      "lua": "apply_variability"
+    },
+    {
+      "at_ms": 546000,
+      "lua": "apply_variability"
+    },
+    {
+      "at_ms": 558000,
+      "lua": "apply_variability"
+    },
+    {
+      "at_ms": 570000,
       "lua": "apply_variability"
     }
   ],
