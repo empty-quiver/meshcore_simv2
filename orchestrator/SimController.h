@@ -63,6 +63,13 @@ public:
     // --- Command injection ---
     nlohmann::json injectCommand(const std::string& node_name, const std::string& command);
 
+    // --- Dynamic-topology link mutation (name-based wrapper for Lua) ---
+    // Returns true if both node names resolve, false otherwise (no-op).
+    bool setLinkByName(const std::string& from, const std::string& to,
+                       float snr, float rssi, bool bidirectional = true);
+    bool clearLinkByName(const std::string& from, const std::string& to,
+                         bool bidirectional = true);
+
     // --- Message statistics ---
     nlohmann::json queryMessageStats(const std::string& node_name) const;
 

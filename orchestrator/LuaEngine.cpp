@@ -170,6 +170,18 @@ void LuaEngine::registerBindings() {
         registerEventCallback(type, fn);
     });
 
+    // Dynamic-topology link mutation. Bidirectional by default (RF links are symmetric in our model).
+    // sim:set_link(from_name, to_name, snr_db, rssi_dbm[, bidirectional=true])
+    // sim:clear_link(from_name, to_name[, bidirectional=true])
+    sim.set_function("set_link", [this](sol::table, const std::string& from, const std::string& to,
+                                         double snr, double rssi, sol::optional<bool> bi) -> bool {
+        return _ctrl.setLinkByName(from, to, (float)snr, (float)rssi, bi.value_or(true));
+    });
+    sim.set_function("clear_link", [this](sol::table, const std::string& from, const std::string& to,
+                                           sol::optional<bool> bi) -> bool {
+        return _ctrl.clearLinkByName(from, to, bi.value_or(true));
+    });
+
     // `vars` table for CLI variables (populated via setVar)
     _lua.create_named_table("vars");
 

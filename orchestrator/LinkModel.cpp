@@ -20,6 +20,17 @@ void MatrixLinkModel::setBidirectional(int a, int b, float snr, float rssi, floa
     setLink(b, a, snr, rssi, snr_std_dev, loss);
 }
 
+void MatrixLinkModel::clearLink(int sender, int receiver) {
+    if (sender >= 0 && sender < _n && receiver >= 0 && receiver < _n) {
+        _links[sender * _n + receiver].active = false;
+    }
+}
+
+void MatrixLinkModel::clearBidirectional(int a, int b) {
+    clearLink(a, b);
+    clearLink(b, a);
+}
+
 bool MatrixLinkModel::getLink(int sender, int receiver, LinkParams& out) const {
     if (sender < 0 || sender >= _n || receiver < 0 || receiver >= _n)
         return false;

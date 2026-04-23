@@ -1591,3 +1591,24 @@ bool Orchestrator::checkAssertions() {
 
     return fail == 0;
 }
+
+
+// ---------- Dynamic-topology link mutation ----------
+// Exposed via Lua (sim:set_link / sim:clear_link) for scripts that simulate
+// time-varying propagation: shadowing, deep fades, repeaters going offline,
+// mobile nodes. No-op if _link_model is not yet built or indices are invalid.
+void Orchestrator::setLink(int from, int to, float snr, float rssi) {
+    if (_link_model) _link_model->setLink(from, to, snr, rssi);
+}
+
+void Orchestrator::setLinkBidirectional(int a, int b, float snr, float rssi) {
+    if (_link_model) _link_model->setBidirectional(a, b, snr, rssi);
+}
+
+void Orchestrator::clearLink(int from, int to) {
+    if (_link_model) _link_model->clearLink(from, to);
+}
+
+void Orchestrator::clearLinkBidirectional(int a, int b) {
+    if (_link_model) _link_model->clearBidirectional(a, b);
+}

@@ -1,0 +1,660 @@
+{
+  "_source": "urban_variability synthetic - SNR-variability dynamic A/B",
+  "simulation": {
+    "duration_ms": 600000,
+    "step_ms": 4,
+    "warmup_ms": 5000,
+    "hot_start": true,
+    "seed": 42,
+    "radio": {
+      "sf": 10,
+      "bw": 250000,
+      "cr": 4
+    },
+    "lua_init": "simulation/urban_variability.lua"
+  },
+  "nodes": [
+    {
+      "name": "alice",
+      "role": "companion",
+      "lat": 54.3,
+      "lon": 18.6
+    },
+    {
+      "name": "R1",
+      "role": "repeater",
+      "lat": 54.3002,
+      "lon": 18.602
+    },
+    {
+      "name": "R2",
+      "role": "repeater",
+      "lat": 54.2998,
+      "lon": 18.602
+    },
+    {
+      "name": "R3",
+      "role": "repeater",
+      "lat": 54.3002,
+      "lon": 18.604
+    },
+    {
+      "name": "R4",
+      "role": "repeater",
+      "lat": 54.2998,
+      "lon": 18.604
+    },
+    {
+      "name": "R5",
+      "role": "repeater",
+      "lat": 54.3002,
+      "lon": 18.606
+    },
+    {
+      "name": "R6",
+      "role": "repeater",
+      "lat": 54.2998,
+      "lon": 18.606
+    },
+    {
+      "name": "R7",
+      "role": "repeater",
+      "lat": 54.3002,
+      "lon": 18.608
+    },
+    {
+      "name": "R8",
+      "role": "repeater",
+      "lat": 54.2998,
+      "lon": 18.608
+    },
+    {
+      "name": "bob",
+      "role": "companion",
+      "lat": 54.3,
+      "lon": 18.61
+    }
+  ],
+  "topology": {
+    "links": [
+      {
+        "from": "alice",
+        "to": "R1",
+        "snr": 8.0,
+        "rssi": -105.0,
+        "snr_std_dev": 1.5,
+        "bidir": true
+      },
+      {
+        "from": "alice",
+        "to": "R2",
+        "snr": 8.0,
+        "rssi": -105.0,
+        "snr_std_dev": 1.5,
+        "bidir": true
+      },
+      {
+        "from": "R1",
+        "to": "R3",
+        "snr": 8.0,
+        "rssi": -105.0,
+        "snr_std_dev": 1.5,
+        "bidir": true
+      },
+      {
+        "from": "R3",
+        "to": "R5",
+        "snr": 8.0,
+        "rssi": -105.0,
+        "snr_std_dev": 1.5,
+        "bidir": true
+      },
+      {
+        "from": "R5",
+        "to": "R7",
+        "snr": 8.0,
+        "rssi": -105.0,
+        "snr_std_dev": 1.5,
+        "bidir": true
+      },
+      {
+        "from": "R2",
+        "to": "R4",
+        "snr": 8.0,
+        "rssi": -105.0,
+        "snr_std_dev": 1.5,
+        "bidir": true
+      },
+      {
+        "from": "R4",
+        "to": "R6",
+        "snr": 8.0,
+        "rssi": -105.0,
+        "snr_std_dev": 1.5,
+        "bidir": true
+      },
+      {
+        "from": "R6",
+        "to": "R8",
+        "snr": 8.0,
+        "rssi": -105.0,
+        "snr_std_dev": 1.5,
+        "bidir": true
+      },
+      {
+        "from": "R1",
+        "to": "R2",
+        "snr": 8.0,
+        "rssi": -105.0,
+        "snr_std_dev": 1.5,
+        "bidir": true
+      },
+      {
+        "from": "R3",
+        "to": "R4",
+        "snr": 8.0,
+        "rssi": -105.0,
+        "snr_std_dev": 1.5,
+        "bidir": true
+      },
+      {
+        "from": "R5",
+        "to": "R6",
+        "snr": 8.0,
+        "rssi": -105.0,
+        "snr_std_dev": 1.5,
+        "bidir": true
+      },
+      {
+        "from": "R7",
+        "to": "R8",
+        "snr": 8.0,
+        "rssi": -105.0,
+        "snr_std_dev": 1.5,
+        "bidir": true
+      },
+      {
+        "from": "R7",
+        "to": "bob",
+        "snr": 8.0,
+        "rssi": -105.0,
+        "snr_std_dev": 1.5,
+        "bidir": true
+      },
+      {
+        "from": "R8",
+        "to": "bob",
+        "snr": 8.0,
+        "rssi": -105.0,
+        "snr_std_dev": 1.5,
+        "bidir": true
+      },
+      {
+        "from": "R1",
+        "to": "R4",
+        "snr": 8.0,
+        "rssi": -105.0,
+        "snr_std_dev": 1.5,
+        "bidir": true
+      },
+      {
+        "from": "R5",
+        "to": "R8",
+        "snr": 8.0,
+        "rssi": -105.0,
+        "snr_std_dev": 1.5,
+        "bidir": true
+      }
+    ]
+  },
+  "commands": [
+    {
+      "at_ms": 0,
+      "lua": "init_variability"
+    },
+    {
+      "at_ms": 60000,
+      "lua": "apply_variability"
+    },
+    {
+      "at_ms": 80000,
+      "lua": "apply_variability"
+    },
+    {
+      "at_ms": 100000,
+      "lua": "apply_variability"
+    },
+    {
+      "at_ms": 120000,
+      "lua": "apply_variability"
+    },
+    {
+      "at_ms": 140000,
+      "lua": "apply_variability"
+    },
+    {
+      "at_ms": 160000,
+      "lua": "apply_variability"
+    },
+    {
+      "at_ms": 180000,
+      "lua": "apply_variability"
+    },
+    {
+      "at_ms": 200000,
+      "lua": "apply_variability"
+    },
+    {
+      "at_ms": 220000,
+      "lua": "apply_variability"
+    },
+    {
+      "at_ms": 240000,
+      "lua": "apply_variability"
+    },
+    {
+      "at_ms": 260000,
+      "lua": "apply_variability"
+    },
+    {
+      "at_ms": 280000,
+      "lua": "apply_variability"
+    },
+    {
+      "at_ms": 300000,
+      "lua": "apply_variability"
+    },
+    {
+      "at_ms": 320000,
+      "lua": "apply_variability"
+    },
+    {
+      "at_ms": 340000,
+      "lua": "apply_variability"
+    },
+    {
+      "at_ms": 360000,
+      "lua": "apply_variability"
+    },
+    {
+      "at_ms": 380000,
+      "lua": "apply_variability"
+    },
+    {
+      "at_ms": 400000,
+      "lua": "apply_variability"
+    },
+    {
+      "at_ms": 420000,
+      "lua": "apply_variability"
+    },
+    {
+      "at_ms": 440000,
+      "lua": "apply_variability"
+    },
+    {
+      "at_ms": 460000,
+      "lua": "apply_variability"
+    },
+    {
+      "at_ms": 480000,
+      "lua": "apply_variability"
+    },
+    {
+      "at_ms": 500000,
+      "lua": "apply_variability"
+    },
+    {
+      "at_ms": 520000,
+      "lua": "apply_variability"
+    },
+    {
+      "at_ms": 540000,
+      "lua": "apply_variability"
+    },
+    {
+      "at_ms": 560000,
+      "lua": "apply_variability"
+    },
+    {
+      "at_ms": 580000,
+      "lua": "apply_variability"
+    }
+  ],
+  "message_schedule": [
+    {
+      "from": "alice",
+      "to": "bob",
+      "start_ms": 30000,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 alice->bob seq=1",
+      "ack": true
+    },
+    {
+      "from": "alice",
+      "to": "bob",
+      "start_ms": 45000,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 alice->bob seq=2",
+      "ack": true
+    },
+    {
+      "from": "alice",
+      "to": "bob",
+      "start_ms": 60000,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 alice->bob seq=3",
+      "ack": true
+    },
+    {
+      "from": "alice",
+      "to": "bob",
+      "start_ms": 75000,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 alice->bob seq=4",
+      "ack": true
+    },
+    {
+      "from": "alice",
+      "to": "bob",
+      "start_ms": 90000,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 alice->bob seq=5",
+      "ack": true
+    },
+    {
+      "from": "alice",
+      "to": "bob",
+      "start_ms": 105000,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 alice->bob seq=6",
+      "ack": true
+    },
+    {
+      "from": "alice",
+      "to": "bob",
+      "start_ms": 120000,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 alice->bob seq=7",
+      "ack": true
+    },
+    {
+      "from": "alice",
+      "to": "bob",
+      "start_ms": 135000,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 alice->bob seq=8",
+      "ack": true
+    },
+    {
+      "from": "alice",
+      "to": "bob",
+      "start_ms": 150000,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 alice->bob seq=9",
+      "ack": true
+    },
+    {
+      "from": "alice",
+      "to": "bob",
+      "start_ms": 165000,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 alice->bob seq=10",
+      "ack": true
+    },
+    {
+      "from": "alice",
+      "to": "bob",
+      "start_ms": 180000,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 alice->bob seq=11",
+      "ack": true
+    },
+    {
+      "from": "alice",
+      "to": "bob",
+      "start_ms": 195000,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 alice->bob seq=12",
+      "ack": true
+    },
+    {
+      "from": "alice",
+      "to": "bob",
+      "start_ms": 210000,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 alice->bob seq=13",
+      "ack": true
+    },
+    {
+      "from": "alice",
+      "to": "bob",
+      "start_ms": 225000,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 alice->bob seq=14",
+      "ack": true
+    },
+    {
+      "from": "alice",
+      "to": "bob",
+      "start_ms": 240000,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 alice->bob seq=15",
+      "ack": true
+    },
+    {
+      "from": "alice",
+      "to": "bob",
+      "start_ms": 255000,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 alice->bob seq=16",
+      "ack": true
+    },
+    {
+      "from": "alice",
+      "to": "bob",
+      "start_ms": 270000,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 alice->bob seq=17",
+      "ack": true
+    },
+    {
+      "from": "alice",
+      "to": "bob",
+      "start_ms": 285000,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 alice->bob seq=18",
+      "ack": true
+    },
+    {
+      "from": "alice",
+      "to": "bob",
+      "start_ms": 300000,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 alice->bob seq=19",
+      "ack": true
+    },
+    {
+      "from": "alice",
+      "to": "bob",
+      "start_ms": 315000,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 alice->bob seq=20",
+      "ack": true
+    },
+    {
+      "from": "alice",
+      "to": "bob",
+      "start_ms": 330000,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 alice->bob seq=21",
+      "ack": true
+    },
+    {
+      "from": "alice",
+      "to": "bob",
+      "start_ms": 345000,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 alice->bob seq=22",
+      "ack": true
+    },
+    {
+      "from": "alice",
+      "to": "bob",
+      "start_ms": 360000,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 alice->bob seq=23",
+      "ack": true
+    },
+    {
+      "from": "alice",
+      "to": "bob",
+      "start_ms": 375000,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 alice->bob seq=24",
+      "ack": true
+    },
+    {
+      "from": "alice",
+      "to": "bob",
+      "start_ms": 390000,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 alice->bob seq=25",
+      "ack": true
+    },
+    {
+      "from": "alice",
+      "to": "bob",
+      "start_ms": 405000,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 alice->bob seq=26",
+      "ack": true
+    },
+    {
+      "from": "alice",
+      "to": "bob",
+      "start_ms": 420000,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 alice->bob seq=27",
+      "ack": true
+    },
+    {
+      "from": "alice",
+      "to": "bob",
+      "start_ms": 435000,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 alice->bob seq=28",
+      "ack": true
+    },
+    {
+      "from": "alice",
+      "to": "bob",
+      "start_ms": 450000,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 alice->bob seq=29",
+      "ack": true
+    },
+    {
+      "from": "alice",
+      "to": "bob",
+      "start_ms": 465000,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 alice->bob seq=30",
+      "ack": true
+    },
+    {
+      "from": "alice",
+      "to": "bob",
+      "start_ms": 480000,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 alice->bob seq=31",
+      "ack": true
+    },
+    {
+      "from": "alice",
+      "to": "bob",
+      "start_ms": 495000,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 alice->bob seq=32",
+      "ack": true
+    },
+    {
+      "from": "alice",
+      "to": "bob",
+      "start_ms": 510000,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 alice->bob seq=33",
+      "ack": true
+    },
+    {
+      "from": "alice",
+      "to": "bob",
+      "start_ms": 525000,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 alice->bob seq=34",
+      "ack": true
+    },
+    {
+      "from": "alice",
+      "to": "bob",
+      "start_ms": 540000,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 alice->bob seq=35",
+      "ack": true
+    },
+    {
+      "from": "alice",
+      "to": "bob",
+      "start_ms": 555000,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 alice->bob seq=36",
+      "ack": true
+    },
+    {
+      "from": "alice",
+      "to": "bob",
+      "start_ms": 570000,
+      "interval_ms": 1,
+      "count": 1,
+      "message": "1to1 alice->bob seq=37",
+      "ack": true
+    }
+  ],
+  "channel_schedule": []
+}

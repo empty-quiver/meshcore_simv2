@@ -29,6 +29,8 @@ public:
 
     void setLink(int sender, int receiver, float snr, float rssi, float snr_std_dev = 0.0f, float loss = 0.0f);
     void setBidirectional(int a, int b, float snr, float rssi, float snr_std_dev = 0.0f, float loss = 0.0f);
+    void clearLink(int sender, int receiver);
+    void clearBidirectional(int a, int b);
     bool getLink(int sender, int receiver, LinkParams& out) const;
     int nodeCount() const { return _n; }
 };

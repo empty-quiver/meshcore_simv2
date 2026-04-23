@@ -241,6 +241,12 @@ public:
     NodeContext* nodeAt(size_t i) { return _nodes[i].get(); }
     int findNodeByName(const std::string& name) const { return findNode(name); }
 
+    // Dynamic-topology link mutation (Lua-exposed for time-varying scenarios)
+    void setLink(int from, int to, float snr, float rssi);
+    void setLinkBidirectional(int a, int b, float snr, float rssi);
+    void clearLink(int from, int to);
+    void clearLinkBidirectional(int a, int b);
+
     void setEventHook(EventHook hook) { _event_hook = std::move(hook); }
     void setLuaCallback(LuaCallbackHook hook) { _lua_callback = std::move(hook); }
 

@@ -366,3 +366,24 @@ bool SimController::finalize() {
     EventLog::setEventHook(nullptr);
     return _orch.checkAssertions();
 }
+
+
+bool SimController::setLinkByName(const std::string& from, const std::string& to,
+                                  float snr, float rssi, bool bidirectional) {
+    int fi = _orch.findNodeByName(from);
+    int ti = _orch.findNodeByName(to);
+    if (fi < 0 || ti < 0) return false;
+    if (bidirectional) _orch.setLinkBidirectional(fi, ti, snr, rssi);
+    else _orch.setLink(fi, ti, snr, rssi);
+    return true;
+}
+
+bool SimController::clearLinkByName(const std::string& from, const std::string& to,
+                                    bool bidirectional) {
+    int fi = _orch.findNodeByName(from);
+    int ti = _orch.findNodeByName(to);
+    if (fi < 0 || ti < 0) return false;
+    if (bidirectional) _orch.clearLinkBidirectional(fi, ti);
+    else _orch.clearLink(fi, ti);
+    return true;
+}
